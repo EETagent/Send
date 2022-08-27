@@ -766,6 +766,13 @@
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <binding destination="SXD-cH-kMH" name="value" keyPath="values.enableSecret" id="fzN-yh-y7e">
+                                                        <dictionary key="options">
+                                                            <bool key="NSValidatesImmediately" value="YES"/>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
                                             </button>
                                             <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SqA-mS-heU">
                                                 <rect key="frame" x="132" y="0.0" width="96" height="21"/>
@@ -777,6 +784,13 @@
                                                         <string>NSAllRomanInputSourcesLocaleIdentifier</string>
                                                     </allowedInputSourceLocales>
                                                 </secureTextFieldCell>
+                                                <connections>
+                                                    <binding destination="SXD-cH-kMH" name="value" keyPath="values.secret" id="Lxs-Ha-cKP">
+                                                        <dictionary key="options">
+                                                            <bool key="NSValidatesImmediately" value="YES"/>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
                                             </secureTextField>
                                         </subviews>
                                         <visibilityPriorities>
@@ -831,6 +845,7 @@
                     </connections>
                 </viewController>
                 <customObject id="OBJ-AF-e7R" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="SXD-cH-kMH"/>
             </objects>
             <point key="canvasLocation" x="638" y="774"/>
         </scene>
