@@ -1,0 +1,17 @@
+[package]
+name = "libffsend"
+version = "0.1.1"
+edition = "2021"
+
+[dependencies]
+ffsend-api = { version = "0.7.3", features = ["send3", "crypto-ring"], default-features = false }
+url = "2.2.2"
+
+[lib]
+name = "ffsend"
+crate-type = ["cdylib"]
+
+[profile.release]
+lto = true
+opt-level = 3
+panic = "abort"
