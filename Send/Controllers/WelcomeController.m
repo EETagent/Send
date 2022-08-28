@@ -37,4 +37,9 @@
     [[self dropView] openFile:sender];
 }
 
+- (void)openPath:(NSString *)path {
+    NSArray<NSURL *> *array = [NSArray arrayWithObject:[NSURL fileURLWithPath:path]];
+    [self moveToFilesViewWithFiles:array];
+}
+
 @end

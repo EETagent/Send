@@ -16,5 +16,7 @@
 // Respond to openDocument in menu
 - (void)openDocument:(id)sender;
 
+- (void)openPath:(NSString *)path;
+
 @end
 

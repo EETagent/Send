@@ -21,6 +21,8 @@
 // Respond to openDocument in menu
 - (void)openDocument:(id)sender;
 
+- (void)openPath:(NSString *)path;
+
 @property NSMutableArray<File*> *fileList;
 
 @end

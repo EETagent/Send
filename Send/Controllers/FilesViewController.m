@@ -72,6 +72,11 @@
     }
 }
 
+- (void)openPath:(NSString *)path {
+    NSArray<NSURL *> *array = [NSArray arrayWithObject:[NSURL fileURLWithPath:path]];
+    [self addFilesToTable:array];
+}
+
 - (void)dropFilesAdded:(NSArray<NSURL *> *)files {
     [self addFilesToTable:files];
 }
