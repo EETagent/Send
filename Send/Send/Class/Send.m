@@ -27,15 +27,18 @@
 }
 
 void uploadStarted (unsigned long long size, void *ctx) {
-    //Send* send = (__bridge Send *)(ctx);
+    Send* send = (__bridge Send *)(ctx);
+    [[send delegate] fileUploadStartedWithSize:size];
 }
 
 void uploadProgress (unsigned long long bytes, void *ctx) {
-    //Send* send = (__bridge Send *)(ctx);
+    Send* send = (__bridge Send *)(ctx);
+    [[send delegate] fileUploadProgressWithTotalBytesUploaded:bytes];
 }
 
 void uploadCompleted (void *ctx) {
-    //Send* send = (__bridge Send *)(ctx);
+    Send* send = (__bridge Send *)(ctx);
+    [[send delegate] fileUploadCompleted];
 }
 
 - (void)uploadFileWithPath:(NSString*)path {
