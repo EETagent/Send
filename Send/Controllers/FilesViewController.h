@@ -6,10 +6,11 @@
 #import <Cocoa/Cocoa.h>
 
 #import "FileItemViewDelegate.h"
+#import "DropDelegate.h"
 
 #import "File.h"
 
-@interface FilesViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource, FileItemViewDelegate>
+@interface FilesViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource, FileItemViewDelegate, DropDelegate>
 
 @property (nonatomic, weak) IBOutlet NSTableView *fileListView;
 

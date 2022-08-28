@@ -21,6 +21,10 @@
     [self reloadTotalSize];
 }
 
+- (void)dealloc {
+    [[self fileListView] unregisterDraggedTypes];
+}
+
 - (void)moveToWelcomeView {
     NSViewController *controller = [[self storyboard] instantiateControllerWithIdentifier:@"WelcomeView"];
     [[[self view] window] setContentViewController:controller];
@@ -37,21 +41,30 @@
     [[self totalSize] setStringValue:string];
 }
 
+- (void)addFilesToTable:(NSArray<NSURL *> *)files {
+    for (NSURL *path in files) {
+        File *file = [[File alloc] initWithPath:path];
+        [[self fileList] addObject:file];
+    }
+    [[self fileListView] reloadData];
+    [self reloadTotalSize];
+}
+
+
 - (void)openFile:(id)sender {
     NSOpenPanel* openDialog = [NSOpenPanel openPanel];
     [openDialog setCanChooseFiles:YES];
     [openDialog setAllowsMultipleSelection:YES];
     [openDialog setCanChooseDirectories:NO];
-
+    
     if ( [openDialog runModal] == NSModalResponseOK ) {
         NSArray* urls = [openDialog URLs];
-        for (NSURL *path in urls) {
-            File *file = [[File alloc] initWithPath:path];
-            [[self fileList] addObject:file];
-        }
-        [[self fileListView] reloadData];
-        [self reloadTotalSize];
+        [self addFilesToTable: urls];
     }
+}
+
+- (void)dropFilesAdded:(NSArray<NSURL *> *)files {
+    [self addFilesToTable:files];
 }
 
 - (BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex {

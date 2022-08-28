@@ -5,10 +5,10 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol DropViewDelegate <NSObject>
+@protocol DropDelegate <NSObject>
 
 @optional
 
-- (void)dropViewFilesAdded:(NSArray<NSURL*>*)files;
+- (void)dropFilesAdded:(NSArray<NSURL *> *)files;
 
 @end

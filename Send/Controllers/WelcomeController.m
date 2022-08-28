@@ -29,7 +29,7 @@
     [super setRepresentedObject:representedObject];
 }
 
-- (void)dropViewFilesAdded:(NSArray<NSURL *> *)files {
+- (void)dropFilesAdded:(NSArray<NSURL *> *)files {
     [self moveToFilesViewWithFiles:files];
 }
 

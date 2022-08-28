@@ -520,7 +520,7 @@
                                     <constraint firstAttribute="trailing" secondItem="uSa-7z-Dwj" secondAttribute="trailing" constant="20" id="dHY-Ro-YIM"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="dropViewDelegate" destination="XfG-lQ-9wD" id="7G9-Ji-BiX"/>
+                                    <outlet property="dropDelegate" destination="XfG-lQ-9wD" id="3lM-G9-Tf6"/>
                                 </connections>
                             </customView>
                         </subviews>
@@ -553,7 +553,7 @@
                                     <rect key="frame" x="1" y="1" width="478" height="163"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="45" viewBased="YES" id="3L7-2g-c2R">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="45" viewBased="YES" id="3L7-2g-c2R" customClass="DropTableView">
                                             <rect key="frame" x="0.0" y="0.0" width="478" height="163"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="0.0" height="20"/>
@@ -639,8 +639,9 @@
                                                 </tableColumn>
                                             </tableColumns>
                                             <connections>
-                                                <outlet property="dataSource" destination="e1U-O2-xRu" id="Th3-vG-63V"/>
                                                 <outlet property="delegate" destination="e1U-O2-xRu" id="Oc8-Wg-yku"/>
+                                                <outlet property="dropDelegate" destination="e1U-O2-xRu" id="zOf-lo-Ahl"/>
+                                                <outlet property="sourceDelegate" destination="e1U-O2-xRu" id="HAZ-8Y-SwL"/>
                                             </connections>
                                         </tableView>
                                     </subviews>

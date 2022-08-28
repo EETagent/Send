@@ -5,11 +5,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "DropViewDelegate.h"
+#import "DropDelegate.h"
 
 @interface DropView : NSView
 
-@property (nonatomic, weak) IBOutlet id <DropViewDelegate> dropViewDelegate;
+@property (nonatomic, weak) IBOutlet id <DropDelegate> dropDelegate;
 
 - (IBAction)openFile:(id)sender;
 

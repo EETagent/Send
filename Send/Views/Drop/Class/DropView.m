@@ -75,7 +75,7 @@
     if ([[pasteboard types] containsObject:NSURLPboardType]) {
         NSArray *urls = [pasteboard readObjectsForClasses:@[[NSURL class]] options:nil];
         dispatch_async(dispatch_get_main_queue(), ^{
-            [[self dropViewDelegate] dropViewFilesAdded:[urls copy]];
+            [[self dropDelegate] dropFilesAdded:[urls copy]];
         });
         return YES;
     }
@@ -90,7 +90,7 @@
 
     if ( [openDialog runModal] == NSModalResponseOK ) {
         NSArray* urls = [openDialog URLs];
-        [[self dropViewDelegate] dropViewFilesAdded:[urls copy]];
+        [[self dropDelegate] dropFilesAdded:[urls copy]];
     }
 }
 @end

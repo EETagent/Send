@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4618301628BA7D4600BFB7E8 /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = 4618301528BA7D4600BFB7E8 /* File.m */; };
+		461D13B928BBAEE4001E34CC /* DropTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 461D13B828BBAEE4001E34CC /* DropTableView.m */; };
 		462E688628B94B6F001F569F /* DropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 462E688528B94B6F001F569F /* DropView.m */; };
 		462E688A28BA28C8001F569F /* FilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462E688928BA28C8001F569F /* FilesViewController.m */; };
 		46371F2828BA4749008F6DFF /* libzip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46371F2728BA46EF008F6DFF /* libzip.framework */; };
@@ -60,6 +61,8 @@
 		4618301428BA7D4600BFB7E8 /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = File.h; sourceTree = "<group>"; };
 		4618301528BA7D4600BFB7E8 /* File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = File.m; sourceTree = "<group>"; };
 		4618301A28BA80CF00BFB7E8 /* FileItemViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FileItemViewDelegate.h; sourceTree = "<group>"; };
+		461D13B728BBAEE4001E34CC /* DropTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropTableView.h; sourceTree = "<group>"; };
+		461D13B828BBAEE4001E34CC /* DropTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropTableView.m; sourceTree = "<group>"; };
 		462E688428B94B6F001F569F /* DropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DropView.h; sourceTree = "<group>"; };
 		462E688528B94B6F001F569F /* DropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DropView.m; sourceTree = "<group>"; };
 		462E688828BA28C8001F569F /* FilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FilesViewController.h; sourceTree = "<group>"; };
@@ -67,7 +70,7 @@
 		46371F2228BA46EF008F6DFF /* libzip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libzip.xcodeproj; path = libzip/libzip.xcodeproj; sourceTree = "<group>"; };
 		46371F2A28BA4F5F008F6DFF /* FileItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FileItemView.h; sourceTree = "<group>"; };
 		46371F2B28BA4F5F008F6DFF /* FileItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FileItemView.m; sourceTree = "<group>"; };
-		4651F4B328BB9E2A00FF3E4D /* DropViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropViewDelegate.h; sourceTree = "<group>"; };
+		4651F4B328BB9E2A00FF3E4D /* DropDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropDelegate.h; sourceTree = "<group>"; };
 		46930D2328B82E3100B07A0C /* SendUploadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SendUploadDelegate.h; sourceTree = "<group>"; };
 		46CAAA0328B802430015008F /* Send.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Send.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46CAAA0628B802430015008F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -168,13 +171,13 @@
 			path = Files;
 			sourceTree = "<group>";
 		};
-		4651F4AE28BB9DFA00FF3E4D /* DropView */ = {
+		4651F4AE28BB9DFA00FF3E4D /* Drop */ = {
 			isa = PBXGroup;
 			children = (
 				4651F4B228BB9E0D00FF3E4D /* Protocol */,
 				4651F4B128BB9E0400FF3E4D /* Class */,
 			);
-			path = DropView;
+			path = Drop;
 			sourceTree = "<group>";
 		};
 		4651F4B128BB9E0400FF3E4D /* Class */ = {
@@ -182,6 +185,8 @@
 			children = (
 				462E688428B94B6F001F569F /* DropView.h */,
 				462E688528B94B6F001F569F /* DropView.m */,
+				461D13B728BBAEE4001E34CC /* DropTableView.h */,
+				461D13B828BBAEE4001E34CC /* DropTableView.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -189,7 +194,7 @@
 		4651F4B228BB9E0D00FF3E4D /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				4651F4B328BB9E2A00FF3E4D /* DropViewDelegate.h */,
+				4651F4B328BB9E2A00FF3E4D /* DropDelegate.h */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -291,7 +296,7 @@
 		46CAAA3B28B8077E0015008F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4651F4AE28BB9DFA00FF3E4D /* DropView */,
+				4651F4AE28BB9DFA00FF3E4D /* Drop */,
 				4618301728BA7FE100BFB7E8 /* Table */,
 			);
 			path = Views;
@@ -470,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461D13B928BBAEE4001E34CC /* DropTableView.m in Sources */,
 				46CAAA4528B81B3C0015008F /* Send.m in Sources */,
 				462E688628B94B6F001F569F /* DropView.m in Sources */,
 				46CAAA0B28B802430015008F /* WelcomeController.m in Sources */,

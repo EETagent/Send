@@ -12,12 +12,10 @@
     if (self) {
         NSURL *filePath = [path filePathURL];
         NSString *filePathString = [filePath path];
-        NSLog(@"%@", filePathString);
         //NSString *fileNameWithoutExtension = [[[NSFileManager defaultManager] displayNameAtPath:filePathString] stringByDeletingPathExtension];
         NSString *fileName= [[NSFileManager defaultManager] displayNameAtPath:filePathString];
         NSError *error;
         NSUInteger fileSize = [[[NSFileManager defaultManager] attributesOfItemAtPath:filePathString error:&error] fileSize];
-        NSLog(@"%@", error);
         [self setFilename:fileName];
         [self setPath:filePath];
         [self setSize:fileSize];
@@ -31,8 +29,6 @@
 
 + (NSString *)getStringRepresentationFromSize:(NSUInteger)size {
     double convertedValue = size;
-    
-    NSLog(@"%f", convertedValue);
     
     NSArray *tokens = @[@"bytes",@"KB",@"MB",@"GB",@"TB",@"PB", @"EB", @"ZB", @"YB"];
     
