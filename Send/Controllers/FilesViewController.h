@@ -16,8 +16,10 @@
 
 @property (nonatomic, weak) IBOutlet NSTextField *totalSize;
 
-
 - (IBAction)openFile:(id)sender;
+
+// Respond to openDocument in menu
+- (void)openDocument:(id)sender;
 
 @property NSMutableArray<File*> *fileList;
 

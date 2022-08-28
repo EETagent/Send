@@ -93,4 +93,5 @@
         [[self dropDelegate] dropFilesAdded:[urls copy]];
     }
 }
+
 @end

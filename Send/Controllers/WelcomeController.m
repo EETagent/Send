@@ -33,4 +33,8 @@
     [self moveToFilesViewWithFiles:files];
 }
 
+- (void)openDocument:(id)sender {
+    [[self dropView] openFile:sender];
+}
+
 @end

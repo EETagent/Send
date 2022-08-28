@@ -84,6 +84,10 @@
     return [[self fileList] count];
 }
 
+- (void)openDocument:(id)sender {
+    [self openFile:sender];
+}
+
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     if ([[tableColumn identifier] isEqualTo:@"fileColumn"]) {
         FileItemView *fileItemView =  [tableView makeViewWithIdentifier:@"fileItem" owner:self];
