@@ -44,7 +44,16 @@
 - (void)addFilesToTable:(NSArray<NSURL *> *)files {
     for (NSURL *path in files) {
         File *file = [[File alloc] initWithPath:path];
-        [[self fileList] addObject:file];
+        // Prevent duplicates
+        BOOL isNotInArray = YES;
+        for (File *item in [self fileList]) {
+            if ([item isEqualTo:file]) {
+                isNotInArray = NO;
+                break;
+            }
+        }
+        if (isNotInArray)
+            [[self fileList] addObject:file];
     }
     [[self fileListView] reloadData];
     [self reloadTotalSize];

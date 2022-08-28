@@ -41,4 +41,13 @@
     return [NSString stringWithFormat:@"%4.2f %@",convertedValue, tokens[multiplyFactor]];
 }
 
+- (BOOL)isEqualTo:(id)object {
+    if (![object isKindOfClass:[File class]])
+        return NO;
+    File *casted = (File*)object;
+    if ([[self filename] isEqualTo:[casted filename]] && [[self path] isEqualTo:[casted path]] && [self size] == [casted size])
+        return YES;
+    return NO;
+}
+
 @end
