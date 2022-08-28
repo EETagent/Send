@@ -14,6 +14,7 @@
 		46371F2828BA4749008F6DFF /* libzip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46371F2728BA46EF008F6DFF /* libzip.framework */; };
 		46371F2C28BA4F5F008F6DFF /* FileItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46371F2B28BA4F5F008F6DFF /* FileItemView.m */; };
 		46930D2228B81FC900B07A0C /* ffsend.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46CAAA4128B808250015008F /* ffsend.dylib */; };
+		46BFCF3228BBEF66006919D0 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 46BFCF3128BBEF66006919D0 /* Credits.rtf */; };
 		46CAAA0828B802430015008F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA0728B802430015008F /* AppDelegate.m */; };
 		46CAAA0B28B802430015008F /* WelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA0A28B802430015008F /* WelcomeController.m */; };
 		46CAAA0D28B802440015008F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46CAAA0C28B802440015008F /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		46371F2B28BA4F5F008F6DFF /* FileItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FileItemView.m; sourceTree = "<group>"; };
 		4651F4B328BB9E2A00FF3E4D /* DropDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropDelegate.h; sourceTree = "<group>"; };
 		46930D2328B82E3100B07A0C /* SendUploadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SendUploadDelegate.h; sourceTree = "<group>"; };
+		46BFCF3128BBEF66006919D0 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		46CAAA0328B802430015008F /* Send.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Send.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46CAAA0628B802430015008F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; };
 		46CAAA0728B802430015008F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				46CAAA0E28B802440015008F /* Main.storyboard */,
 				46CAAA1128B802440015008F /* main.m */,
 				46CAAA1328B802440015008F /* Send.entitlements */,
+				46BFCF3128BBEF66006919D0 /* Credits.rtf */,
 			);
 			path = Send;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1400;
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					46CAAA0228B802430015008F = {
 						CreatedOnToolsVersion = 14.0;
@@ -450,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46CAAA0D28B802440015008F /* Assets.xcassets in Resources */,
+				46BFCF3228BBEF66006919D0 /* Credits.rtf in Resources */,
 				46CAAA1028B802440015008F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,7 +660,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_KEY_CFBundleDisplayName = Send;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Vojtěch Jungmann";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -685,7 +690,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_KEY_CFBundleDisplayName = Send;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Vojtěch Jungmann";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
