@@ -5,9 +5,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface WelcomeController : NSViewController
+#import "DropViewDelegate.h"
 
--(IBAction) move:(id) sender;
+@interface WelcomeController : NSViewController <DropViewDelegate>
 
 @end
 

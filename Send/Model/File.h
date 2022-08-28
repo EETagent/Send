@@ -13,6 +13,11 @@
 
 @property NSUInteger size;
 
-- (instancetype) initWithFilename:(NSString*)filename withPath:(NSURL*)path withSize:(NSUInteger)size;
+- (instancetype)initWithPath:(NSURL *)path;
+
++ (NSString *) getStringRepresentationFromSize:(NSUInteger)size;
+
+- (NSString *) getSizeAsString;
+
 
 @end

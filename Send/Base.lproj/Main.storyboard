@@ -466,6 +466,9 @@
                                                     <imageReference key="image" image="plus.circle" symbolScale="large"/>
                                                 </buttonCell>
                                                 <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <connections>
+                                                    <action selector="openFile:" target="XHV-QG-UmI" id="SFx-oz-kGH"/>
+                                                </connections>
                                             </button>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ewR-vj-yzg">
                                                 <rect key="frame" x="100" y="74" width="241" height="16"/>
@@ -492,7 +495,7 @@
                                                 <color key="bezelColor" red="0.3686274886" green="0.62352943419999995" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <connections>
-                                                    <action selector="move:" target="XfG-lQ-9wD" id="nIQ-0C-beh"/>
+                                                    <action selector="openFile:" target="XHV-QG-UmI" id="L0l-uf-3BT"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -516,6 +519,9 @@
                                     <constraint firstAttribute="bottom" secondItem="uSa-7z-Dwj" secondAttribute="bottom" constant="21" id="WME-GW-64C"/>
                                     <constraint firstAttribute="trailing" secondItem="uSa-7z-Dwj" secondAttribute="trailing" constant="20" id="dHY-Ro-YIM"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dropViewDelegate" destination="XfG-lQ-9wD" id="7G9-Ji-BiX"/>
+                                </connections>
                             </customView>
                         </subviews>
                         <constraints>
@@ -548,7 +554,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="45" viewBased="YES" id="3L7-2g-c2R">
-                                            <rect key="frame" x="0.0" y="0.0" width="478" height="220"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="163"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="0.0" height="20"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -662,6 +668,9 @@
                                             <imageReference key="image" image="plus.circle" symbolScale="large"/>
                                         </buttonCell>
                                         <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="openFile:" target="e1U-O2-xRu" id="DrN-43-yzf"/>
+                                        </connections>
                                     </button>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lhi-54-l1C">
                                         <rect key="frame" x="28" y="2" width="315" height="16"/>
@@ -842,6 +851,7 @@
                     </view>
                     <connections>
                         <outlet property="fileListView" destination="3L7-2g-c2R" id="Jme-oT-RjP"/>
+                        <outlet property="totalSize" destination="5NX-t2-iF7" id="52p-Ee-FNi"/>
                     </connections>
                 </viewController>
                 <customObject id="OBJ-AF-e7R" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

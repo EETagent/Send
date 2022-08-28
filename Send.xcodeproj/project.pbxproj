@@ -67,6 +67,7 @@
 		46371F2228BA46EF008F6DFF /* libzip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libzip.xcodeproj; path = libzip/libzip.xcodeproj; sourceTree = "<group>"; };
 		46371F2A28BA4F5F008F6DFF /* FileItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FileItemView.h; sourceTree = "<group>"; };
 		46371F2B28BA4F5F008F6DFF /* FileItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FileItemView.m; sourceTree = "<group>"; };
+		4651F4B328BB9E2A00FF3E4D /* DropViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropViewDelegate.h; sourceTree = "<group>"; };
 		46930D2328B82E3100B07A0C /* SendUploadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SendUploadDelegate.h; sourceTree = "<group>"; };
 		46CAAA0328B802430015008F /* Send.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Send.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46CAAA0628B802430015008F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -167,6 +168,32 @@
 			path = Files;
 			sourceTree = "<group>";
 		};
+		4651F4AE28BB9DFA00FF3E4D /* DropView */ = {
+			isa = PBXGroup;
+			children = (
+				4651F4B228BB9E0D00FF3E4D /* Protocol */,
+				4651F4B128BB9E0400FF3E4D /* Class */,
+			);
+			path = DropView;
+			sourceTree = "<group>";
+		};
+		4651F4B128BB9E0400FF3E4D /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				462E688428B94B6F001F569F /* DropView.h */,
+				462E688528B94B6F001F569F /* DropView.m */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		4651F4B228BB9E0D00FF3E4D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				4651F4B328BB9E2A00FF3E4D /* DropViewDelegate.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		46930D2028B81F9700B07A0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,9 +291,8 @@
 		46CAAA3B28B8077E0015008F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4651F4AE28BB9DFA00FF3E4D /* DropView */,
 				4618301728BA7FE100BFB7E8 /* Table */,
-				462E688428B94B6F001F569F /* DropView.h */,
-				462E688528B94B6F001F569F /* DropView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";

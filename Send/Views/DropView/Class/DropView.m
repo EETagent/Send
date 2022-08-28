@@ -15,6 +15,7 @@
 
 - (void)dealloc {
     [self->timer invalidate];
+    [self unregisterDraggedTypes];
 }
 
 
@@ -57,8 +58,39 @@
         //Background color
         //#333333
         [[self layer] setBackgroundColor:[[NSColor colorWithSRGBRed:0.2 green:0.2 blue:0.2 alpha:1] CGColor]];
+        // Drag & Drop register
+        [self registerForDraggedTypes:[NSArray arrayWithObjects: (NSString*)kUTTypeFileURL, nil]];
     }
     return self;
 }
 
+
+- (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender {
+    // Set style to copy (better cursor icon)
+    return NSDragOperationCopy;
+}
+
+- (BOOL)performDragOperation:(id<NSDraggingInfo>)sender {
+    NSPasteboard *pasteboard = [sender draggingPasteboard];
+    if ([[pasteboard types] containsObject:NSURLPboardType]) {
+        NSArray *urls = [pasteboard readObjectsForClasses:@[[NSURL class]] options:nil];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[self dropViewDelegate] dropViewFilesAdded:[urls copy]];
+        });
+        return YES;
+    }
+    return NO;
+}
+
+- (void)openFile:(id)sender {
+    NSOpenPanel* openDialog = [NSOpenPanel openPanel];
+    [openDialog setCanChooseFiles:YES];
+    [openDialog setAllowsMultipleSelection:YES];
+    [openDialog setCanChooseDirectories:NO];
+
+    if ( [openDialog runModal] == NSModalResponseOK ) {
+        NSArray* urls = [openDialog URLs];
+        [[self dropViewDelegate] dropViewFilesAdded:[urls copy]];
+    }
+}
 @end

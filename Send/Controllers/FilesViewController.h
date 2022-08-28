@@ -13,6 +13,11 @@
 
 @property (nonatomic, weak) IBOutlet NSTableView *fileListView;
 
+@property (nonatomic, weak) IBOutlet NSTextField *totalSize;
+
+
+- (IBAction)openFile:(id)sender;
+
 @property NSMutableArray<File*> *fileList;
 
 @end
