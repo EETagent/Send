@@ -681,6 +681,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Send/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Send;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Vojtěch Jungmann";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -712,6 +713,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Send/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Send;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Vojtěch Jungmann";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
