@@ -72,6 +72,7 @@
 		46371F2A28BA4F5F008F6DFF /* FileItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FileItemView.h; sourceTree = "<group>"; };
 		46371F2B28BA4F5F008F6DFF /* FileItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FileItemView.m; sourceTree = "<group>"; };
 		4651F4B328BB9E2A00FF3E4D /* DropDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropDelegate.h; sourceTree = "<group>"; };
+		46769B3F28BC038700F06426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		46930D2328B82E3100B07A0C /* SendUploadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SendUploadDelegate.h; sourceTree = "<group>"; };
 		46BFCF3128BBEF66006919D0 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		46CAAA0328B802430015008F /* Send.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Send.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +252,7 @@
 		46CAAA0528B802430015008F /* Send */ = {
 			isa = PBXGroup;
 			children = (
+				46769B3F28BC038700F06426 /* Info.plist */,
 				46CAAA4228B81B2C0015008F /* Send */,
 				4618301328BA7D3600BFB7E8 /* Model */,
 				46CAAA3B28B8077E0015008F /* Views */,
@@ -659,6 +661,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Send/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Send;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Vojtěch Jungmann";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -689,6 +692,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Send/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Send;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 Vojtěch Jungmann";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
