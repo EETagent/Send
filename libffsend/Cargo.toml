@@ -12,6 +12,7 @@ name = "ffsend"
 crate-type = ["cdylib"]
 
 [profile.release]
+codegen-units = 1
 lto = true
 opt-level = 3
 panic = "abort"
