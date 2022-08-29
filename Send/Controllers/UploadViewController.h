@@ -11,11 +11,13 @@
 
 #import "ResultView.h"
 
+#import "DotAnimatedTextField.h"
+
 #import "File.h"
 
 @interface UploadViewController : NSViewController <SendUploadDelegate>
 
-@property(nonatomic, weak) IBOutlet NSTextField *statusTextField;
+@property(nonatomic, weak) IBOutlet DotAnimatedTextField *statusTextField;
 @property(nonatomic, weak) IBOutlet NSProgressIndicator *progressIndicator;
 
 @property(nonatomic, weak) IBOutlet FileItemView *fileItemView;

@@ -28,6 +28,7 @@
 		46CAAA3928B807050015008F /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA3828B807050015008F /* UploadViewController.m */; };
 		46CAAA4528B81B3C0015008F /* Send.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA4428B81B3C0015008F /* Send.m */; };
 		46CF0F4328BD11FF00298A84 /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CF0F4228BD11FF00298A84 /* ResultView.m */; };
+		46CF0F4628BD496900298A84 /* DotAnimatedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CF0F4528BD496900298A84 /* DotAnimatedTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,8 @@
 		46CAAA4428B81B3C0015008F /* Send.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Send.m; sourceTree = "<group>"; };
 		46CF0F4128BD11FF00298A84 /* ResultView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultView.h; sourceTree = "<group>"; };
 		46CF0F4228BD11FF00298A84 /* ResultView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultView.m; sourceTree = "<group>"; };
+		46CF0F4428BD496900298A84 /* DotAnimatedTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DotAnimatedTextField.h; sourceTree = "<group>"; };
+		46CF0F4528BD496900298A84 /* DotAnimatedTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DotAnimatedTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +353,8 @@
 			children = (
 				46CF0F4128BD11FF00298A84 /* ResultView.h */,
 				46CF0F4228BD11FF00298A84 /* ResultView.m */,
+				46CF0F4428BD496900298A84 /* DotAnimatedTextField.h */,
+				46CF0F4528BD496900298A84 /* DotAnimatedTextField.m */,
 			);
 			path = Upload;
 			sourceTree = "<group>";
@@ -513,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46CF0F4628BD496900298A84 /* DotAnimatedTextField.m in Sources */,
 				461D13B928BBAEE4001E34CC /* DropTableView.m in Sources */,
 				46CAAA4528B81B3C0015008F /* Send.m in Sources */,
 				462E688628B94B6F001F569F /* DropView.m in Sources */,

@@ -62,7 +62,9 @@
         [[self progressIndicator] setDoubleValue:0];
         //FileItemView
         [[self fileItemView] setWithFile:self->file];
-        // TODO: Status
+        // TODO: Translation
+        [[self statusTextField] setStringValue:@"Váše soubory se právě nahrávají"];
+        [[self statusTextField] startAnimating];
     });
 }
 
@@ -78,6 +80,9 @@
         if (link) {
             [[self resultView] setUrl:link];
             [[self resultView] setValues];
+            // TODO: Translation
+            [[self statusTextField] setStringValue:@"Váš soubor je zašifrovaný a připraven k použití"];
+            [[self statusTextField] stopAnimating];
         }
     });
 }
