@@ -32,10 +32,10 @@
 
 
 
-- (void)setValuesForURL:(NSURL *)url {
+- (void)setValues{
     [self setHidden:NO];
     
-    NSString *urlString = [url absoluteString];
+    NSString *urlString = [[self url] absoluteString];
     
     [[self urlTextField] setStringValue:urlString];
     

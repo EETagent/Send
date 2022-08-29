@@ -230,13 +230,19 @@ pub extern "C" fn upload_file(
                 assert!(!ptr.is_null());
                 &mut *ptr
             };
-            println!("Result: {:?}", result.secret());
+
+            #[cfg(debug_assertions)] {
+                println!("URL: {:?} SECRET: {:?}", result.url().to_string(), result.secret());
+            }
+
             structure.fill(
                 result.id().to_string(),
                 result.expire_at().timestamp(),
                 result.url().to_string(),
                 result.secret(),
             );
+            
+            progress_reporter.unwrap().lock().unwrap().finish();
         } else {
             // Upload failure
             return -2;

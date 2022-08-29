@@ -74,8 +74,11 @@
 
 - (void)sendUploadCompleted {
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"%@", [self->send uploadedFileGetLink]);
-        [[self resultView] setValuesForURL:[self->send uploadedFileGetLink]];
+        NSURL *link = [self->send uploadedFileGetLink];
+        if (link) {
+            [[self resultView] setUrl:link];
+            [[self resultView] setValues];
+        }
     });
 }
 

@@ -103,10 +103,15 @@ void uploadCompleted (void *ctx) {
 }
 
 - (NSURL *)uploadedFileGetLink {
+    if (!self->uploadedFile)
+        return nil;
+    
     NSString *url = [self uploadedFileGetURL];
     NSString *secret = [self uploadedFileGetSecret];
+    
     if (!url || !secret)
         return nil;
+    
     return [NSURL URLWithString:[NSString stringWithFormat:@"%@#%@", url, secret]];
 }
 

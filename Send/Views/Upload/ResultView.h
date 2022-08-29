@@ -11,6 +11,8 @@
 
 @property(nonatomic, weak) IBOutlet NSButton *qrcodeImage;
 
--(void)setValuesForURL:(NSURL*)url;
+@property NSURL *url;
+
+- (void)setValues;
 
 @end
