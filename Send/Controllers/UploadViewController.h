@@ -22,6 +22,8 @@
 
 @property(nonatomic, weak) IBOutlet ResultView *resultView;
 
+- (IBAction)returnToWelcome:(id)sender;
+
 - (void)uploadFiles:(NSArray<File *> *)files;
 
 @end

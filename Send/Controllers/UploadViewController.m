@@ -82,4 +82,9 @@
     });
 }
 
+- (void)returnToWelcome:(id)sender {
+    NSViewController *controller = [[self storyboard] instantiateControllerWithIdentifier:@"WelcomeView"];
+    [[[self view] window] setContentViewController:controller];
+}
+
 @end

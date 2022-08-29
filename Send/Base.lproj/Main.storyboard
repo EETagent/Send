@@ -944,24 +944,53 @@
                                 </customSpacing>
                             </stackView>
                             <stackView hidden="YES" distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pPW-FH-Ai6" customClass="ResultView">
-                                <rect key="frame" x="30" y="30" width="460" height="130"/>
+                                <rect key="frame" x="30" y="30" width="460" height="132"/>
                                 <subviews>
-                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cWS-cr-nsk">
-                                        <rect key="frame" x="0.0" y="109" width="96" height="21"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="9MW-ns-Q0X">
-                                            <font key="font" usesAppearanceFont="YES"/>
-                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="trg-26-6tT">
+                                        <rect key="frame" x="0.0" y="102" width="460" height="30"/>
+                                        <subviews>
+                                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cWS-cr-nsk">
+                                                <rect key="frame" x="0.0" y="9" width="403" height="21"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="9MW-ns-Q0X">
+                                                    <font key="font" usesAppearanceFont="YES"/>
+                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DnA-xR-taP">
+                                                <rect key="frame" x="404" y="3" width="63" height="32"/>
+                                                <buttonCell key="cell" type="push" title="Zpět" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FNl-Ze-Rax">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <color key="bezelColor" red="0.3686274886" green="0.62352943419999995" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <connections>
+                                                    <action selector="returnToWelcome:" target="RP5-zP-BbD" id="J5p-HA-GuR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="Y76-l7-odK" userLabel="Qrcode">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="101"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="94"/>
                                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="leading" alignment="left" imageScaling="proportionallyUpOrDown" inset="2" id="LoX-xZ-STT">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="trg-26-6tT" secondAttribute="trailing" id="H00-Lm-pJO"/>
+                                    <constraint firstItem="trg-26-6tT" firstAttribute="leading" secondItem="pPW-FH-Ai6" secondAttribute="leading" id="wni-mw-i9h"/>
+                                </constraints>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
@@ -982,7 +1011,7 @@
                             <constraint firstAttribute="trailing" secondItem="SYb-0h-vYb" secondAttribute="trailing" constant="30" id="HXb-l5-caP"/>
                             <constraint firstAttribute="bottom" secondItem="pPW-FH-Ai6" secondAttribute="bottom" constant="30" id="Iud-3M-w3b"/>
                             <constraint firstAttribute="bottom" secondItem="SYb-0h-vYb" secondAttribute="bottom" constant="180" id="MSY-BP-8IQ"/>
-                            <constraint firstItem="pPW-FH-Ai6" firstAttribute="top" secondItem="SYb-0h-vYb" secondAttribute="bottom" constant="20" id="no4-bu-deF"/>
+                            <constraint firstItem="pPW-FH-Ai6" firstAttribute="top" secondItem="SYb-0h-vYb" secondAttribute="bottom" constant="18" id="no4-bu-deF"/>
                             <constraint firstItem="SYb-0h-vYb" firstAttribute="top" secondItem="SXe-gv-rCo" secondAttribute="top" constant="30" id="p56-bU-9qn"/>
                             <constraint firstItem="pPW-FH-Ai6" firstAttribute="leading" secondItem="SXe-gv-rCo" secondAttribute="leading" constant="30" id="xJP-XU-4ro"/>
                         </constraints>
