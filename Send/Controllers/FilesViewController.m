@@ -4,6 +4,7 @@
 //
 
 #import "FilesViewController.h"
+#import "UploadViewController.h"
 
 #import "FileItemView.h"
 
@@ -35,7 +36,7 @@
     for (File *file in [self fileList]) {
         size += [file size];
     }
-    NSString *totalSize = [File getStringRepresentationFromSize:size];
+    NSString *totalSize = [File StringRepresentationFromSize:size];
     // TODO: Translate string
     NSString *string = [NSString stringWithFormat:@"Celková velikost: %@", totalSize];
     [[self totalSize] setStringValue:string];
@@ -43,7 +44,7 @@
 
 - (void)addFilesToTable:(NSArray<NSURL *> *)files {
     for (NSURL *path in files) {
-        File *file = [[File alloc] initWithPath:path];
+        File *file = [[File alloc] initWithURLPath:path];
         // Prevent duplicates
         BOOL isNotInArray = YES;
         for (File *item in [self fileList]) {
@@ -72,9 +73,22 @@
     }
 }
 
+
+- (void)openDocument:(id)sender {
+    [self openFile:sender];
+}
+
 - (void)openPath:(NSString *)path {
     NSArray<NSURL *> *array = [NSArray arrayWithObject:[NSURL fileURLWithPath:path]];
     [self addFilesToTable:array];
+}
+
+- (void)uploadFilesToSend:(id)sender {
+    if ([[self fileList] count] < 1)
+        return;
+    UploadViewController *controller = [[self storyboard] instantiateControllerWithIdentifier:@"UploadView"];
+    [controller uploadFiles:[self fileList]];
+    [[[self view] window] setContentViewController:controller];
 }
 
 - (void)dropFilesAdded:(NSArray<NSURL *> *)files {
@@ -89,10 +103,6 @@
     return [[self fileList] count];
 }
 
-- (void)openDocument:(id)sender {
-    [self openFile:sender];
-}
-
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     if ([[tableColumn identifier] isEqualTo:@"fileColumn"]) {
         FileItemView *fileItemView =  [tableView makeViewWithIdentifier:@"fileItem" owner:self];
@@ -100,10 +110,8 @@
             File *file = [[self fileList] objectAtIndex:row];
             [fileItemView setIndex:row];
             [fileItemView setFileDelegate:self];
-            if (file) {
-                [[fileItemView name] setStringValue:[file filename]];
-                [[fileItemView size] setStringValue:[file getSizeAsString]];
-            }
+            if (file)
+                [fileItemView setWithFile:file];
             return fileItemView;
         }
     }

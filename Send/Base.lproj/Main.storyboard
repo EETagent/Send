@@ -602,8 +602,8 @@
                                                                 <real value="3.4028234663852886e+38"/>
                                                             </customSpacing>
                                                             <connections>
-                                                                <outlet property="name" destination="gsh-Kz-DaB" id="Bvr-lp-uWM"/>
-                                                                <outlet property="size" destination="mm9-vT-UIt" id="yJA-fR-dFA"/>
+                                                                <outlet property="fileName" destination="gsh-Kz-DaB" id="613-iZ-QK1"/>
+                                                                <outlet property="fileSize" destination="mm9-vT-UIt" id="OKL-91-fiU"/>
                                                             </connections>
                                                         </stackView>
                                                     </prototypeCellViews>
@@ -791,6 +791,9 @@
                                         </buttonCell>
                                         <color key="bezelColor" red="0.3686274886" green="0.62352943419999995" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="uploadFilesToSend:" target="e1U-O2-xRu" id="EQ6-Vq-S6h"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <visibilityPriorities>
@@ -840,26 +843,103 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="18" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SYb-0h-vYb">
-                                <rect key="frame" x="30" y="256" width="460" height="64"/>
+                                <rect key="frame" x="30" y="180" width="460" height="140"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="JWv-KL-XiA">
-                                        <rect key="frame" x="-2" y="36" width="382" height="28"/>
+                                        <rect key="frame" x="-2" y="112" width="382" height="28"/>
                                         <textFieldCell key="cell" selectable="YES" title="Váše soubory se právě nahrávají..." id="0eA-X3-HyY">
                                             <font key="font" metaFont="systemBold" size="24"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <progressIndicator maxValue="100" doubleValue="50" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="VPA-8k-75H">
-                                        <rect key="frame" x="0.0" y="-1" width="100" height="20"/>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PHc-yl-OO5" customClass="FileItemView">
+                                        <rect key="frame" x="0.0" y="36" width="460" height="58"/>
+                                        <subviews>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0CZ-9I-0rU">
+                                                <rect key="frame" x="10" y="19" width="17" height="21"/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="8u4-6F-ScY">
+                                                    <imageReference key="image" image="doc" symbolScale="large"/>
+                                                </imageCell>
+                                                <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </imageView>
+                                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZVv-oL-gUk">
+                                                <rect key="frame" x="37" y="10" width="413" height="38"/>
+                                                <subviews>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dt4-qa-Pkb">
+                                                        <rect key="frame" x="-2" y="22" width="49" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="A4.pdf" id="SjE-Mz-xfb">
+                                                            <font key="font" textStyle="headline" name=".SFNS-Bold"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hD6-IB-rGN">
+                                                        <rect key="frame" x="-2" y="0.0" width="37" height="14"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="1,4MB" id="5at-G2-IHd">
+                                                            <font key="font" textStyle="subheadline" name=".SFNS-Regular"/>
+                                                            <color key="textColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                        </subviews>
+                                        <edgeInsets key="edgeInsets" left="10" right="10" top="20" bottom="20"/>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                        <connections>
+                                            <outlet property="fileName" destination="dt4-qa-Pkb" id="Zu8-2V-Sh4"/>
+                                            <outlet property="fileSize" destination="hD6-IB-rGN" id="RA8-lZ-7lE"/>
+                                        </connections>
+                                    </stackView>
+                                    <progressIndicator maxValue="100" doubleValue="1" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="VPA-8k-75H">
+                                        <rect key="frame" x="0.0" y="-1" width="460" height="20"/>
                                     </progressIndicator>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="VPA-8k-75H" secondAttribute="trailing" id="1Va-zj-Ntm"/>
+                                    <constraint firstItem="VPA-8k-75H" firstAttribute="leading" secondItem="SYb-0h-vYb" secondAttribute="leading" id="FUX-g3-xcO"/>
+                                    <constraint firstItem="PHc-yl-OO5" firstAttribute="leading" secondItem="SYb-0h-vYb" secondAttribute="leading" id="LkC-bJ-Xx9"/>
+                                    <constraint firstAttribute="trailing" secondItem="PHc-yl-OO5" secondAttribute="trailing" id="sNP-hn-G80"/>
+                                </constraints>
                                 <visibilityPriorities>
+                                    <integer value="1000"/>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
                                     <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4C-Zv-FW4">
+                                <rect key="frame" x="44" y="189" width="50" height="50"/>
+                                <subviews>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vn4-kX-fAv">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="HKH-a3-7Nb"/>
+                                    </imageView>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
@@ -867,9 +947,15 @@
                         <constraints>
                             <constraint firstItem="SYb-0h-vYb" firstAttribute="leading" secondItem="SXe-gv-rCo" secondAttribute="leading" constant="30" id="Gs1-Lg-nod"/>
                             <constraint firstAttribute="trailing" secondItem="SYb-0h-vYb" secondAttribute="trailing" constant="30" id="HXb-l5-caP"/>
+                            <constraint firstAttribute="bottom" secondItem="SYb-0h-vYb" secondAttribute="bottom" constant="180" id="MSY-BP-8IQ"/>
                             <constraint firstItem="SYb-0h-vYb" firstAttribute="top" secondItem="SXe-gv-rCo" secondAttribute="top" constant="30" id="p56-bU-9qn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fileItemView" destination="PHc-yl-OO5" id="AwQ-7R-vEk"/>
+                        <outlet property="progressIndicator" destination="VPA-8k-75H" id="XvM-dE-cSi"/>
+                        <outlet property="statusTextField" destination="JWv-KL-XiA" id="uJA-qb-7GO"/>
+                    </connections>
                 </viewController>
                 <customObject id="nuZ-cp-OWg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

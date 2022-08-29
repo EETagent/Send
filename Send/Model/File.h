@@ -9,15 +9,18 @@
 
 @property NSString *filename;
 
-@property NSURL *path;
+@property NSString *path;
 
 @property NSUInteger size;
 
-- (instancetype)initWithPath:(NSURL *)path;
+- (NSURL*)urlPath;
 
-+ (NSString *) getStringRepresentationFromSize:(NSUInteger)size;
+- (instancetype)initWithPath:(NSString *)path;
 
-- (NSString *) getSizeAsString;
+- (instancetype)initWithURLPath:(NSURL *)path;
 
+- (NSString *) stringSize;
+
++ (NSString *) StringRepresentationFromSize:(NSUInteger)size;
 
 @end

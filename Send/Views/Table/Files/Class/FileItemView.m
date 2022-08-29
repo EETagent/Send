@@ -5,6 +5,8 @@
 
 #import "FileItemView.h"
 
+#import "../../../../../libzip/SSZipArchive/SSZipArchive.h"
+
 @implementation FileItemView
 
 - (instancetype)initWithCoder:(NSCoder *)coder {
@@ -25,6 +27,19 @@
 
 - (void)deleteItem:(id)sender {
     [[self fileDelegate] fileItemDeletedWithIndex:[self index]];
+}
+
+- (void)setFileName:(NSString *)fileName setSize:(NSString *)fileSize {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[self fileName] setStringValue:fileName];
+        [[self fileSize] setStringValue:fileSize];
+    });
+}
+
+- (void)setWithFile:(File *)file {
+    NSString *fileName = [file filename];
+    NSString *fileSize = [file stringSize];
+    [self setFileName:fileName setSize:fileSize];
 }
 
 @end

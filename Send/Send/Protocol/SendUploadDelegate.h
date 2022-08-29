@@ -9,10 +9,10 @@
 
 @optional
 
-- (void)fileUploadStartedWithSize:(NSUInteger)size;
+- (void)sendUploadStartedWithSize:(NSUInteger)size;
 
-- (void)fileUploadProgressWithTotalBytesUploaded:(NSUInteger)bytes;
+- (void)sendUploadProgressWithTotalBytesUploaded:(NSUInteger)bytes;
 
-- (void)fileUploadCompleted;
+- (void)sendUploadCompleted;
 
 @end

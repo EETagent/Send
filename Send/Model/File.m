@@ -7,15 +7,13 @@
 
 @implementation File
 
-- (instancetype)initWithPath:(NSURL *)path {
+- (instancetype)initWithPath:(NSString *)filePath {
     self = [super init];
     if (self) {
-        NSURL *filePath = [path filePathURL];
-        NSString *filePathString = [filePath path];
         //NSString *fileNameWithoutExtension = [[[NSFileManager defaultManager] displayNameAtPath:filePathString] stringByDeletingPathExtension];
-        NSString *fileName= [[NSFileManager defaultManager] displayNameAtPath:filePathString];
+        NSString *fileName= [[NSFileManager defaultManager] displayNameAtPath:filePath];
         NSError *error;
-        NSUInteger fileSize = [[[NSFileManager defaultManager] attributesOfItemAtPath:filePathString error:&error] fileSize];
+        NSUInteger fileSize = [[[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:&error] fileSize];
         [self setFilename:fileName];
         [self setPath:filePath];
         [self setSize:fileSize];
@@ -23,11 +21,20 @@
     return self;
 }
 
-- (NSString *)getSizeAsString {
-    return [File getStringRepresentationFromSize:[self size]];
+- (instancetype)initWithURLPath:(NSURL *)fileURLPath {
+    NSString *filePath = [fileURLPath path];
+    self = [self initWithPath:filePath];
+    return self;
 }
 
-+ (NSString *)getStringRepresentationFromSize:(NSUInteger)size {
+- (NSURL *)urlPath {
+    return [NSURL fileURLWithPath:[self path]];
+}
+- (NSString *)stringSize {
+    return [File StringRepresentationFromSize:[self size]];
+}
+
++ (NSString *)StringRepresentationFromSize:(NSUInteger)size {
     double convertedValue = size;
     
     NSArray *tokens = @[@"bytes",@"KB",@"MB",@"GB",@"TB",@"PB", @"EB", @"ZB", @"YB"];

@@ -5,7 +5,20 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface UploadViewController : NSViewController
+#import "SendUploadDelegate.h"
+
+#import "FileItemView.h"
+
+#import "File.h"
+
+@interface UploadViewController : NSViewController <SendUploadDelegate>
+
+@property (nonatomic, weak) IBOutlet NSTextField *statusTextField;
+@property (nonatomic, weak) IBOutlet NSProgressIndicator *progressIndicator;
+
+@property (nonatomic, weak) IBOutlet FileItemView *fileItemView;
+
+- (void)uploadFiles:(NSArray<File *> *)files;
 
 @end
 

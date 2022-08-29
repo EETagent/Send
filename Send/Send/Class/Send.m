@@ -7,6 +7,8 @@
 
 #import "../../../libffsend/src/ffsend.h"
 
+#import "../../../libzip/SSZipArchive/SSZipArchive.h"
+
 @implementation Send {
     uploaded_file_t *uploadedFile;
     progress_reporter_t *progressReporter;
@@ -28,29 +30,42 @@
 
 void uploadStarted (unsigned long long size, void *ctx) {
     Send* send = (__bridge Send *)(ctx);
-    [[send delegate] fileUploadStartedWithSize:size];
+    [[send delegate] sendUploadStartedWithSize:size];
 }
 
 void uploadProgress (unsigned long long bytes, void *ctx) {
     Send* send = (__bridge Send *)(ctx);
-    [[send delegate] fileUploadProgressWithTotalBytesUploaded:bytes];
+    [[send delegate] sendUploadProgressWithTotalBytesUploaded:bytes];
 }
 
 void uploadCompleted (void *ctx) {
     Send* send = (__bridge Send *)(ctx);
-    [[send delegate] fileUploadCompleted];
+    [[send delegate] sendUploadCompleted];
 }
+
 
 - (void)uploadFileWithPath:(NSString*)path {
     const char *pathString = [path UTF8String];
     
     progress_reporter_setup(self->progressReporter, uploadStarted, uploadProgress, uploadCompleted, (__bridge void *)(self));
-
+    
     upload_file(pathString, nil, [self limit], [self expiry], self->progressReporter, self->uploadedFile);
 }
 
-- (void)uploadFilesWithPaths:(NSArray<NSString*>*)paths {
-    
+- (void)uploadFileWithURLPath:(NSURL *)urlPath {
+    NSString *path = [urlPath path];
+    return [self uploadFileWithPath:path];
+}
+
+- (void)uploadFilesWithPaths:(NSArray<NSString *> *)files tempFileBlock:(void (^)(NSString *path))tempFileBlock {
+    const NSString *archiveName = @"Send-Archive.zip";
+    NSString *tempZIP = [NSTemporaryDirectory() stringByAppendingPathComponent:(NSString *)archiveName];
+    BOOL createZIP = [SSZipArchive createZipFileAtPath:tempZIP withFilesAtPaths:files];
+    if (createZIP) {
+        tempFileBlock(tempZIP);
+        [self uploadFileWithPath:tempZIP];
+        [[NSFileManager defaultManager] removeItemAtPath:tempZIP error:nil];
+    }
 }
 
 - (NSString *)uploadedFileGetId {

@@ -16,6 +16,8 @@
 
 @property (nonatomic, weak) IBOutlet NSTextField *totalSize;
 
+- (IBAction)uploadFilesToSend:(id)sender;
+
 - (IBAction)openFile:(id)sender;
 
 // Respond to openDocument in menu

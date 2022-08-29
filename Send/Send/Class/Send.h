@@ -15,8 +15,10 @@
 @property long long expiry;
 @property unsigned char limit;
 
+- (void)uploadFileWithURLPath:(NSURL*)path;
 - (void)uploadFileWithPath:(NSString*)path;
-- (void)uploadFilesWithPaths:(NSArray<NSString*>*)paths;
+
+- (void)uploadFilesWithPaths:(NSArray<NSString *> *)files tempFileBlock:(void (^)(NSString *path))tempFileBlock;
 
 - (NSString *)uploadedFileGetId;
 - (long long)uploadedFileGetExpireAt;

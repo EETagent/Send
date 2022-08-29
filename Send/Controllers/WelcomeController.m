@@ -17,7 +17,7 @@
 - (void)moveToFilesViewWithFiles:(NSArray<NSURL *> *)filesURL {
     NSMutableArray<File *> *files = [NSMutableArray new];
     for (NSURL *path in filesURL) {
-        File *file = [[File alloc] initWithPath:path];
+        File *file = [[File alloc] initWithURLPath:path];
         [files addObject:file];
     }
     FilesViewController *controller = [[self storyboard] instantiateControllerWithIdentifier:@"FilesView"];
