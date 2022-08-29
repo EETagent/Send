@@ -27,6 +27,7 @@
 		46CAAA2928B802440015008F /* SendUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA2828B802440015008F /* SendUITestsLaunchTests.m */; };
 		46CAAA3928B807050015008F /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA3828B807050015008F /* UploadViewController.m */; };
 		46CAAA4528B81B3C0015008F /* Send.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA4428B81B3C0015008F /* Send.m */; };
+		46CF0F4328BD11FF00298A84 /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CF0F4228BD11FF00298A84 /* ResultView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,8 @@
 		46CAAA3C28B808250015008F /* libffsend.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libffsend.xcodeproj; path = libffsend/libffsend.xcodeproj; sourceTree = "<group>"; };
 		46CAAA4328B81B3C0015008F /* Send.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Send.h; sourceTree = "<group>"; };
 		46CAAA4428B81B3C0015008F /* Send.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Send.m; sourceTree = "<group>"; };
+		46CF0F4128BD11FF00298A84 /* ResultView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultView.h; sourceTree = "<group>"; };
+		46CF0F4228BD11FF00298A84 /* ResultView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +321,7 @@
 		46CAAA3B28B8077E0015008F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				46CF0F3E28BD11EF00298A84 /* Upload */,
 				4651F4AE28BB9DFA00FF3E4D /* Drop */,
 				4618301728BA7FE100BFB7E8 /* Table */,
 			);
@@ -339,6 +343,15 @@
 				46930D2428B8334100B07A0C /* Protocol */,
 			);
 			path = Send;
+			sourceTree = "<group>";
+		};
+		46CF0F3E28BD11EF00298A84 /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				46CF0F4128BD11FF00298A84 /* ResultView.h */,
+				46CF0F4228BD11FF00298A84 /* ResultView.m */,
+			);
+			path = Upload;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -506,6 +519,7 @@
 				46CAAA0B28B802430015008F /* WelcomeController.m in Sources */,
 				46371F2C28BA4F5F008F6DFF /* FileItemView.m in Sources */,
 				462E688A28BA28C8001F569F /* FilesViewController.m in Sources */,
+				46CF0F4328BD11FF00298A84 /* ResultView.m in Sources */,
 				46CAAA3928B807050015008F /* UploadViewController.m in Sources */,
 				46CAAA1228B802440015008F /* main.m in Sources */,
 				46CAAA0828B802430015008F /* AppDelegate.m in Sources */,

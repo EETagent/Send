@@ -943,17 +943,54 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
+                            <stackView hidden="YES" distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pPW-FH-Ai6" customClass="ResultView">
+                                <rect key="frame" x="30" y="30" width="460" height="130"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cWS-cr-nsk">
+                                        <rect key="frame" x="0.0" y="109" width="96" height="21"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="9MW-ns-Q0X">
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="Y76-l7-odK" userLabel="Qrcode">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="101"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="leading" alignment="left" imageScaling="proportionallyUpOrDown" inset="2" id="LoX-xZ-STT">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                                <connections>
+                                    <outlet property="qrcodeImage" destination="Y76-l7-odK" id="VP9-ID-ddh"/>
+                                    <outlet property="urlTextField" destination="cWS-cr-nsk" id="nSN-K2-rq1"/>
+                                </connections>
+                            </stackView>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pPW-FH-Ai6" secondAttribute="trailing" constant="30" id="7SR-eo-xw1"/>
                             <constraint firstItem="SYb-0h-vYb" firstAttribute="leading" secondItem="SXe-gv-rCo" secondAttribute="leading" constant="30" id="Gs1-Lg-nod"/>
                             <constraint firstAttribute="trailing" secondItem="SYb-0h-vYb" secondAttribute="trailing" constant="30" id="HXb-l5-caP"/>
+                            <constraint firstAttribute="bottom" secondItem="pPW-FH-Ai6" secondAttribute="bottom" constant="30" id="Iud-3M-w3b"/>
                             <constraint firstAttribute="bottom" secondItem="SYb-0h-vYb" secondAttribute="bottom" constant="180" id="MSY-BP-8IQ"/>
+                            <constraint firstItem="pPW-FH-Ai6" firstAttribute="top" secondItem="SYb-0h-vYb" secondAttribute="bottom" constant="20" id="no4-bu-deF"/>
                             <constraint firstItem="SYb-0h-vYb" firstAttribute="top" secondItem="SXe-gv-rCo" secondAttribute="top" constant="30" id="p56-bU-9qn"/>
+                            <constraint firstItem="pPW-FH-Ai6" firstAttribute="leading" secondItem="SXe-gv-rCo" secondAttribute="leading" constant="30" id="xJP-XU-4ro"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="fileItemView" destination="PHc-yl-OO5" id="AwQ-7R-vEk"/>
                         <outlet property="progressIndicator" destination="VPA-8k-75H" id="XvM-dE-cSi"/>
+                        <outlet property="resultView" destination="pPW-FH-Ai6" id="Aed-BS-FoY"/>
                         <outlet property="statusTextField" destination="JWv-KL-XiA" id="uJA-qb-7GO"/>
                     </connections>
                 </viewController>

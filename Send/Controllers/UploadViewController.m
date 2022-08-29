@@ -72,6 +72,11 @@
     });
 }
 
-- (void)sendUploadCompleted {}
+- (void)sendUploadCompleted {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"%@", [self->send uploadedFileGetLink]);
+        [[self resultView] setValuesForURL:[self->send uploadedFileGetLink]];
+    });
+}
 
 @end
