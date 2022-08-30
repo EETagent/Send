@@ -13,6 +13,6 @@
 
 - (void)sendUploadProgressWithTotalBytesUploaded:(NSUInteger)bytes;
 
-- (void)sendUploadCompleted;
+- (void)sendUploadCompletedWithStatus:(NSInteger)status;
 
 @end

@@ -242,7 +242,7 @@ pub extern "C" fn upload_file(
                 result.secret(),
             );
             
-            progress_reporter.unwrap().lock().unwrap().finish();
+            //progress_reporter.unwrap().lock().unwrap().finish();
         } else {
             // Upload failure
             return -2;

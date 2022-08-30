@@ -74,17 +74,19 @@
     });
 }
 
-- (void)sendUploadCompleted {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSURL *link = [self->send uploadedFileGetLink];
-        if (link) {
-            [[self resultView] setUrl:link];
-            [[self resultView] setValues];
-            // TODO: Translation
-            [[self statusTextField] setStringValue:@"Váš soubor je zašifrovaný a připraven k použití"];
-            [[self statusTextField] stopAnimating];
-        }
-    });
+- (void)sendUploadCompletedWithStatus:(NSInteger)status {
+    if (status == 0) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSURL *link = [self->send uploadedFileGetLink];
+            if (link) {
+                [[self resultView] setUrl:link];
+                [[self resultView] setValues];
+                // TODO: Translation
+                [[self statusTextField] setStringValue:@"Váš soubor je zašifrovaný a připraven k použití"];
+                [[self statusTextField] stopAnimating];
+            }
+        });
+    }
 }
 
 - (void)returnToWelcome:(id)sender {

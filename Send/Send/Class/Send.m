@@ -39,8 +39,8 @@ void uploadProgress (unsigned long long bytes, void *ctx) {
 }
 
 void uploadCompleted (void *ctx) {
-    Send* send = (__bridge Send *)(ctx);
-    [[send delegate] sendUploadCompleted];
+    //Send* send = (__bridge Send *)(ctx);
+    //[[send delegate] sendUploadCompleted];
 }
 
 
@@ -49,7 +49,8 @@ void uploadCompleted (void *ctx) {
     
     progress_reporter_setup(self->progressReporter, uploadStarted, uploadProgress, uploadCompleted, (__bridge void *)(self));
     
-    upload_file(pathString, nil, [self limit], [self expiry], self->progressReporter, self->uploadedFile);
+    NSInteger status = upload_file(pathString, nil, [self limit], [self expiry], self->progressReporter, self->uploadedFile);
+    [[self delegate] sendUploadCompletedWithStatus:status];
 }
 
 - (void)uploadFileWithURLPath:(NSURL *)urlPath {
