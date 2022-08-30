@@ -66,7 +66,7 @@
             [[self resultView] setValues];
             [[self resultView] setHidden:NO];
             
-            [[self mainButton] setTitle:@"Exit"];
+            [[self mainButton] setTitle:NSLocalizedString(@"Exit", @"Exit button")];
             self->fileUploaded = YES;
         });
     }
