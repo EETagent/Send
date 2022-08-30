@@ -16,7 +16,6 @@
 		4634032028BE70AE00C759DB /* SettingsStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4634031F28BE70AE00C759DB /* SettingsStackView.m */; };
 		4634032128BE73EB00C759DB /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CF0F4228BD11FF00298A84 /* ResultView.m */; };
 		4634032228BE740600C759DB /* SettingsStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4634031F28BE70AE00C759DB /* SettingsStackView.m */; };
-		4634032928BE7E8000C759DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46CAAA0E28B802440015008F /* Main.storyboard */; };
 		4634033228BE805200C759DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4634033428BE805200C759DB /* Localizable.strings */; };
 		46371F2C28BA4F5F008F6DFF /* FileItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46371F2B28BA4F5F008F6DFF /* FileItemView.m */; };
 		46BFCF3228BBEF66006919D0 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 46BFCF3128BBEF66006919D0 /* Credits.rtf */; };
@@ -253,13 +252,6 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		4634031D28BE6F4500C759DB /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		4634032328BE741300C759DB /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -440,7 +432,6 @@
 		46EAB05F28BE446D00BA82D5 /* Send Share */ = {
 			isa = PBXGroup;
 			children = (
-				4634031D28BE6F4500C759DB /* Views */,
 				4634031C28BE6EE800C759DB /* Controllers */,
 				46EAB06028BE446D00BA82D5 /* icon.icns */,
 				46EAB06528BE446D00BA82D5 /* ShareViewController.xib */,
@@ -645,7 +636,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4634032928BE7E8000C759DB /* Main.storyboard in Resources */,
 				4634033228BE805200C759DB /* Localizable.strings in Resources */,
 				46EAB06728BE446D00BA82D5 /* ShareViewController.xib in Resources */,
 				46EAB06128BE446D00BA82D5 /* icon.icns in Resources */,
