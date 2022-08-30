@@ -26,7 +26,7 @@
 
 - (IBAction)returnToWelcome:(id)sender;
 
-- (void)uploadFiles:(NSArray<File *> *)files;
+- (void)uploadFiles:(NSArray<File *> *)files withExpiry:(long long)expiry withLimit:(unsigned char)limit;
 
 @end
 

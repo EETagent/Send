@@ -641,7 +641,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="expiryPopUpButton" destination="b95-Sy-qKL" id="7YR-IC-wle"/>
                         <outlet property="fileListView" destination="3L7-2g-c2R" id="Jme-oT-RjP"/>
+                        <outlet property="limitPopUpButton" destination="XA1-Vl-rxp" id="Ei2-Ka-SU8"/>
                         <outlet property="totalSize" destination="5NX-t2-iF7" id="52p-Ee-FNi"/>
                     </connections>
                 </viewController>

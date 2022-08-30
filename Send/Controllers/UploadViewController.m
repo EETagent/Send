@@ -20,12 +20,15 @@
 }
 
 
-- (void)uploadFiles:(NSArray<File *> *)files {
+- (void)uploadFiles:(NSArray<File *> *)files withExpiry:(long long)expiry withLimit:(unsigned char)limit {
     if ([files count] == 0)
         return;
     
     self->send = [Send new];
     [self->send setDelegate:self];
+    
+    [self->send setExpiry:expiry];
+    [self->send setLimit:limit];
     
     // Single file
     if ([files count] == 1) {
