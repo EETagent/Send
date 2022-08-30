@@ -37,7 +37,7 @@
     CGContextStrokePath(currentContext);
     // Reset phsase counter
     // TODO: Investigate smooth transition
-    if (self->dashedBorderPhase > 10000)
+    if (self->dashedBorderPhase > FLT_MAX - 10)
         self->dashedBorderPhase = 0;
 }
 
