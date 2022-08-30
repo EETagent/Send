@@ -37,8 +37,7 @@
         size += [file size];
     }
     NSString *totalSize = [File StringRepresentationFromSize:size];
-    // TODO: Translate string
-    NSString *string = [NSString stringWithFormat:@"Celková velikost: %@", totalSize];
+    NSString *string = [NSString stringWithFormat: @"%@ %@", NSLocalizedString(@"Total size:", @"Total size in FilesView"), totalSize];
     [[self totalSize] setStringValue:string];
 }
 
@@ -60,7 +59,6 @@
     [self reloadTotalSize];
 }
 
-
 - (void)openFile:(id)sender {
     NSOpenPanel* openDialog = [NSOpenPanel openPanel];
     [openDialog setCanChooseFiles:YES];
@@ -73,7 +71,6 @@
     }
 }
 
-
 - (void)openDocument:(id)sender {
     [self openFile:sender];
 }
@@ -81,6 +78,10 @@
 - (void)openPath:(NSString *)path {
     NSArray<NSURL *> *array = [NSArray arrayWithObject:[NSURL fileURLWithPath:path]];
     [self addFilesToTable:array];
+}
+
+- (void)dropFilesAdded:(NSArray<NSURL *> *)files {
+    [self addFilesToTable:files];
 }
 
 - (long long)parseExpiry {
@@ -100,7 +101,7 @@
             // 7 days
             return 7*24*60*minute;
         default:
-            return 60* minute;
+            return 60*minute;
     }
 }
 
@@ -120,16 +121,13 @@
             return 3;
     }
 }
+
 - (void)uploadFilesToSend:(id)sender {
     if ([[self fileList] count] < 1)
         return;
     UploadViewController *controller = [[self storyboard] instantiateControllerWithIdentifier:@"UploadView"];
     [controller uploadFiles:[self fileList] withExpiry:[self parseExpiry] withLimit:[self parseLimit]];
     [[[self view] window] setContentViewController:controller];
-}
-
-- (void)dropFilesAdded:(NSArray<NSURL *> *)files {
-    [self addFilesToTable:files];
 }
 
 - (BOOL)tableView:(NSTableView *)aTableView shouldSelectRow:(NSInteger)rowIndex {
@@ -148,7 +146,7 @@
             [fileItemView setIndex:row];
             [fileItemView setFileDelegate:self];
             if (file)
-                [fileItemView setWithFile:file];
+                [fileItemView setupWithFile:file];
             return fileItemView;
         }
     }

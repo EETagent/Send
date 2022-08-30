@@ -5,8 +5,6 @@
 
 #import "FileItemView.h"
 
-#import "../../../../../libzip/SSZipArchive/SSZipArchive.h"
-
 @implementation FileItemView
 
 - (instancetype)initWithCoder:(NSCoder *)coder {
@@ -36,7 +34,7 @@
     });
 }
 
-- (void)setWithFile:(File *)file {
+- (void)setupWithFile:(File *)file {
     NSString *fileName = [file filename];
     NSString *fileSize = [file stringSize];
     [self setFileName:fileName setSize:fileSize];

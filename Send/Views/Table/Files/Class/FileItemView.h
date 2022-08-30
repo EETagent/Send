@@ -23,6 +23,6 @@
 
 - (void)setFileName:(NSString*)fileName setSize:(NSString*)size;
 
-- (void)setWithFile:(File *)file;
+- (void)setupWithFile:(File *)file;
 
 @end

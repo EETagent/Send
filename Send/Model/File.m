@@ -30,6 +30,7 @@
 - (NSURL *)urlPath {
     return [NSURL fileURLWithPath:[self path]];
 }
+
 - (NSString *)stringSize {
     return [File StringRepresentationFromSize:[self size]];
 }

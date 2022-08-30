@@ -43,7 +43,6 @@ void uploadCompleted (void *ctx) {
     //[[send delegate] sendUploadCompleted];
 }
 
-
 - (void)uploadFileWithPath:(NSString*)path {
     const char *pathString = [path UTF8String];
     
