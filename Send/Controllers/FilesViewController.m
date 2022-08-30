@@ -84,54 +84,16 @@
     [self addFilesToTable:files];
 }
 
-- (long long)parseExpiry {
-    NSPopUpButton *button = [self expiryPopUpButton];
-    const long long minute = 60;
-    switch ([button indexOfSelectedItem]) {
-        case 0:
-            // 5 minutes
-            return 5*minute;
-        case 1:
-            // 1 hour
-            return 60*minute;
-        case 2:
-            // 1 days
-            return 24*60*minute;
-        case 3:
-            // 7 days
-            return 7*24*60*minute;
-        default:
-            return 60*minute;
-    }
-}
-
-- (unsigned char)parseLimit {
-    NSPopUpButton *button = [self limitPopUpButton];
-    switch ([button indexOfSelectedItem]) {
-        case 0:
-        case 1:
-        case 2:
-        case 3:
-        case 4:
-            return [button indexOfSelectedItem] + 1;
-        case 6:
-            // 20 downloads
-            return 20;
-        default:
-            return 3;
-    }
-}
-
 - (void)uploadFilesToSend:(id)sender {
     if ([[self fileList] count] < 1)
         return;
     UploadViewController *controller = [[self storyboard] instantiateControllerWithIdentifier:@"UploadView"];
     
-    NSString *password = nil;
-    if ([[self passwordCheckBox] state] == NSControlStateValueOn)
-        password = [[self passwordTextField] stringValue];
+    long long expiry = [[self settingsStackView] parseExpiry];
+    unsigned char limit = [[self settingsStackView] parseLimit];
+    NSString *password = [[self settingsStackView] parsePassword];
     
-    [controller uploadFiles:[self fileList] withExpiry:[self parseExpiry] withLimit:[self parseLimit] withPassword:password];
+    [controller uploadFiles:[self fileList] withExpiry:expiry withLimit:limit withPassword:password];
     
     [[[self view] window] setContentViewController:controller];
 }

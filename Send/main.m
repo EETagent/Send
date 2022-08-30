@@ -5,8 +5,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "Send.h"
-
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         /*Send *send = [Send new];

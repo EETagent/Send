@@ -5,9 +5,9 @@
 
 #import "Send.h"
 
-#import "../../../libffsend/src/ffsend.h"
+#import "../libffsend/src/ffsend.h"
 
-#import "../../../libzip/SSZipArchive/SSZipArchive.h"
+#import <libzip/SSZipArchive.h>
 
 @implementation Send {
     uploaded_file_t *uploadedFile;

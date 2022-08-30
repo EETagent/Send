@@ -1,6 +1,6 @@
 //
-//  SendDownloadDelegate.h
-//  Send
+//  SendUploadDelegate.h
+//  libffsendObjc
 //
 
 #import <Foundation/Foundation.h>
@@ -16,3 +16,4 @@
 - (void)sendUploadCompletedWithStatus:(NSInteger)status;
 
 @end
+
