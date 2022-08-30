@@ -42,6 +42,12 @@ Send is still in development
 
 <img src="./.github/img/send4.jpg" width=500px>
 
+<img src="./.github/img/share1.jpg" width=500px>
+
+<img src="./.github/img/share2.jpg" width=500px>
+
+<img src="./.github/img/share3.jpg" width=500px>
+
 ## 🎥 Video
 
 https://user-images.githubusercontent.com/20557318/187444449-51a2b0f0-55da-47da-bbc2-4e891a2a61fa.mp4
