@@ -37,3 +37,10 @@ Send is still in development
 <img src="./.github/img/send1.jpg" width=500px>
 
 <img src="./.github/img/send2.jpg" width=500px>
+
+<img src="./.github/img/send3.jpg" width=500px>
+
+<img src="./.github/img/send4.jpg" width=500px>
+
+## 🎥 Video
+
