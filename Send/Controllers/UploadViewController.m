@@ -62,8 +62,7 @@
         [[self progressIndicator] setDoubleValue:0];
         //FileItemView
         [[self fileItemView] setWithFile:self->file];
-        // TODO: Translation
-        [[self statusTextField] setStringValue:@"Váše soubory se právě nahrávají"];
+        //[[self statusTextField] setStringValue:NSLocalizedString(@"Your files are currently being uploaded", @"Files uploading status")];
         [[self statusTextField] startAnimating];
     });
 }
@@ -82,7 +81,7 @@
                 [[self resultView] setUrl:link];
                 [[self resultView] setValues];
                 // TODO: Translation
-                [[self statusTextField] setStringValue:@"Váš soubor je zašifrovaný a připraven k použití"];
+                [[self statusTextField] setStringValue:NSLocalizedString(@"Your file is encrypted and ready to send", @"Successful file upload status")];
                 [[self statusTextField] stopAnimating];
             }
         });

@@ -102,208 +102,6 @@
                                                 <action selector="redo:" target="Ady-hI-5gd" id="oIA-Rs-6OD"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="WRV-NI-Exz"/>
-                                        <menuItem title="Cut" keyEquivalent="x" id="uRl-iY-unG">
-                                            <connections>
-                                                <action selector="cut:" target="Ady-hI-5gd" id="YJe-68-I9s"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Copy" keyEquivalent="c" id="x3v-GG-iWU">
-                                            <connections>
-                                                <action selector="copy:" target="Ady-hI-5gd" id="G1f-GL-Joy"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Paste" keyEquivalent="v" id="gVA-U4-sdL">
-                                            <connections>
-                                                <action selector="paste:" target="Ady-hI-5gd" id="UvS-8e-Qdg"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Paste and Match Style" keyEquivalent="V" id="WeT-3V-zwk">
-                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
-                                            <connections>
-                                                <action selector="pasteAsPlainText:" target="Ady-hI-5gd" id="cEh-KX-wJQ"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Delete" id="pa3-QI-u2k">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="delete:" target="Ady-hI-5gd" id="0Mk-Ml-PaM"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Select All" keyEquivalent="a" id="Ruw-6m-B2m">
-                                            <connections>
-                                                <action selector="selectAll:" target="Ady-hI-5gd" id="VNm-Mi-diN"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="uyl-h8-XO2"/>
-                                        <menuItem title="Find" id="4EN-yA-p0u">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Find" id="1b7-l0-nxx">
-                                                <items>
-                                                    <menuItem title="Find…" tag="1" keyEquivalent="f" id="Xz5-n4-O0W">
-                                                        <connections>
-                                                            <action selector="performFindPanelAction:" target="Ady-hI-5gd" id="cD7-Qs-BN4"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Find and Replace…" tag="12" keyEquivalent="f" id="YEy-JH-Tfz">
-                                                        <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
-                                                        <connections>
-                                                            <action selector="performFindPanelAction:" target="Ady-hI-5gd" id="WD3-Gg-5AJ"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Find Next" tag="2" keyEquivalent="g" id="q09-fT-Sye">
-                                                        <connections>
-                                                            <action selector="performFindPanelAction:" target="Ady-hI-5gd" id="NDo-RZ-v9R"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Find Previous" tag="3" keyEquivalent="G" id="OwM-mh-QMV">
-                                                        <connections>
-                                                            <action selector="performFindPanelAction:" target="Ady-hI-5gd" id="HOh-sY-3ay"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Use Selection for Find" tag="7" keyEquivalent="e" id="buJ-ug-pKt">
-                                                        <connections>
-                                                            <action selector="performFindPanelAction:" target="Ady-hI-5gd" id="U76-nv-p5D"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Jump to Selection" keyEquivalent="j" id="S0p-oC-mLd">
-                                                        <connections>
-                                                            <action selector="centerSelectionInVisibleArea:" target="Ady-hI-5gd" id="IOG-6D-g5B"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                </items>
-                                            </menu>
-                                        </menuItem>
-                                        <menuItem title="Spelling and Grammar" id="Dv1-io-Yv7">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Spelling" id="3IN-sU-3Bg">
-                                                <items>
-                                                    <menuItem title="Show Spelling and Grammar" keyEquivalent=":" id="HFo-cy-zxI">
-                                                        <connections>
-                                                            <action selector="showGuessPanel:" target="Ady-hI-5gd" id="vFj-Ks-hy3"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Check Document Now" keyEquivalent=";" id="hz2-CU-CR7">
-                                                        <connections>
-                                                            <action selector="checkSpelling:" target="Ady-hI-5gd" id="fz7-VC-reM"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem isSeparatorItem="YES" id="bNw-od-mp5"/>
-                                                    <menuItem title="Check Spelling While Typing" id="rbD-Rh-wIN">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="toggleContinuousSpellChecking:" target="Ady-hI-5gd" id="7w6-Qz-0kB"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Check Grammar With Spelling" id="mK6-2p-4JG">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="toggleGrammarChecking:" target="Ady-hI-5gd" id="muD-Qn-j4w"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Correct Spelling Automatically" id="78Y-hA-62v">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="toggleAutomaticSpellingCorrection:" target="Ady-hI-5gd" id="2lM-Qi-WAP"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                </items>
-                                            </menu>
-                                        </menuItem>
-                                        <menuItem title="Substitutions" id="9ic-FL-obx">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Substitutions" id="FeM-D8-WVr">
-                                                <items>
-                                                    <menuItem title="Show Substitutions" id="z6F-FW-3nz">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="orderFrontSubstitutionsPanel:" target="Ady-hI-5gd" id="oku-mr-iSq"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem isSeparatorItem="YES" id="gPx-C9-uUO"/>
-                                                    <menuItem title="Smart Copy/Paste" id="9yt-4B-nSM">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="toggleSmartInsertDelete:" target="Ady-hI-5gd" id="3IJ-Se-DZD"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Smart Quotes" id="hQb-2v-fYv">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="toggleAutomaticQuoteSubstitution:" target="Ady-hI-5gd" id="ptq-xd-QOA"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Smart Dashes" id="rgM-f4-ycn">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="toggleAutomaticDashSubstitution:" target="Ady-hI-5gd" id="oCt-pO-9gS"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Smart Links" id="cwL-P1-jid">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="toggleAutomaticLinkDetection:" target="Ady-hI-5gd" id="Gip-E3-Fov"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Data Detectors" id="tRr-pd-1PS">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="toggleAutomaticDataDetection:" target="Ady-hI-5gd" id="R1I-Nq-Kbl"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Text Replacement" id="HFQ-gK-NFA">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="toggleAutomaticTextReplacement:" target="Ady-hI-5gd" id="DvP-Fe-Py6"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                </items>
-                                            </menu>
-                                        </menuItem>
-                                        <menuItem title="Transformations" id="2oI-Rn-ZJC">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Transformations" id="c8a-y6-VQd">
-                                                <items>
-                                                    <menuItem title="Make Upper Case" id="vmV-6d-7jI">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="uppercaseWord:" target="Ady-hI-5gd" id="sPh-Tk-edu"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Make Lower Case" id="d9M-CD-aMd">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="lowercaseWord:" target="Ady-hI-5gd" id="iUZ-b5-hil"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Capitalize" id="UEZ-Bs-lqG">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="capitalizeWord:" target="Ady-hI-5gd" id="26H-TL-nsh"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                </items>
-                                            </menu>
-                                        </menuItem>
-                                        <menuItem title="Speech" id="xrE-MZ-jX0">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Speech" id="3rS-ZA-NoH">
-                                                <items>
-                                                    <menuItem title="Start Speaking" id="Ynk-f8-cLZ">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="startSpeaking:" target="Ady-hI-5gd" id="654-Ng-kyl"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Stop Speaking" id="Oyz-dy-DGm">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="stopSpeaking:" target="Ady-hI-5gd" id="dX8-6p-jy9"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                </items>
-                                            </menu>
-                                        </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>
@@ -388,22 +186,28 @@
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="18" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hro-Ob-mee">
                                 <rect key="frame" x="30" y="232" width="460" height="88"/>
                                 <subviews>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="AUi-be-JG7">
-                                        <rect key="frame" x="-2" y="60" width="455" height="28"/>
-                                        <textFieldCell key="cell" title="Jednoduché a soukromé sdílení souborů" id="87Z-8c-LE6">
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="AUi-be-JG7" userLabel="Headline">
+                                        <rect key="frame" x="-2" y="60" width="298" height="28"/>
+                                        <textFieldCell key="cell" title="Simple, private file sharing" id="87Z-8c-LE6">
                                             <font key="font" metaFont="systemBold" size="24"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
+                                        <attributedString key="userComments">
+                                            <fragment content="WelcomeView Headline"/>
+                                        </attributedString>
                                     </textField>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="MvX-5F-zZs">
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="MvX-5F-zZs" userLabel="Subtitle">
                                         <rect key="frame" x="-2" y="0.0" width="464" height="42"/>
                                         <textFieldCell key="cell" id="2wr-Am-WmR">
                                             <font key="font" textStyle="subheadline" name=".SFNS-Regular"/>
-                                            <string key="title">S Send jsou sdílené soubory šifrované end-to-end, takže ani my nevíme, co sdílíte. Platnost odkazů je navíc omezená. Soubory tak můžete sdílet soukromě a s jistotou, že se nezůstanou na internetu válet navždy.</string>
+                                            <string key="title">Send lets you share files with end-to-end encryption and a link that automatically expires. So you can keep what you share private and make sure your stuff doesn’t stay online forever.</string>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
+                                        <attributedString key="userComments">
+                                            <fragment content="WelcomeView Subtitle"/>
+                                        </attributedString>
                                     </textField>
                                 </subviews>
                                 <visibilityPriorities>
@@ -439,29 +243,38 @@
                                                 </connections>
                                             </button>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ewR-vj-yzg">
-                                                <rect key="frame" x="100" y="74" width="241" height="16"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Přetažením myší nebo kliknutím sem" id="as0-pb-qAw">
+                                                <rect key="frame" x="157" y="74" width="127" height="16"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Drag and drop files" id="as0-pb-qAw">
                                                     <font key="font" textStyle="headline" name=".SFNS-Bold"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
+                                                <attributedString key="userComments">
+                                                    <fragment content="DropView D&amp;D"/>
+                                                </attributedString>
                                             </textField>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q7B-i2-JbY">
-                                                <rect key="frame" x="156" y="40" width="128" height="14"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="můžete poslat až 10 GB" id="EWT-ky-x4L">
+                                                <rect key="frame" x="147" y="40" width="146" height="14"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="or click to send up to 10GB" id="EWT-ky-x4L">
                                                     <font key="font" textStyle="subheadline" name=".SFNS-Regular"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
+                                                <attributedString key="userComments">
+                                                    <fragment content="DropView 10GB"/>
+                                                </attributedString>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6Us-qz-nDQ">
-                                                <rect key="frame" x="123" y="-7" width="194" height="32"/>
-                                                <buttonCell key="cell" type="push" title="Vyberte soubory k nahrání" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SyA-Kd-DaZ">
+                                                <rect key="frame" x="139" y="-7" width="162" height="32"/>
+                                                <buttonCell key="cell" type="push" title="Select files to upload" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SyA-Kd-DaZ">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                                 <color key="bezelColor" red="0.3686274886" green="0.62352943419999995" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <attributedString key="userComments">
+                                                    <fragment content="DropView select button"/>
+                                                </attributedString>
                                                 <connections>
                                                     <action selector="openFile:" target="XHV-QG-UmI" id="L0l-uf-3BT"/>
                                                 </connections>
@@ -525,7 +338,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="45" viewBased="YES" id="3L7-2g-c2R" customClass="DropTableView">
-                                            <rect key="frame" x="0.0" y="0.0" width="478" height="220"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="163"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="0.0" height="20"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -645,16 +458,19 @@
                                         </connections>
                                     </button>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lhi-54-l1C">
-                                        <rect key="frame" x="28" y="2" width="315" height="16"/>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Vyberte soubory k nahrání" id="gHz-wO-AxW">
+                                        <rect key="frame" x="28" y="2" width="354" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Select files to upload" id="gHz-wO-AxW">
                                             <font key="font" metaFont="systemBold"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
+                                        <attributedString key="userComments">
+                                            <fragment content="FilesView select files"/>
+                                        </attributedString>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5NX-t2-iF7">
-                                        <rect key="frame" x="339" y="2" width="143" height="16"/>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Celková velikost: 1,4MB" id="3nt-6W-H1a">
+                                        <rect key="frame" x="378" y="2" width="104" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Total size: 1,4MB" id="3nt-6W-H1a">
                                             <font key="font" metaFont="systemLight" size="13"/>
                                             <color key="textColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -676,36 +492,36 @@
                                 <rect key="frame" x="20" y="20" width="480" height="105"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jtk-GE-CkC">
-                                        <rect key="frame" x="0.0" y="85" width="297" height="20"/>
+                                        <rect key="frame" x="0.0" y="85" width="223" height="20"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8th-ie-phr">
-                                                <rect key="frame" x="-2" y="4" width="113" height="16"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Platnost vyprší po" id="nM0-mq-q1p">
+                                                <rect key="frame" x="-2" y="4" width="81" height="16"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Expires after" id="nM0-mq-q1p">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XA1-Vl-rxp">
-                                                <rect key="frame" x="114" y="-4" width="131" height="25"/>
-                                                <popUpButtonCell key="cell" type="push" title="jednom stažení" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="vRD-AE-Cz8" id="8nX-Wr-2qO">
+                                                <rect key="frame" x="82" y="-4" width="124" height="25"/>
+                                                <popUpButtonCell key="cell" type="push" title="1 download" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="vRD-AE-Cz8" id="8nX-Wr-2qO">
                                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="menu"/>
                                                     <menu key="menu" id="IjD-kl-qB4">
                                                         <items>
-                                                            <menuItem title="jednom stažení" state="on" id="vRD-AE-Cz8"/>
-                                                            <menuItem title="2 staženích" id="pqN-Wt-TTe"/>
-                                                            <menuItem title="3 staženích" id="JkK-Xt-tdE"/>
-                                                            <menuItem title="4 staženích" id="nda-tz-HHE"/>
-                                                            <menuItem title="5 staženích" id="cBa-7R-f2j"/>
-                                                            <menuItem title="20 staženích" id="7Ku-K8-OS4"/>
+                                                            <menuItem title="1 download" state="on" id="vRD-AE-Cz8"/>
+                                                            <menuItem title="2 downloads" id="pqN-Wt-TTe"/>
+                                                            <menuItem title="3 downloads" id="JkK-Xt-tdE"/>
+                                                            <menuItem title="4 downloads" id="nda-tz-HHE"/>
+                                                            <menuItem title="5 downloads" id="cBa-7R-f2j"/>
+                                                            <menuItem title="20 downloads" id="7Ku-K8-OS4"/>
                                                         </items>
                                                     </menu>
                                                 </popUpButtonCell>
                                             </popUpButton>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BAI-hT-at4">
-                                                <rect key="frame" x="247" y="4" width="52" height="16"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="nebo za" id="yNA-35-9y1">
+                                                <rect key="frame" x="208" y="4" width="17" height="16"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="or" id="yNA-35-9y1">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -725,25 +541,25 @@
                                     </stackView>
                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b95-Sy-qKL">
                                         <rect key="frame" x="-3" y="53" width="99" height="25"/>
-                                        <popUpButtonCell key="cell" type="push" title="jeden den" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="AyN-pM-hOP" id="Nh1-QB-5sR">
+                                        <popUpButtonCell key="cell" type="push" title="1 day" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="AyN-pM-hOP" id="Nh1-QB-5sR">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
                                             <menu key="menu" id="Dh7-UK-tDI">
                                                 <items>
-                                                    <menuItem title="5 minut" id="Xvl-v2-zS9"/>
-                                                    <menuItem title="hodinu" id="4PV-Ud-cMG"/>
-                                                    <menuItem title="jeden den" state="on" id="AyN-pM-hOP"/>
-                                                    <menuItem title="7 dní" id="ijj-hM-ypL"/>
+                                                    <menuItem title="5 minutes" id="Xvl-v2-zS9"/>
+                                                    <menuItem title="1 hour" id="4PV-Ud-cMG"/>
+                                                    <menuItem title="1 day" state="on" id="AyN-pM-hOP"/>
+                                                    <menuItem title="7 days" id="ijj-hM-ypL"/>
                                                 </items>
                                             </menu>
                                         </popUpButtonCell>
                                     </popUpButton>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nps-zN-Gcu">
-                                        <rect key="frame" x="0.0" y="28" width="228" height="21"/>
+                                        <rect key="frame" x="0.0" y="28" width="263" height="21"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wav-Mh-kxD">
-                                                <rect key="frame" x="-2" y="4" width="126" height="18"/>
-                                                <buttonCell key="cell" type="check" title="Ochránit heslem" bezelStyle="regularSquare" imagePosition="left" inset="2" id="o8P-GE-Iin">
+                                                <rect key="frame" x="-2" y="4" width="161" height="18"/>
+                                                <buttonCell key="cell" type="check" title="Protect with password" bezelStyle="regularSquare" imagePosition="left" inset="2" id="o8P-GE-Iin">
                                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
@@ -756,7 +572,7 @@
                                                 </connections>
                                             </button>
                                             <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SqA-mS-heU">
-                                                <rect key="frame" x="132" y="0.0" width="96" height="21"/>
+                                                <rect key="frame" x="167" y="0.0" width="96" height="21"/>
                                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="5sM-QC-ceO">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -784,8 +600,8 @@
                                         </customSpacing>
                                     </stackView>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F4l-VL-iNH">
-                                        <rect key="frame" x="-7" y="-7" width="75" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Nahrát" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aKa-uq-S0I">
+                                        <rect key="frame" x="-7" y="-7" width="78" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Upload" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aKa-uq-S0I">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -846,8 +662,8 @@
                                 <rect key="frame" x="30" y="170" width="460" height="150"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="JWv-KL-XiA" customClass="DotAnimatedTextField">
-                                        <rect key="frame" x="-2" y="122" width="363" height="28"/>
-                                        <textFieldCell key="cell" selectable="YES" title="Váše soubory se právě nahrávají" id="0eA-X3-HyY">
+                                        <rect key="frame" x="-2" y="122" width="327" height="28"/>
+                                        <textFieldCell key="cell" title="Your files are being uploaded" id="0eA-X3-HyY">
                                             <font key="font" metaFont="systemBold" size="24"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -950,7 +766,7 @@
                                         <rect key="frame" x="0.0" y="92" width="460" height="30"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cWS-cr-nsk">
-                                                <rect key="frame" x="0.0" y="9" width="403" height="21"/>
+                                                <rect key="frame" x="0.0" y="9" width="391" height="21"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="9MW-ns-Q0X">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -958,8 +774,8 @@
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DnA-xR-taP">
-                                                <rect key="frame" x="404" y="3" width="63" height="32"/>
-                                                <buttonCell key="cell" type="push" title="Zpět" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FNl-Ze-Rax">
+                                                <rect key="frame" x="392" y="3" width="75" height="32"/>
+                                                <buttonCell key="cell" type="push" title="Return" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FNl-Ze-Rax">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
