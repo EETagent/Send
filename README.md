@@ -44,3 +44,6 @@ Send is still in development
 
 ## 🎥 Video
 
+https://user-images.githubusercontent.com/20557318/187444449-51a2b0f0-55da-47da-bbc2-4e891a2a61fa.mp4
+
+
