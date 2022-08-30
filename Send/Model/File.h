@@ -7,6 +7,10 @@
 
 @interface File : NSObject
 
+- (instancetype)initWithPath:(NSString *)path;
+
+- (instancetype)initWithURLPath:(NSURL *)path;
+
 @property NSString *filename;
 
 @property NSString *path;
@@ -14,10 +18,6 @@
 @property NSUInteger size;
 
 - (NSURL*)urlPath;
-
-- (instancetype)initWithPath:(NSString *)path;
-
-- (instancetype)initWithURLPath:(NSURL *)path;
 
 - (NSString *) stringSize;
 

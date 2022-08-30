@@ -19,6 +19,10 @@
     [super viewDidLoad];
 }
 
+- (void)returnToWelcome:(id)sender {
+    NSViewController *controller = [[self storyboard] instantiateControllerWithIdentifier:@"WelcomeView"];
+    [[[self view] window] setContentViewController:controller];
+}
 
 - (void)uploadFiles:(NSArray<File *> *)files withExpiry:(long long)expiry withLimit:(unsigned char)limit {
     if ([files count] == 0)
@@ -64,8 +68,8 @@
         [[self progressIndicator] setMaxValue:size];
         [[self progressIndicator] setDoubleValue:0];
         //FileItemView
-        [[self fileItemView] setWithFile:self->file];
-        //[[self statusTextField] setStringValue:NSLocalizedString(@"Your files are currently being uploaded", @"Files uploading status")];
+        [[self fileItemView] setupWithFile:self->file];
+        [[self statusTextField] setStringValue:NSLocalizedString(@"Your files are currently being uploaded", @"Files uploading status")];
         [[self statusTextField] startAnimating];
     });
 }
@@ -89,11 +93,6 @@
             }
         });
     }
-}
-
-- (void)returnToWelcome:(id)sender {
-    NSViewController *controller = [[self storyboard] instantiateControllerWithIdentifier:@"WelcomeView"];
-    [[[self view] window] setContentViewController:controller];
 }
 
 @end
