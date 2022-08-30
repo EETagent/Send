@@ -525,7 +525,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="45" viewBased="YES" id="3L7-2g-c2R" customClass="DropTableView">
-                                            <rect key="frame" x="0.0" y="0.0" width="478" height="163"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="220"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="0.0" height="20"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -843,10 +843,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="18" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SYb-0h-vYb">
-                                <rect key="frame" x="30" y="180" width="460" height="140"/>
+                                <rect key="frame" x="30" y="170" width="460" height="150"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="JWv-KL-XiA" customClass="DotAnimatedTextField">
-                                        <rect key="frame" x="-2" y="112" width="363" height="28"/>
+                                        <rect key="frame" x="-2" y="122" width="363" height="28"/>
                                         <textFieldCell key="cell" selectable="YES" title="Váše soubory se právě nahrávají" id="0eA-X3-HyY">
                                             <font key="font" metaFont="systemBold" size="24"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -854,17 +854,17 @@
                                         </textFieldCell>
                                     </textField>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PHc-yl-OO5" customClass="FileItemView">
-                                        <rect key="frame" x="0.0" y="36" width="460" height="58"/>
+                                        <rect key="frame" x="0.0" y="36" width="460" height="68"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0CZ-9I-0rU">
-                                                <rect key="frame" x="10" y="19" width="17" height="21"/>
+                                                <rect key="frame" x="10" y="24" width="17" height="21"/>
                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="8u4-6F-ScY">
                                                     <imageReference key="image" image="doc" symbolScale="large"/>
                                                 </imageCell>
                                                 <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </imageView>
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZVv-oL-gUk">
-                                                <rect key="frame" x="37" y="10" width="413" height="38"/>
+                                                <rect key="frame" x="37" y="15" width="413" height="38"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dt4-qa-Pkb">
                                                         <rect key="frame" x="-2" y="22" width="49" height="16"/>
@@ -944,14 +944,14 @@
                                 </customSpacing>
                             </stackView>
                             <stackView hidden="YES" distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pPW-FH-Ai6" customClass="ResultView">
-                                <rect key="frame" x="30" y="30" width="460" height="132"/>
+                                <rect key="frame" x="30" y="30" width="460" height="122"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="trg-26-6tT">
-                                        <rect key="frame" x="0.0" y="102" width="460" height="30"/>
+                                        <rect key="frame" x="0.0" y="92" width="460" height="30"/>
                                         <subviews>
-                                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cWS-cr-nsk">
+                                            <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cWS-cr-nsk">
                                                 <rect key="frame" x="0.0" y="9" width="403" height="21"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="9MW-ns-Q0X">
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="9MW-ns-Q0X">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -980,11 +980,14 @@
                                         </customSpacing>
                                     </stackView>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="Y76-l7-odK" userLabel="Qrcode">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="94"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="84"/>
                                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="leading" alignment="left" imageScaling="proportionallyUpOrDown" inset="2" id="LoX-xZ-STT">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="copyQrCode:" target="pPW-FH-Ai6" id="g08-yF-8TA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1010,7 +1013,7 @@
                             <constraint firstItem="SYb-0h-vYb" firstAttribute="leading" secondItem="SXe-gv-rCo" secondAttribute="leading" constant="30" id="Gs1-Lg-nod"/>
                             <constraint firstAttribute="trailing" secondItem="SYb-0h-vYb" secondAttribute="trailing" constant="30" id="HXb-l5-caP"/>
                             <constraint firstAttribute="bottom" secondItem="pPW-FH-Ai6" secondAttribute="bottom" constant="30" id="Iud-3M-w3b"/>
-                            <constraint firstAttribute="bottom" secondItem="SYb-0h-vYb" secondAttribute="bottom" constant="180" id="MSY-BP-8IQ"/>
+                            <constraint firstAttribute="bottom" secondItem="SYb-0h-vYb" secondAttribute="bottom" constant="170" id="MSY-BP-8IQ"/>
                             <constraint firstItem="pPW-FH-Ai6" firstAttribute="top" secondItem="SYb-0h-vYb" secondAttribute="bottom" constant="18" id="no4-bu-deF"/>
                             <constraint firstItem="SYb-0h-vYb" firstAttribute="top" secondItem="SXe-gv-rCo" secondAttribute="top" constant="30" id="p56-bU-9qn"/>
                             <constraint firstItem="pPW-FH-Ai6" firstAttribute="leading" secondItem="SXe-gv-rCo" secondAttribute="leading" constant="30" id="xJP-XU-4ro"/>

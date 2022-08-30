@@ -15,4 +15,6 @@
 
 - (void)setValues;
 
+- (IBAction)copyQrCode:(id)sender;
+
 @end

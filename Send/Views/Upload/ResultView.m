@@ -30,8 +30,6 @@
     return qrCode;
 }
 
-
-
 - (void)setValues{
     [self setHidden:NO];
     
@@ -41,6 +39,16 @@
     
     NSImage *qrCodeImage = [self getQRCodeForURLString:urlString];
     [[self qrcodeImage] setImage:qrCodeImage];
+}
+
+- (void)copyQrCode:(id)sender {
+    NSImage *qrCode = [[self qrcodeImage] image];
+    if (qrCode) {
+        NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
+        [pasteboard clearContents];
+        NSArray *pastedObject = [NSArray arrayWithObject:qrCode];
+        [pasteboard writeObjects:pastedObject];
+    }
 }
 
 @end
