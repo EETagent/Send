@@ -5,9 +5,7 @@
 
 #import "UploadViewController.h"
 
-#import "Send.h"
-
-#import "File.h"
+#import <Send_Library/Send.h>
 
 @implementation UploadViewController {
     Send *send;

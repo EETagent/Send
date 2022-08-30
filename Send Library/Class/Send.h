@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "SendUploadDelegate.h"
+#import <Send_Library/SendUploadDelegate.h>
 
 @interface Send : NSObject
 

@@ -11,69 +11,120 @@
 		461D13B928BBAEE4001E34CC /* DropTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 461D13B828BBAEE4001E34CC /* DropTableView.m */; };
 		462E688628B94B6F001F569F /* DropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 462E688528B94B6F001F569F /* DropView.m */; };
 		462E688A28BA28C8001F569F /* FilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462E688928BA28C8001F569F /* FilesViewController.m */; };
+		4634031728BE5E5B00C759DB /* Send_Library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EAB07B28BE554800BA82D5 /* Send_Library.framework */; };
+		4634031828BE5E5B00C759DB /* Send_Library.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46EAB07B28BE554800BA82D5 /* Send_Library.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4634032028BE70AE00C759DB /* SettingsStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4634031F28BE70AE00C759DB /* SettingsStackView.m */; };
+		4634032128BE73EB00C759DB /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CF0F4228BD11FF00298A84 /* ResultView.m */; };
+		4634032228BE740600C759DB /* SettingsStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4634031F28BE70AE00C759DB /* SettingsStackView.m */; };
+		4634033228BE805200C759DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4634033428BE805200C759DB /* Localizable.strings */; };
 		46371F2C28BA4F5F008F6DFF /* FileItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46371F2B28BA4F5F008F6DFF /* FileItemView.m */; };
-		4656491628BC14F2006FEF97 /* ffsend.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 46CAAA4128B808250015008F /* ffsend.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		4656491828BC14F3006FEF97 /* libzip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46371F2728BA46EF008F6DFF /* libzip.framework */; };
-		4656491928BC14F3006FEF97 /* libzip.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 46371F2728BA46EF008F6DFF /* libzip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		46930D2228B81FC900B07A0C /* ffsend.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46CAAA4128B808250015008F /* ffsend.dylib */; };
 		46BFCF3228BBEF66006919D0 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 46BFCF3128BBEF66006919D0 /* Credits.rtf */; };
 		46CAAA0828B802430015008F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA0728B802430015008F /* AppDelegate.m */; };
 		46CAAA0B28B802430015008F /* WelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA0A28B802430015008F /* WelcomeController.m */; };
 		46CAAA0D28B802440015008F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46CAAA0C28B802440015008F /* Assets.xcassets */; };
 		46CAAA1028B802440015008F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46CAAA0E28B802440015008F /* Main.storyboard */; };
 		46CAAA1228B802440015008F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA1128B802440015008F /* main.m */; };
-		46CAAA1D28B802440015008F /* SendTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA1C28B802440015008F /* SendTests.m */; };
-		46CAAA2728B802440015008F /* SendUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA2628B802440015008F /* SendUITests.m */; };
-		46CAAA2928B802440015008F /* SendUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA2828B802440015008F /* SendUITestsLaunchTests.m */; };
 		46CAAA3928B807050015008F /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA3828B807050015008F /* UploadViewController.m */; };
-		46CAAA4528B81B3C0015008F /* Send.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA4428B81B3C0015008F /* Send.m */; };
 		46CF0F4328BD11FF00298A84 /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CF0F4228BD11FF00298A84 /* ResultView.m */; };
 		46CF0F4628BD496900298A84 /* DotAnimatedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CF0F4528BD496900298A84 /* DotAnimatedTextField.m */; };
 		46D4CE0E28BE0C2000CD26B5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46D4CE1028BE0C2000CD26B5 /* Localizable.strings */; };
+		46EAB06128BE446D00BA82D5 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 46EAB06028BE446D00BA82D5 /* icon.icns */; };
+		46EAB06428BE446D00BA82D5 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EAB06328BE446D00BA82D5 /* ShareViewController.m */; };
+		46EAB06728BE446D00BA82D5 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46EAB06528BE446D00BA82D5 /* ShareViewController.xib */; };
+		46EAB06C28BE446D00BA82D5 /* Send Share.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 46EAB05E28BE446D00BA82D5 /* Send Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		46EAB08828BE55E200BA82D5 /* SendUploadDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EAB08728BE55E200BA82D5 /* SendUploadDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EAB09828BE57CD00BA82D5 /* Send.h in Headers */ = {isa = PBXBuildFile; fileRef = 46CAAA4328B81B3C0015008F /* Send.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EAB09928BE586400BA82D5 /* ffsend.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EAB09228BE566700BA82D5 /* ffsend.dylib */; };
+		46EAB09A28BE586400BA82D5 /* ffsend.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 46EAB09228BE566700BA82D5 /* ffsend.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		46EAB09B28BE586800BA82D5 /* libzip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EAB09728BE567000BA82D5 /* libzip.framework */; };
+		46EAB09C28BE586800BA82D5 /* libzip.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 46EAB09728BE567000BA82D5 /* libzip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		46EAB09D28BE589400BA82D5 /* Send_Library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EAB07B28BE554800BA82D5 /* Send_Library.framework */; };
+		46EAB09E28BE589400BA82D5 /* Send_Library.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46EAB07B28BE554800BA82D5 /* Send_Library.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		46EAB0A228BE58FC00BA82D5 /* Send.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA4428B81B3C0015008F /* Send.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		46371F2628BA46EF008F6DFF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 46371F2228BA46EF008F6DFF /* libzip.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AFF75A241C37279600F450AC;
-			remoteInfo = "libzip-Mac";
-		};
-		46CAAA1928B802440015008F /* PBXContainerItemProxy */ = {
+		4634031928BE5E5B00C759DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46CAA9FB28B802430015008F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 46CAAA0228B802430015008F;
-			remoteInfo = Send;
+			remoteGlobalIDString = 46EAB07A28BE554800BA82D5;
+			remoteInfo = "Send Library";
 		};
-		46CAAA2328B802440015008F /* PBXContainerItemProxy */ = {
+		46EAB06A28BE446D00BA82D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46CAA9FB28B802430015008F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 46CAAA0228B802430015008F;
-			remoteInfo = Send;
+			remoteGlobalIDString = 46EAB05D28BE446D00BA82D5;
+			remoteInfo = "Send Share";
 		};
-		46CAAA4028B808250015008F /* PBXContainerItemProxy */ = {
+		46EAB09128BE566700BA82D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46CAAA3C28B808250015008F /* libffsend.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = CA607EE972B195EB9635735F;
 			remoteInfo = "ffsend-cdylib";
 		};
+		46EAB09628BE567000BA82D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46371F2228BA46EF008F6DFF /* libzip.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AFF75A241C37279600F450AC;
+			remoteInfo = "libzip-Mac";
+		};
+		46EAB09F28BE589400BA82D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46CAA9FB28B802430015008F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 46EAB07A28BE554800BA82D5;
+			remoteInfo = libffsendObjc;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4656491728BC14F2006FEF97 /* Embed Libraries */ = {
+		4634031B28BE5E5B00C759DB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4656491928BC14F3006FEF97 /* libzip.framework in Embed Libraries */,
-				4656491628BC14F2006FEF97 /* ffsend.dylib in Embed Libraries */,
+				4634031828BE5E5B00C759DB /* Send_Library.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46EAB07028BE446D00BA82D5 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				46EAB06C28BE446D00BA82D5 /* Send Share.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46EAB08B28BE560300BA82D5 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				46EAB09C28BE586800BA82D5 /* libzip.framework in Embed Libraries */,
+				46EAB09A28BE586400BA82D5 /* ffsend.dylib in Embed Libraries */,
 			);
 			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46EAB0A128BE589400BA82D5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				46EAB09E28BE589400BA82D5 /* Send_Library.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -88,12 +139,15 @@
 		462E688528B94B6F001F569F /* DropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DropView.m; sourceTree = "<group>"; };
 		462E688828BA28C8001F569F /* FilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FilesViewController.h; sourceTree = "<group>"; };
 		462E688928BA28C8001F569F /* FilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FilesViewController.m; sourceTree = "<group>"; };
+		4634031E28BE70AE00C759DB /* SettingsStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SettingsStackView.h; sourceTree = "<group>"; };
+		4634031F28BE70AE00C759DB /* SettingsStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SettingsStackView.m; sourceTree = "<group>"; };
+		4634032D28BE7EA100C759DB /* cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = cs; path = cs.lproj/ShareViewController.strings; sourceTree = "<group>"; };
+		4634033328BE805200C759DB /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		46371F2228BA46EF008F6DFF /* libzip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libzip.xcodeproj; path = libzip/libzip.xcodeproj; sourceTree = "<group>"; };
 		46371F2A28BA4F5F008F6DFF /* FileItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FileItemView.h; sourceTree = "<group>"; };
 		46371F2B28BA4F5F008F6DFF /* FileItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FileItemView.m; sourceTree = "<group>"; };
 		4651F4B328BB9E2A00FF3E4D /* DropDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DropDelegate.h; sourceTree = "<group>"; };
 		46769B3F28BC038700F06426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		46930D2328B82E3100B07A0C /* SendUploadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SendUploadDelegate.h; sourceTree = "<group>"; };
 		46BFCF3128BBEF66006919D0 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		46CAAA0328B802430015008F /* Send.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Send.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46CAAA0628B802430015008F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -104,11 +158,6 @@
 		46CAAA0F28B802440015008F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46CAAA1128B802440015008F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; };
 		46CAAA1328B802440015008F /* Send.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Send.entitlements; sourceTree = "<group>"; };
-		46CAAA1828B802440015008F /* SendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		46CAAA1C28B802440015008F /* SendTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SendTests.m; sourceTree = "<group>"; };
-		46CAAA2228B802440015008F /* SendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		46CAAA2628B802440015008F /* SendUITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SendUITests.m; sourceTree = "<group>"; };
-		46CAAA2828B802440015008F /* SendUITestsLaunchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SendUITestsLaunchTests.m; sourceTree = "<group>"; };
 		46CAAA3728B807050015008F /* UploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = UploadViewController.h; sourceTree = "<group>"; };
 		46CAAA3828B807050015008F /* UploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = UploadViewController.m; sourceTree = "<group>"; };
 		46CAAA3C28B808250015008F /* libffsend.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libffsend.xcodeproj; path = libffsend/libffsend.xcodeproj; sourceTree = "<group>"; };
@@ -120,6 +169,15 @@
 		46CF0F4528BD496900298A84 /* DotAnimatedTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DotAnimatedTextField.m; sourceTree = "<group>"; };
 		46CF0F4A28BE048F00298A84 /* cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = cs; path = cs.lproj/Main.strings; sourceTree = "<group>"; };
 		46D4CE0F28BE0C2000CD26B5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		46EAB05E28BE446D00BA82D5 /* Send Share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Send Share.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EAB06028BE446D00BA82D5 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		46EAB06228BE446D00BA82D5 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ShareViewController.h; sourceTree = "<group>"; };
+		46EAB06328BE446D00BA82D5 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ShareViewController.m; sourceTree = "<group>"; };
+		46EAB06628BE446D00BA82D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ShareViewController.xib; sourceTree = "<group>"; };
+		46EAB06828BE446D00BA82D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46EAB06928BE446D00BA82D5 /* Send_Share.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Send_Share.entitlements; sourceTree = "<group>"; };
+		46EAB07B28BE554800BA82D5 /* Send_Library.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Send_Library.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EAB08728BE55E200BA82D5 /* SendUploadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SendUploadDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,22 +185,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4656491828BC14F3006FEF97 /* libzip.framework in Frameworks */,
-				46930D2228B81FC900B07A0C /* ffsend.dylib in Frameworks */,
+				46EAB09D28BE589400BA82D5 /* Send_Library.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46CAAA1528B802440015008F /* Frameworks */ = {
+		46EAB05B28BE446D00BA82D5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4634031728BE5E5B00C759DB /* Send_Library.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46CAAA1F28B802440015008F /* Frameworks */ = {
+		46EAB07828BE554800BA82D5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46EAB09B28BE586800BA82D5 /* libzip.framework in Frameworks */,
+				46EAB09928BE586400BA82D5 /* ffsend.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,12 +243,66 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		46371F2328BA46EF008F6DFF /* Products */ = {
+		4634031C28BE6EE800C759DB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				46371F2728BA46EF008F6DFF /* libzip.framework */,
+				46EAB06228BE446D00BA82D5 /* ShareViewController.h */,
+				46EAB06328BE446D00BA82D5 /* ShareViewController.m */,
 			);
-			name = Products;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4634032328BE741300C759DB /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4634032428BE741700C759DB /* Views */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		4634032428BE741700C759DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4634031E28BE70AE00C759DB /* SettingsStackView.h */,
+				4634031F28BE70AE00C759DB /* SettingsStackView.m */,
+				46CF0F4128BD11FF00298A84 /* ResultView.h */,
+				46CF0F4228BD11FF00298A84 /* ResultView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4634032528BE77FE00C759DB /* WelcomeView */ = {
+			isa = PBXGroup;
+			children = (
+				4634032628BE783800C759DB /* Drop */,
+			);
+			path = WelcomeView;
+			sourceTree = "<group>";
+		};
+		4634032628BE783800C759DB /* Drop */ = {
+			isa = PBXGroup;
+			children = (
+				4651F4B228BB9E0D00FF3E4D /* Protocol */,
+				4651F4B128BB9E0400FF3E4D /* Class */,
+			);
+			path = Drop;
+			sourceTree = "<group>";
+		};
+		4634032728BE784E00C759DB /* FilesView */ = {
+			isa = PBXGroup;
+			children = (
+				4618301728BA7FE100BFB7E8 /* Table */,
+				4651F4AE28BB9DFA00FF3E4D /* Drop */,
+			);
+			path = FilesView;
+			sourceTree = "<group>";
+		};
+		4634032828BE786B00C759DB /* UploadView */ = {
+			isa = PBXGroup;
+			children = (
+				46CF0F3E28BD11EF00298A84 /* Upload */,
+			);
+			path = UploadView;
 			sourceTree = "<group>";
 		};
 		46371F2928BA4F4A008F6DFF /* Files */ = {
@@ -203,8 +317,8 @@
 		4651F4AE28BB9DFA00FF3E4D /* Drop */ = {
 			isa = PBXGroup;
 			children = (
-				4651F4B228BB9E0D00FF3E4D /* Protocol */,
-				4651F4B128BB9E0400FF3E4D /* Class */,
+				461D13B728BBAEE4001E34CC /* DropTableView.h */,
+				461D13B828BBAEE4001E34CC /* DropTableView.m */,
 			);
 			path = Drop;
 			sourceTree = "<group>";
@@ -214,8 +328,6 @@
 			children = (
 				462E688428B94B6F001F569F /* DropView.h */,
 				462E688528B94B6F001F569F /* DropView.m */,
-				461D13B728BBAEE4001E34CC /* DropTableView.h */,
-				461D13B828BBAEE4001E34CC /* DropTableView.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -235,14 +347,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		46930D2428B8334100B07A0C /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				46930D2328B82E3100B07A0C /* SendUploadDelegate.h */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
 		46930D2528B8334B00B07A0C /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,11 +359,9 @@
 		46CAA9FA28B802430015008F = {
 			isa = PBXGroup;
 			children = (
-				46CAAA3C28B808250015008F /* libffsend.xcodeproj */,
-				46371F2228BA46EF008F6DFF /* libzip.xcodeproj */,
 				46CAAA0528B802430015008F /* Send */,
-				46CAAA1B28B802440015008F /* SendTests */,
-				46CAAA2528B802440015008F /* SendUITests */,
+				46EAB05F28BE446D00BA82D5 /* Send Share */,
+				46EAB07C28BE554800BA82D5 /* Send Library */,
 				46CAAA0428B802430015008F /* Products */,
 				46930D2028B81F9700B07A0C /* Frameworks */,
 			);
@@ -269,8 +371,8 @@
 			isa = PBXGroup;
 			children = (
 				46CAAA0328B802430015008F /* Send.app */,
-				46CAAA1828B802440015008F /* SendTests.xctest */,
-				46CAAA2228B802440015008F /* SendUITests.xctest */,
+				46EAB05E28BE446D00BA82D5 /* Send Share.appex */,
+				46EAB07B28BE554800BA82D5 /* Send_Library.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -278,8 +380,8 @@
 		46CAAA0528B802430015008F /* Send */ = {
 			isa = PBXGroup;
 			children = (
+				4634032328BE741300C759DB /* Shared */,
 				46769B3F28BC038700F06426 /* Info.plist */,
-				46CAAA4228B81B2C0015008F /* Send */,
 				4618301328BA7D3600BFB7E8 /* Model */,
 				46CAAA3B28B8077E0015008F /* Views */,
 				46CAAA3A28B8070B0015008F /* Controllers */,
@@ -293,23 +395,6 @@
 				46D4CE1028BE0C2000CD26B5 /* Localizable.strings */,
 			);
 			path = Send;
-			sourceTree = "<group>";
-		};
-		46CAAA1B28B802440015008F /* SendTests */ = {
-			isa = PBXGroup;
-			children = (
-				46CAAA1C28B802440015008F /* SendTests.m */,
-			);
-			path = SendTests;
-			sourceTree = "<group>";
-		};
-		46CAAA2528B802440015008F /* SendUITests */ = {
-			isa = PBXGroup;
-			children = (
-				46CAAA2628B802440015008F /* SendUITests.m */,
-				46CAAA2828B802440015008F /* SendUITestsLaunchTests.m */,
-			);
-			path = SendUITests;
 			sourceTree = "<group>";
 		};
 		46CAAA3A28B8070B0015008F /* Controllers */ = {
@@ -328,42 +413,83 @@
 		46CAAA3B28B8077E0015008F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				46CF0F3E28BD11EF00298A84 /* Upload */,
-				4651F4AE28BB9DFA00FF3E4D /* Drop */,
-				4618301728BA7FE100BFB7E8 /* Table */,
+				4634032828BE786B00C759DB /* UploadView */,
+				4634032728BE784E00C759DB /* FilesView */,
+				4634032528BE77FE00C759DB /* WelcomeView */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		46CAAA3D28B808250015008F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				46CAAA4128B808250015008F /* ffsend.dylib */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		46CAAA4228B81B2C0015008F /* Send */ = {
-			isa = PBXGroup;
-			children = (
-				46930D2528B8334B00B07A0C /* Class */,
-				46930D2428B8334100B07A0C /* Protocol */,
-			);
-			path = Send;
 			sourceTree = "<group>";
 		};
 		46CF0F3E28BD11EF00298A84 /* Upload */ = {
 			isa = PBXGroup;
 			children = (
-				46CF0F4128BD11FF00298A84 /* ResultView.h */,
-				46CF0F4228BD11FF00298A84 /* ResultView.m */,
 				46CF0F4428BD496900298A84 /* DotAnimatedTextField.h */,
 				46CF0F4528BD496900298A84 /* DotAnimatedTextField.m */,
 			);
 			path = Upload;
 			sourceTree = "<group>";
 		};
+		46EAB05F28BE446D00BA82D5 /* Send Share */ = {
+			isa = PBXGroup;
+			children = (
+				4634031C28BE6EE800C759DB /* Controllers */,
+				46EAB06028BE446D00BA82D5 /* icon.icns */,
+				46EAB06528BE446D00BA82D5 /* ShareViewController.xib */,
+				46EAB06828BE446D00BA82D5 /* Info.plist */,
+				46EAB06928BE446D00BA82D5 /* Send_Share.entitlements */,
+				4634033428BE805200C759DB /* Localizable.strings */,
+			);
+			path = "Send Share";
+			sourceTree = "<group>";
+		};
+		46EAB07C28BE554800BA82D5 /* Send Library */ = {
+			isa = PBXGroup;
+			children = (
+				46CAAA3C28B808250015008F /* libffsend.xcodeproj */,
+				46371F2228BA46EF008F6DFF /* libzip.xcodeproj */,
+				46EAB08628BE55D300BA82D5 /* Protocol */,
+				46930D2528B8334B00B07A0C /* Class */,
+			);
+			path = "Send Library";
+			sourceTree = "<group>";
+		};
+		46EAB08628BE55D300BA82D5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				46EAB08728BE55E200BA82D5 /* SendUploadDelegate.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		46EAB08E28BE566700BA82D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46EAB09228BE566700BA82D5 /* ffsend.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46EAB09328BE567000BA82D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46EAB09728BE567000BA82D5 /* libzip.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		46EAB07628BE554800BA82D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46EAB08828BE55E200BA82D5 /* SendUploadDelegate.h in Headers */,
+				46EAB09828BE57CD00BA82D5 /* Send.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		46CAAA0228B802430015008F /* Send */ = {
@@ -373,52 +499,57 @@
 				46CAA9FF28B802430015008F /* Sources */,
 				46CAAA0028B802430015008F /* Frameworks */,
 				46CAAA0128B802430015008F /* Resources */,
-				4656491728BC14F2006FEF97 /* Embed Libraries */,
+				46EAB07028BE446D00BA82D5 /* Embed Foundation Extensions */,
+				46EAB0A128BE589400BA82D5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				46EAB06B28BE446D00BA82D5 /* PBXTargetDependency */,
+				46EAB0A028BE589400BA82D5 /* PBXTargetDependency */,
 			);
 			name = Send;
 			productName = Send;
 			productReference = 46CAAA0328B802430015008F /* Send.app */;
 			productType = "com.apple.product-type.application";
 		};
-		46CAAA1728B802440015008F /* SendTests */ = {
+		46EAB05D28BE446D00BA82D5 /* Send Share */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46CAAA2F28B802440015008F /* Build configuration list for PBXNativeTarget "SendTests" */;
+			buildConfigurationList = 46EAB06D28BE446D00BA82D5 /* Build configuration list for PBXNativeTarget "Send Share" */;
 			buildPhases = (
-				46CAAA1428B802440015008F /* Sources */,
-				46CAAA1528B802440015008F /* Frameworks */,
-				46CAAA1628B802440015008F /* Resources */,
+				46EAB05A28BE446D00BA82D5 /* Sources */,
+				46EAB05B28BE446D00BA82D5 /* Frameworks */,
+				46EAB05C28BE446D00BA82D5 /* Resources */,
+				4634031B28BE5E5B00C759DB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				46CAAA1A28B802440015008F /* PBXTargetDependency */,
+				4634031A28BE5E5B00C759DB /* PBXTargetDependency */,
 			);
-			name = SendTests;
-			productName = SendTests;
-			productReference = 46CAAA1828B802440015008F /* SendTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = "Send Share";
+			productName = "Send Share";
+			productReference = 46EAB05E28BE446D00BA82D5 /* Send Share.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
-		46CAAA2128B802440015008F /* SendUITests */ = {
+		46EAB07A28BE554800BA82D5 /* Send Library */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46CAAA3228B802440015008F /* Build configuration list for PBXNativeTarget "SendUITests" */;
+			buildConfigurationList = 46EAB08328BE554800BA82D5 /* Build configuration list for PBXNativeTarget "Send Library" */;
 			buildPhases = (
-				46CAAA1E28B802440015008F /* Sources */,
-				46CAAA1F28B802440015008F /* Frameworks */,
-				46CAAA2028B802440015008F /* Resources */,
+				46EAB07628BE554800BA82D5 /* Headers */,
+				46EAB07728BE554800BA82D5 /* Sources */,
+				46EAB07828BE554800BA82D5 /* Frameworks */,
+				46EAB07928BE554800BA82D5 /* Resources */,
+				46EAB08B28BE560300BA82D5 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				46CAAA2428B802440015008F /* PBXTargetDependency */,
 			);
-			name = SendUITests;
-			productName = SendUITests;
-			productReference = 46CAAA2228B802440015008F /* SendUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			name = "Send Library";
+			productName = libffsendObjc;
+			productReference = 46EAB07B28BE554800BA82D5 /* Send_Library.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -433,13 +564,11 @@
 					46CAAA0228B802430015008F = {
 						CreatedOnToolsVersion = 14.0;
 					};
-					46CAAA1728B802440015008F = {
+					46EAB05D28BE446D00BA82D5 = {
 						CreatedOnToolsVersion = 14.0;
-						TestTargetID = 46CAAA0228B802430015008F;
 					};
-					46CAAA2128B802440015008F = {
+					46EAB07A28BE554800BA82D5 = {
 						CreatedOnToolsVersion = 14.0;
-						TestTargetID = 46CAAA0228B802430015008F;
 					};
 				};
 			};
@@ -457,36 +586,36 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 46CAAA3D28B808250015008F /* Products */;
+					ProductGroup = 46EAB08E28BE566700BA82D5 /* Products */;
 					ProjectRef = 46CAAA3C28B808250015008F /* libffsend.xcodeproj */;
 				},
 				{
-					ProductGroup = 46371F2328BA46EF008F6DFF /* Products */;
+					ProductGroup = 46EAB09328BE567000BA82D5 /* Products */;
 					ProjectRef = 46371F2228BA46EF008F6DFF /* libzip.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
 				46CAAA0228B802430015008F /* Send */,
-				46CAAA1728B802440015008F /* SendTests */,
-				46CAAA2128B802440015008F /* SendUITests */,
+				46EAB05D28BE446D00BA82D5 /* Send Share */,
+				46EAB07A28BE554800BA82D5 /* Send Library */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		46371F2728BA46EF008F6DFF /* libzip.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = libzip.framework;
-			remoteRef = 46371F2628BA46EF008F6DFF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		46CAAA4128B808250015008F /* ffsend.dylib */ = {
+		46EAB09228BE566700BA82D5 /* ffsend.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			path = ffsend.dylib;
-			remoteRef = 46CAAA4028B808250015008F /* PBXContainerItemProxy */;
+			remoteRef = 46EAB09128BE566700BA82D5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		46EAB09728BE567000BA82D5 /* libzip.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = libzip.framework;
+			remoteRef = 46EAB09628BE567000BA82D5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -503,14 +632,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46CAAA1628B802440015008F /* Resources */ = {
+		46EAB05C28BE446D00BA82D5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4634033228BE805200C759DB /* Localizable.strings in Resources */,
+				46EAB06728BE446D00BA82D5 /* ShareViewController.xib in Resources */,
+				46EAB06128BE446D00BA82D5 /* icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46CAAA2028B802440015008F /* Resources */ = {
+		46EAB07928BE554800BA82D5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -526,52 +658,66 @@
 			files = (
 				46CF0F4628BD496900298A84 /* DotAnimatedTextField.m in Sources */,
 				461D13B928BBAEE4001E34CC /* DropTableView.m in Sources */,
-				46CAAA4528B81B3C0015008F /* Send.m in Sources */,
 				462E688628B94B6F001F569F /* DropView.m in Sources */,
 				46CAAA0B28B802430015008F /* WelcomeController.m in Sources */,
 				46371F2C28BA4F5F008F6DFF /* FileItemView.m in Sources */,
 				462E688A28BA28C8001F569F /* FilesViewController.m in Sources */,
 				46CF0F4328BD11FF00298A84 /* ResultView.m in Sources */,
 				46CAAA3928B807050015008F /* UploadViewController.m in Sources */,
+				4634032228BE740600C759DB /* SettingsStackView.m in Sources */,
 				46CAAA1228B802440015008F /* main.m in Sources */,
 				46CAAA0828B802430015008F /* AppDelegate.m in Sources */,
 				4618301628BA7D4600BFB7E8 /* File.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46CAAA1428B802440015008F /* Sources */ = {
+		46EAB05A28BE446D00BA82D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46CAAA1D28B802440015008F /* SendTests.m in Sources */,
+				4634032128BE73EB00C759DB /* ResultView.m in Sources */,
+				4634032028BE70AE00C759DB /* SettingsStackView.m in Sources */,
+				46EAB06428BE446D00BA82D5 /* ShareViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46CAAA1E28B802440015008F /* Sources */ = {
+		46EAB07728BE554800BA82D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46CAAA2928B802440015008F /* SendUITestsLaunchTests.m in Sources */,
-				46CAAA2728B802440015008F /* SendUITests.m in Sources */,
+				46EAB0A228BE58FC00BA82D5 /* Send.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		46CAAA1A28B802440015008F /* PBXTargetDependency */ = {
+		4634031A28BE5E5B00C759DB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 46CAAA0228B802430015008F /* Send */;
-			targetProxy = 46CAAA1928B802440015008F /* PBXContainerItemProxy */;
+			target = 46EAB07A28BE554800BA82D5 /* Send Library */;
+			targetProxy = 4634031928BE5E5B00C759DB /* PBXContainerItemProxy */;
 		};
-		46CAAA2428B802440015008F /* PBXTargetDependency */ = {
+		46EAB06B28BE446D00BA82D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 46CAAA0228B802430015008F /* Send */;
-			targetProxy = 46CAAA2328B802440015008F /* PBXContainerItemProxy */;
+			target = 46EAB05D28BE446D00BA82D5 /* Send Share */;
+			targetProxy = 46EAB06A28BE446D00BA82D5 /* PBXContainerItemProxy */;
+		};
+		46EAB0A028BE589400BA82D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 46EAB07A28BE554800BA82D5 /* Send Library */;
+			targetProxy = 46EAB09F28BE589400BA82D5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		4634033428BE805200C759DB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4634033328BE805200C759DB /* cs */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		46CAAA0E28B802440015008F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -587,6 +733,15 @@
 				46D4CE0F28BE0C2000CD26B5 /* cs */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		46EAB06528BE446D00BA82D5 /* ShareViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46EAB06628BE446D00BA82D5 /* Base */,
+				4634032D28BE7EA100C759DB /* cs */,
+			);
+			name = ShareViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -767,67 +922,117 @@
 			};
 			name = Release;
 		};
-		46CAAA3028B802440015008F /* Debug */ = {
+		46EAB06E28BE446D00BA82D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_ENTITLEMENTS = "Send Share/Send_Share.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KSR6A94B7P;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Send Share/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Send Share";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.EETagent.SendTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.EETagent.Send.Send-Share";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Send.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Send";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Debug;
 		};
-		46CAAA3128B802440015008F /* Release */ = {
+		46EAB06F28BE446D00BA82D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_ENTITLEMENTS = "Send Share/Send_Share.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KSR6A94B7P;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Send Share/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Send Share";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.EETagent.SendTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.EETagent.Send.Send-Share";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Send.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Send";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};
-		46CAAA3328B802440015008F /* Debug */ = {
+		46EAB08428BE554800BA82D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = KSR6A94B7P;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.EETagent.SendUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				TEST_TARGET_NAME = Send;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.EETagent.libffsendObjc;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		46CAAA3428B802440015008F /* Release */ = {
+		46EAB08528BE554800BA82D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = KSR6A94B7P;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.EETagent.SendUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				TEST_TARGET_NAME = Send;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.EETagent.libffsendObjc;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -852,20 +1057,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46CAAA2F28B802440015008F /* Build configuration list for PBXNativeTarget "SendTests" */ = {
+		46EAB06D28BE446D00BA82D5 /* Build configuration list for PBXNativeTarget "Send Share" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				46CAAA3028B802440015008F /* Debug */,
-				46CAAA3128B802440015008F /* Release */,
+				46EAB06E28BE446D00BA82D5 /* Debug */,
+				46EAB06F28BE446D00BA82D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46CAAA3228B802440015008F /* Build configuration list for PBXNativeTarget "SendUITests" */ = {
+		46EAB08328BE554800BA82D5 /* Build configuration list for PBXNativeTarget "Send Library" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				46CAAA3328B802440015008F /* Debug */,
-				46CAAA3428B802440015008F /* Release */,
+				46EAB08428BE554800BA82D5 /* Debug */,
+				46EAB08528BE554800BA82D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

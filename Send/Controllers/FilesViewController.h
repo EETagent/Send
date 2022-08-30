@@ -10,17 +10,15 @@
 
 #import "File.h"
 
+#import "SettingsStackView.h"
+
 @interface FilesViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource, FileItemViewDelegate, DropDelegate>
 
 @property(nonatomic, weak) IBOutlet NSTableView *fileListView;
 
 @property(nonatomic, weak) IBOutlet NSTextField *totalSize;
 
-@property(nonatomic, weak) IBOutlet NSPopUpButton *expiryPopUpButton;
-@property(nonatomic, weak) IBOutlet NSPopUpButton *limitPopUpButton;
-
-@property(nonatomic, weak) IBOutlet NSButton *passwordCheckBox;
-@property(nonatomic, weak) IBOutlet NSSecureTextField *passwordTextField;
+@property(nonatomic, weak) IBOutlet SettingsStackView *settingsStackView;
 
 - (IBAction)uploadFilesToSend:(id)sender;
 
