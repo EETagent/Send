@@ -55,7 +55,7 @@
         [filePaths addObject:[file path]];
     // Start download
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [self->send uploadFilesWithPaths:filePaths tempFileBlock:^(NSString *path) {
+        [self->send uploadFilesWithPaths:filePaths tempFileCreatedAtBlock:^(NSString *path) {
             // Update file with created ZIP location
             File *file = [[File alloc] initWithPath:path];
             self->file = file;
@@ -78,12 +78,15 @@
 }
 
 - (void)sendUploadProgressWithTotalBytesUploaded:(NSUInteger)bytes {
+    // Update progress
     dispatch_async(dispatch_get_main_queue(), ^{
         [[self progressIndicator] setDoubleValue:bytes];
     });
 }
 
 - (void)sendUploadCompletedWithStatus:(NSInteger)status {
+    // Upload completed
+    // TODO: NSError support
     if (status == 0) {
         dispatch_async(dispatch_get_main_queue(), ^{
             NSURL *link = [self->send uploadedFileGetLink];

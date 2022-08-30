@@ -35,7 +35,7 @@
 }
 
 - (void)setupWithFile:(File *)file {
-    NSString *fileName = [file filename];
+    NSString *fileName = [file name];
     NSString *fileSize = [file stringSize];
     [self setFileName:fileName setSize:fileSize];
 }

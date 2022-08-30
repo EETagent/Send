@@ -14,7 +14,7 @@
         NSString *fileName= [[NSFileManager defaultManager] displayNameAtPath:filePath];
         NSError *error;
         NSUInteger fileSize = [[[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:&error] fileSize];
-        [self setFilename:fileName];
+        [self setName:fileName];
         [self setPath:filePath];
         [self setSize:fileSize];
     }
@@ -53,7 +53,7 @@
     if (![object isKindOfClass:[File class]])
         return NO;
     File *casted = (File*)object;
-    if ([[self filename] isEqualTo:[casted filename]] && [[self path] isEqualTo:[casted path]] && [self size] == [casted size])
+    if ([[self name] isEqualTo:[casted name]] && [[self path] isEqualTo:[casted path]] && [self size] == [casted size])
         return YES;
     return NO;
 }

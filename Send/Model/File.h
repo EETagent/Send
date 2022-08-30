@@ -11,7 +11,7 @@
 
 - (instancetype)initWithURLPath:(NSURL *)path;
 
-@property NSString *filename;
+@property NSString *name;
 
 @property NSString *path;
 

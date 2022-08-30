@@ -59,7 +59,7 @@ void uploadCompleted (void *ctx) {
     return [self uploadFileWithPath:path];
 }
 
-- (void)uploadFilesWithPaths:(NSArray<NSString *> *)files tempFileBlock:(void (^)(NSString *path))tempFileBlock {
+- (void)uploadFilesWithPaths:(NSArray<NSString *> *)files tempFileCreatedAtBlock:(void (^)(NSString *path))tempFileBlock {
     const NSString *archiveName = @"Send-Archive.zip";
     NSString *tempZIP = [NSTemporaryDirectory() stringByAppendingPathComponent:(NSString *)archiveName];
     BOOL createZIP = [SSZipArchive createZipFileAtPath:tempZIP withFilesAtPaths:files];
