@@ -338,7 +338,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="45" viewBased="YES" id="3L7-2g-c2R" customClass="DropTableView">
-                                            <rect key="frame" x="0.0" y="0.0" width="478" height="220"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="163"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="0.0" height="20"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -644,6 +644,8 @@
                         <outlet property="expiryPopUpButton" destination="b95-Sy-qKL" id="7YR-IC-wle"/>
                         <outlet property="fileListView" destination="3L7-2g-c2R" id="Jme-oT-RjP"/>
                         <outlet property="limitPopUpButton" destination="XA1-Vl-rxp" id="Ei2-Ka-SU8"/>
+                        <outlet property="passwordCheckBox" destination="Wav-Mh-kxD" id="cx0-dl-WbX"/>
+                        <outlet property="passwordTextField" destination="SqA-mS-heU" id="aus-Fy-5gL"/>
                         <outlet property="totalSize" destination="5NX-t2-iF7" id="52p-Ee-FNi"/>
                     </connections>
                 </viewController>

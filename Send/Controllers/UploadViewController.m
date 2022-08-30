@@ -24,7 +24,7 @@
     [[[self view] window] setContentViewController:controller];
 }
 
-- (void)uploadFiles:(NSArray<File *> *)files withExpiry:(long long)expiry withLimit:(unsigned char)limit {
+- (void)uploadFiles:(NSArray<File *> *)files withExpiry:(long long)expiry withLimit:(unsigned char)limit withPassword:(NSString *)password {
     if ([files count] == 0)
         return;
     
@@ -33,6 +33,9 @@
     
     [self->send setExpiry:expiry];
     [self->send setLimit:limit];
+    
+    if (password)
+        [self->send setPassword:password];
     
     // Single file
     if ([files count] == 1) {

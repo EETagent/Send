@@ -126,7 +126,13 @@
     if ([[self fileList] count] < 1)
         return;
     UploadViewController *controller = [[self storyboard] instantiateControllerWithIdentifier:@"UploadView"];
-    [controller uploadFiles:[self fileList] withExpiry:[self parseExpiry] withLimit:[self parseLimit]];
+    
+    NSString *password = nil;
+    if ([[self passwordCheckBox] state] == NSControlStateValueOn)
+        password = [[self passwordTextField] stringValue];
+    
+    [controller uploadFiles:[self fileList] withExpiry:[self parseExpiry] withLimit:[self parseLimit] withPassword:password];
+    
     [[[self view] window] setContentViewController:controller];
 }
 

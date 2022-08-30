@@ -19,6 +19,9 @@
 @property(nonatomic, weak) IBOutlet NSPopUpButton *expiryPopUpButton;
 @property(nonatomic, weak) IBOutlet NSPopUpButton *limitPopUpButton;
 
+@property(nonatomic, weak) IBOutlet NSButton *passwordCheckBox;
+@property(nonatomic, weak) IBOutlet NSSecureTextField *passwordTextField;
+
 - (IBAction)uploadFilesToSend:(id)sender;
 
 - (IBAction)openFile:(id)sender;

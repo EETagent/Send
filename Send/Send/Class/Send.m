@@ -48,7 +48,9 @@ void uploadCompleted (void *ctx) {
     
     progress_reporter_setup(self->progressReporter, uploadStarted, uploadProgress, uploadCompleted, (__bridge void *)(self));
     
-    NSInteger status = upload_file(pathString, nil, [self limit], [self expiry], self->progressReporter, self->uploadedFile);
+    const char *password = [self password] ? [[self password] UTF8String] : nil;
+    
+    NSInteger status = upload_file(pathString, password, [self limit], [self expiry], self->progressReporter, self->uploadedFile);
     [[self delegate] sendUploadCompletedWithStatus:status];
 }
 
