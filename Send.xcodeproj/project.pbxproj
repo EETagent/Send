@@ -82,8 +82,8 @@
 		4618301428BA7D4600BFB7E8 /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = File.h; sourceTree = "<group>"; };
 		4618301528BA7D4600BFB7E8 /* File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = File.m; sourceTree = "<group>"; };
 		4618301A28BA80CF00BFB7E8 /* FileItemViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FileItemViewDelegate.h; sourceTree = "<group>"; };
-		461D13B728BBAEE4001E34CC /* DropTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropTableView.h; sourceTree = "<group>"; };
-		461D13B828BBAEE4001E34CC /* DropTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropTableView.m; sourceTree = "<group>"; };
+		461D13B728BBAEE4001E34CC /* DropTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DropTableView.h; sourceTree = "<group>"; };
+		461D13B828BBAEE4001E34CC /* DropTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DropTableView.m; sourceTree = "<group>"; };
 		462E688428B94B6F001F569F /* DropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DropView.h; sourceTree = "<group>"; };
 		462E688528B94B6F001F569F /* DropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DropView.m; sourceTree = "<group>"; };
 		462E688828BA28C8001F569F /* FilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FilesViewController.h; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		46371F2228BA46EF008F6DFF /* libzip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libzip.xcodeproj; path = libzip/libzip.xcodeproj; sourceTree = "<group>"; };
 		46371F2A28BA4F5F008F6DFF /* FileItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FileItemView.h; sourceTree = "<group>"; };
 		46371F2B28BA4F5F008F6DFF /* FileItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FileItemView.m; sourceTree = "<group>"; };
-		4651F4B328BB9E2A00FF3E4D /* DropDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropDelegate.h; sourceTree = "<group>"; };
+		4651F4B328BB9E2A00FF3E4D /* DropDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DropDelegate.h; sourceTree = "<group>"; };
 		46769B3F28BC038700F06426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		46930D2328B82E3100B07A0C /* SendUploadDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SendUploadDelegate.h; sourceTree = "<group>"; };
 		46BFCF3128BBEF66006919D0 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
@@ -114,10 +114,10 @@
 		46CAAA3C28B808250015008F /* libffsend.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libffsend.xcodeproj; path = libffsend/libffsend.xcodeproj; sourceTree = "<group>"; };
 		46CAAA4328B81B3C0015008F /* Send.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Send.h; sourceTree = "<group>"; };
 		46CAAA4428B81B3C0015008F /* Send.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Send.m; sourceTree = "<group>"; };
-		46CF0F4128BD11FF00298A84 /* ResultView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultView.h; sourceTree = "<group>"; };
-		46CF0F4228BD11FF00298A84 /* ResultView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultView.m; sourceTree = "<group>"; };
-		46CF0F4428BD496900298A84 /* DotAnimatedTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DotAnimatedTextField.h; sourceTree = "<group>"; };
-		46CF0F4528BD496900298A84 /* DotAnimatedTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DotAnimatedTextField.m; sourceTree = "<group>"; };
+		46CF0F4128BD11FF00298A84 /* ResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ResultView.h; sourceTree = "<group>"; };
+		46CF0F4228BD11FF00298A84 /* ResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ResultView.m; sourceTree = "<group>"; };
+		46CF0F4428BD496900298A84 /* DotAnimatedTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DotAnimatedTextField.h; sourceTree = "<group>"; };
+		46CF0F4528BD496900298A84 /* DotAnimatedTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DotAnimatedTextField.m; sourceTree = "<group>"; };
 		46CF0F4A28BE048F00298A84 /* cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = cs; path = cs.lproj/Main.strings; sourceTree = "<group>"; };
 		46D4CE0F28BE0C2000CD26B5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
