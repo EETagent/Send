@@ -16,6 +16,7 @@
 		4634032028BE70AE00C759DB /* SettingsStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4634031F28BE70AE00C759DB /* SettingsStackView.m */; };
 		4634032128BE73EB00C759DB /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CF0F4228BD11FF00298A84 /* ResultView.m */; };
 		4634032228BE740600C759DB /* SettingsStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4634031F28BE70AE00C759DB /* SettingsStackView.m */; };
+		4634032928BE7E8000C759DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46CAAA0E28B802440015008F /* Main.storyboard */; };
 		46371F2C28BA4F5F008F6DFF /* FileItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46371F2B28BA4F5F008F6DFF /* FileItemView.m */; };
 		46BFCF3228BBEF66006919D0 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 46BFCF3128BBEF66006919D0 /* Credits.rtf */; };
 		46CAAA0828B802430015008F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA0728B802430015008F /* AppDelegate.m */; };
@@ -140,6 +141,7 @@
 		462E688928BA28C8001F569F /* FilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FilesViewController.m; sourceTree = "<group>"; };
 		4634031E28BE70AE00C759DB /* SettingsStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SettingsStackView.h; sourceTree = "<group>"; };
 		4634031F28BE70AE00C759DB /* SettingsStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SettingsStackView.m; sourceTree = "<group>"; };
+		4634032D28BE7EA100C759DB /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/ShareViewController.strings; sourceTree = "<group>"; };
 		46371F2228BA46EF008F6DFF /* libzip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libzip.xcodeproj; path = libzip/libzip.xcodeproj; sourceTree = "<group>"; };
 		46371F2A28BA4F5F008F6DFF /* FileItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FileItemView.h; sourceTree = "<group>"; };
 		46371F2B28BA4F5F008F6DFF /* FileItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FileItemView.m; sourceTree = "<group>"; };
@@ -640,6 +642,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4634032928BE7E8000C759DB /* Main.storyboard in Resources */,
 				46EAB06728BE446D00BA82D5 /* ShareViewController.xib in Resources */,
 				46EAB06128BE446D00BA82D5 /* icon.icns in Resources */,
 			);
@@ -734,6 +737,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				46EAB06628BE446D00BA82D5 /* Base */,
+				4634032D28BE7EA100C759DB /* cs */,
 			);
 			name = ShareViewController.xib;
 			sourceTree = "<group>";
