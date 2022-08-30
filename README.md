@@ -31,6 +31,11 @@ Send is still in development
 - `FFsend API library` [ffsend-api](https://github.com/timvisee/ffsend-api) by [@timvisee](https://github.com/timvisee)
 - `ZIP library` [ZipArchive](https://github.com/ZipArchive/ZipArchive) by [@ZipArchive team](https://github.com/ZipArchive)
 
+## 📙 Multilingual
+
+- Czech 🇨🇿
+- English 🇬🇧🇺🇸
+
 
 ## 🖼️ Gallery
 
