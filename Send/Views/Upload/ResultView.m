@@ -51,4 +51,12 @@
     }
 }
 
+- (void)copyURL:(id)sender {
+    NSString *url = [[self urlTextField] stringValue];
+    NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
+    [pasteboard clearContents];
+    NSArray *pastedObject = [NSArray arrayWithObject:url];
+    [pasteboard writeObjects:pastedObject];
+}
+
 @end

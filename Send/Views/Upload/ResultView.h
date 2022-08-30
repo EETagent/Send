@@ -17,4 +17,6 @@
 
 - (IBAction)copyQrCode:(id)sender;
 
+- (IBAction)copyURL:(id)sender;
+
 @end

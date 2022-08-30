@@ -338,7 +338,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="45" viewBased="YES" id="3L7-2g-c2R" customClass="DropTableView">
-                                            <rect key="frame" x="0.0" y="0.0" width="478" height="163"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="220"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="0.0" height="20"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -767,14 +767,25 @@
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="trg-26-6tT">
                                         <rect key="frame" x="0.0" y="92" width="460" height="30"/>
                                         <subviews>
-                                            <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cWS-cr-nsk">
-                                                <rect key="frame" x="0.0" y="9" width="391" height="21"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="9MW-ns-Q0X">
+                                            <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="499" verticalCompressionResistancePriority="499" translatesAutoresizingMaskIntoConstraints="NO" id="cWS-cr-nsk">
+                                                <rect key="frame" x="0.0" y="9" width="331" height="21"/>
+                                                <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" selectable="YES" editable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="9MW-ns-Q0X">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vkd-KD-Jsp" userLabel="Copy">
+                                                <rect key="frame" x="332" y="3" width="66" height="32"/>
+                                                <buttonCell key="cell" type="push" title="Copy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VgV-Zr-LlE">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <connections>
+                                                    <action selector="copyURL:" target="pPW-FH-Ai6" id="2Fc-Qc-SHp"/>
+                                                </connections>
+                                            </button>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DnA-xR-taP">
                                                 <rect key="frame" x="392" y="3" width="75" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Return" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FNl-Ze-Rax">
@@ -791,8 +802,10 @@
                                         <visibilityPriorities>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
+                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
