@@ -39,19 +39,20 @@ Send is still in development
 
 ## 🖼️ Gallery
 
-<img src="./.github/img/send1.jpg" width=500px>
+<img src="https://user-images.githubusercontent.com/20557318/187721262-faa87980-af5c-4f97-a3c7-2eb8d5156804.jpg" width=500px alt="Send Screenshot 1">
 
-<img src="./.github/img/send2.jpg" width=500px>
+<img src="https://user-images.githubusercontent.com/20557318/187721326-8a96cdd4-5c34-409a-bc3f-9724f1bb5a95.jpg" width=500px alt="Send Screenshot 2">
 
-<img src="./.github/img/send3.jpg" width=500px>
+<img src="https://user-images.githubusercontent.com/20557318/187721519-188ac076-5b1b-4b2d-9ba1-a1026c8d6013.jpg" width=500px alt="Send Screenshot 3">
 
-<img src="./.github/img/send4.jpg" width=500px>
+<img src="https://user-images.githubusercontent.com/20557318/187721775-589e7560-ae0b-443e-915d-ee229c57f71d.jpg" width=500px alt="Send Screenshot 4">
 
-<img src="./.github/img/share1.jpg" width=500px>
+<img src="https://user-images.githubusercontent.com/20557318/187721839-20928b57-0566-415d-8deb-91220cdce6a4.jpg" width=500px alt="Send Share Screenshot 1">
 
-<img src="./.github/img/share2.jpg" width=500px>
+<img src="https://user-images.githubusercontent.com/20557318/187721922-8acb170c-a782-42ef-85f0-ae731fdfad30.jpg" width=500px alt="Send Share Screenshot 2">
 
-<img src="./.github/img/share3.jpg" width=500px>
+<img src="https://user-images.githubusercontent.com/20557318/187722057-1325eed2-a592-47be-9275-356db3119faa.jpg" width=500px alt="Send Share Screenshot 3">
+
 
 ## 🎥 Video
 
