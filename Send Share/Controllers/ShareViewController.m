@@ -58,8 +58,6 @@
 - (void)sendUploadCompletedWithStatus:(NSInteger)status {
     if (status == 0) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            
-            [[self progressIndicator] setHidden:YES];
             NSURL *url = [self->send uploadedFileGetLink];
             
             [[self resultView] setUrl:url];
