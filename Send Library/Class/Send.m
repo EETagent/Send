@@ -44,11 +44,29 @@ void uploadCompleted (void *ctx) {
 }
 
 - (void)uploadFileWithPath:(NSString*)path {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    BOOL isDir = NO;
+    if (![fileManager fileExistsAtPath:path isDirectory:&isDir])
+        //TODO: Normal errors
+        return;
+    
     const char *pathString = [path UTF8String];
     
     progress_reporter_setup(self->progressReporter, uploadStarted, uploadProgress, uploadCompleted, (__bridge void *)(self));
     
     const char *password = [self password] ? [[self password] UTF8String] : nil;
+    
+    if (isDir) {
+        const NSString *archiveName = @"Send-Archive.zip";
+        NSString *tempZIP = [NSTemporaryDirectory() stringByAppendingPathComponent:(NSString *)archiveName];
+        BOOL createZIP = [SSZipArchive createZipFileAtPath:tempZIP withContentsOfDirectory:path keepParentDirectory:YES];
+        if (createZIP) {
+            [self uploadFileWithPath:tempZIP];
+            [fileManager removeItemAtPath:tempZIP error:nil];
+        }
+        return;
+    }
     
     NSInteger status = upload_file(pathString, password, [self limit], [self expiry], self->progressReporter, self->uploadedFile);
     [[self delegate] sendUploadCompletedWithStatus:status];
@@ -60,14 +78,44 @@ void uploadCompleted (void *ctx) {
 }
 
 - (void)uploadFilesWithPaths:(NSArray<NSString *> *)files tempFileCreatedAtBlock:(void (^)(NSString *path))tempFileBlock {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+
+    NSMutableArray<NSString *> *mutableFiles = [files mutableCopy];
+    
+    // Create main ZIP archive
     const NSString *archiveName = @"Send-Archive.zip";
     NSString *tempZIP = [NSTemporaryDirectory() stringByAppendingPathComponent:(NSString *)archiveName];
-    BOOL createZIP = [SSZipArchive createZipFileAtPath:tempZIP withFilesAtPaths:files];
+    // ZIP each directory in provided paths
+    // Nested directories are not supported yet!
+    NSMutableArray<NSString *> *zipDirectories = [NSMutableArray new];
+    for (int index = 0; index < [mutableFiles count]; index++) {
+        NSString *path = [mutableFiles objectAtIndex:index];
+        
+        BOOL isDir = NO;
+        [fileManager fileExistsAtPath:path isDirectory:&isDir];
+        if (!isDir)
+            continue;
+        
+        NSString *fileName = [[path lastPathComponent] stringByDeletingPathExtension];
+        NSString *subZIP = [NSTemporaryDirectory() stringByAppendingFormat:@"%@-%i.zip",fileName, index];
+        BOOL createSubZIP = [SSZipArchive createZipFileAtPath:subZIP withContentsOfDirectory:path keepParentDirectory:NO];
+        
+        if (createSubZIP) {
+            [zipDirectories addObject:subZIP];
+            [mutableFiles replaceObjectAtIndex:index withObject:subZIP];
+        }
+    }
+    
+    BOOL createZIP = [SSZipArchive createZipFileAtPath:tempZIP withFilesAtPaths:mutableFiles];
     if (createZIP) {
         tempFileBlock(tempZIP);
         [self uploadFileWithPath:tempZIP];
-        [[NSFileManager defaultManager] removeItemAtPath:tempZIP error:nil];
+        // Clean ZIP file
+        [fileManager removeItemAtPath:tempZIP error:nil];
     }
+    // Clean ZIP files
+    for (NSString *zipDir in zipDirectories)
+        [fileManager removeItemAtPath:zipDir error:nil];
 }
 
 - (NSString *)uploadedFileGetId {
