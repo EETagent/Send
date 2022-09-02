@@ -3,15 +3,19 @@ name: Build Send!
 on: [push, pull_request]
 
 jobs:
-  test_job:
-    runs-on: macos-12
+  TestCI:
+    runs-on: macos-latest
     steps:
       - name: Checkout 🚚
         uses: actions/checkout@v3
-      #- name: Prepare Env 🚀
-      #  run: |
-      #    pod install
+        
+      - name: Install latest stable Rust toolchain 🦀
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          target: aarch64-apple-darwin
+          default: true
+          override: true
+
       - name: Debug Build 🔨
         run: xcodebuild -scheme Send -destination "platform=macOS" -configuration Debug CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty && exit ${PIPESTATUS[0]}
-      #- name: Tests 📖
-      #  run: xcodebuild test -workspace Lusk.xcworkspace -scheme Lusk  -destination 'platform=macOS'  | xcpretty && exit ${PIPESTATUS[0]}
