@@ -10,10 +10,29 @@
 - (instancetype)initWithPath:(NSString *)filePath {
     self = [super init];
     if (self) {
-        //NSString *fileNameWithoutExtension = [[[NSFileManager defaultManager] displayNameAtPath:filePathString] stringByDeletingPathExtension];
-        NSString *fileName= [[NSFileManager defaultManager] displayNameAtPath:filePath];
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+
+        NSString *fileName= [fileManager displayNameAtPath:filePath];
         NSError *error;
-        NSUInteger fileSize = [[[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:&error] fileSize];
+        
+        NSUInteger fileSize = 0;
+        
+        BOOL isDir = NO;
+        [fileManager fileExistsAtPath:filePath isDirectory:&isDir];
+        
+        if (!isDir)
+            fileSize = [[fileManager attributesOfItemAtPath:filePath error:&error] fileSize];
+        // Get file size of directory
+        else {
+            NSArray *filesArray = [fileManager subpathsOfDirectoryAtPath:filePath error:nil];
+            NSEnumerator *filesEnumerator = [filesArray objectEnumerator];
+            NSString *fileName;
+            while (fileName = [filesEnumerator nextObject]) {
+                NSDictionary *fileDictionary = [fileManager attributesOfItemAtPath:[filePath stringByAppendingPathComponent:fileName]  error:nil];
+                fileSize += [fileDictionary fileSize];
+            }
+        }
+        
         [self setName:fileName];
         [self setPath:filePath];
         [self setSize:fileSize];
