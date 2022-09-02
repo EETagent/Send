@@ -17,8 +17,8 @@
         }
         [[self layer] setCornerRadius:6];
         //Background color
-        //#333333
-        [[self layer] setBackgroundColor:[[NSColor colorWithSRGBRed:0.2 green:0.2 blue:0.2 alpha:1] CGColor]];
+        //#333333 or white
+        [[self layer] setBackgroundColor:[[NSColor colorNamed:@"dragAndDrop" bundle:nil] CGColor]];
     }
     return self;
 }
