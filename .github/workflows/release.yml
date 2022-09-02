@@ -34,7 +34,6 @@ jobs:
     - name: Create Disk Image 💿
       run: |
         XCBUILD_PATH="build/Build/Products/Release"
-        cp LICENSE $XCBUILD_PATH
         cd $XCBUILD_PATH
         curl -sLO https://openintelwireless.github.io/HeliPort/dmg/dmg-background.tiff
         create-dmg \
@@ -43,7 +42,6 @@ jobs:
           --window-pos 200 120 \
           --window-size 660 420 \
           --text-size 12 \
-          --eula "LICENSE" \
           --icon-size 160 \
           --icon "Send.app" 180 170 \
           --hide-extension "Send.app" \
@@ -53,8 +51,10 @@ jobs:
         cd -
         mkdir Artifacts
         cp -R ${XCBUILD_PATH}/*.dmg Artifacts
-        zip -r Send.zip "Send.app"
-        cp Send.zip Artifacts
+        cd $XCBUILD_PATH
+        zip -r Send.zip ./Send.app
+        cd -
+        cp ${XCBUILD_PATH}/*.zip Artifacts
 
     - name: Publish GitHub Release 📂
       uses: ncipollo/release-action@v1
