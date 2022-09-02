@@ -79,6 +79,7 @@
 			buildPhases = (
 				CA603290C40F17691337FC0B /* Sources */,
 				CA602EE07C51AF6EBB7F357C /* Universal Binary lipo */,
+				462F7ECD28C2532B007F6340 /* Fix (hack) @executable_path for Send Library framework */,
 			);
 			buildRules = (
 				CA602EE07C51AC6C1400ACA8 /* PBXBuildRule */,
@@ -123,6 +124,24 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		462F7ECD28C2532B007F6340 /* Fix (hack) @executable_path for Send Library framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Fix (hack) @executable_path for Send Library framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "install_name_tool -id @executable_path/../Frameworks/Send_Library.framework/Versions/A/Frameworks/$EXECUTABLE_PATH \"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"\n";
+		};
 		CA602EE07C51AF6EBB7F357C /* Universal Binary lipo */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
