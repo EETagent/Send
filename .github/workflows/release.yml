@@ -55,7 +55,7 @@ jobs:
     - name: Create Disk Image 💿
       run: |
         cp ./dmg/dmg-background.tiff $XCBUILD_PATH
-        cp ./dmg/dmg-VolumeIcon.icns $XCBUILD_PATH
+        cp ./dmg/VolumeIcon.icns $XCBUILD_PATH
         cd $XCBUILD_PATH
         create-dmg \
           --volname ${MACOS_APP_NAME} \
