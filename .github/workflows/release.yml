@@ -5,6 +5,13 @@ on:
     tags:
       - "*"
 
+env:
+  MACOS_APP_NAME: "Send"
+  MACOS_APP_ARTIFACT: "Send.app"
+  MACOS_DMG_ARTIFACT: "Send.dmg"
+  MACOS_ZIP_ARTIFACT: "Send.zip"
+  XCBUILD_PATH: "build/Build/Products/Release"
+
 jobs:
   ReleaseCI:
     runs-on: macos-latest
@@ -27,35 +34,48 @@ jobs:
           default: true
           override: true
 
+    - name: Setup latest Xcode ⚒️
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: latest
+
+    - name: Import Certificates 📜
+      uses: apple-actions/import-codesign-certs@v1
+      with:
+        p12-file-base64: ${{ secrets.CERTIFICATES_P12 }}
+        p12-password: ${{ secrets.CERTIFICATES_P12_PASSWORD }}
+
     - name: Release Build 🔨
       run: |
-        xcodebuild -scheme Send -configuration Release -derivedDataPath build -disableAutomaticPackageResolution CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty && exit ${PIPESTATUS[0]}
+        xcodebuild -scheme ${MACOS_APP_NAME} -configuration Release -derivedDataPath build -disableAutomaticPackageResolution CODE_SIGN_IDENTITY=- | xcpretty && exit ${PIPESTATUS[0]}
+
+    - name: Check Send signature
+      run: codesign --verify -vvvv --deep --strict "${XCBUILD_PATH}/${MACOS_APP_ARTIFACT}"
 
     - name: Create Disk Image 💿
       run: |
-        XCBUILD_PATH="build/Build/Products/Release"
         cd -
         cp ./dmg/dmg-background.tiff $XCBUILD_PATH
         cp ./dmg/dmg-VolumeIcon.icns $XCBUILD_PATH
         cd $XCBUILD_PATH
         create-dmg \
-          --volname "Send" \
+          --volname ${MACOS_APP_NAME} \
           --volicon "VolumeIcon.icns" \
           --background "dmg-background.tiff" \
           --window-pos 200 120 \
           --window-size 660 420 \
           --text-size 12 \
           --icon-size 160 \
-          --icon "Send.app" 180 170 \
-          --hide-extension "Send.app" \
+          --icon ${MACOS_APP_ARTIFACT} 180 170 \
+          --hide-extension ${MACOS_APP_ARTIFACT} \
           --app-drop-link 480 170 \
-          "Send.dmg" \
-          "./Send.app"
+          ${MACOS_DMG_ARTIFACT} \
+          ${MACOS_APP_ARTIFACT}
         cd -
         mkdir Artifacts
         cp -R ${XCBUILD_PATH}/*.dmg Artifacts
         cd $XCBUILD_PATH
-        zip -r Send.zip ./Send.app
+        zip -r ${MACOS_ZIP_ARTIFACT} ${MACOS_APP_ARTIFACT}
         cd -
         cp ${XCBUILD_PATH}/*.zip Artifacts
 
@@ -64,6 +84,7 @@ jobs:
       with:
         allowUpdates: true
         replacesArtifacts: true
+        draft: true
         prerelease: ${{ env.IS_PRE }}
         artifacts: "./Artifacts/*"
         tag: ${{ env.REL_TAG }}
