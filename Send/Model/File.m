@@ -24,6 +24,8 @@
             fileSize = [[fileManager attributesOfItemAtPath:filePath error:&error] fileSize];
         // Get file size of directory
         else {
+            [self setIsFolder:YES];
+            
             NSArray *filesArray = [fileManager subpathsOfDirectoryAtPath:filePath error:nil];
             NSEnumerator *filesEnumerator = [filesArray objectEnumerator];
             NSString *fileName;

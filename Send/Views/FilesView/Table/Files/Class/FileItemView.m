@@ -27,17 +27,23 @@
     [[self fileDelegate] fileItemDeletedWithIndex:[self index]];
 }
 
-- (void)setFileName:(NSString *)fileName setSize:(NSString *)fileSize {
+- (void)setFileName:(NSString *)fileName setSize:(NSString *)fileSize setIsFolder:(BOOL)isFolder {
     dispatch_async(dispatch_get_main_queue(), ^{
         [[self fileName] setStringValue:fileName];
         [[self fileSize] setStringValue:fileSize];
+        if (isFolder)
+            [[self fileIcon] setImage:[NSImage imageNamed:@"folder"]];
+        else
+            [[self fileIcon] setImage:[NSImage imageNamed:@"doc"]];
     });
 }
 
 - (void)setupWithFile:(File *)file {
     NSString *fileName = [file name];
     NSString *fileSize = [file stringSize];
-    [self setFileName:fileName setSize:fileSize];
+    BOOL isFolder = [file isFolder];
+    
+    [self setFileName:fileName setSize:fileSize setIsFolder:isFolder];
 }
 
 @end

@@ -17,6 +17,8 @@
 
 @property NSUInteger size;
 
+@property BOOL isFolder;
+
 - (NSURL*)urlPath;
 
 - (NSString *) stringSize;

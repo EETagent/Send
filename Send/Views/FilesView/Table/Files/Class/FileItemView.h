@@ -15,13 +15,15 @@
 
 @property NSUInteger index;
 
-@property (nonatomic, weak) IBOutlet NSTextField *fileName;
+@property(nonatomic, weak) IBOutlet NSTextField *fileName;
 
-@property (nonatomic, weak) IBOutlet NSTextField *fileSize;
+@property(nonatomic, weak) IBOutlet NSTextField *fileSize;
+
+@property(nonatomic, weak) IBOutlet NSImageView *fileIcon;
 
 - (IBAction)deleteItem:(id) sender;
 
-- (void)setFileName:(NSString*)fileName setSize:(NSString*)size;
+- (void)setFileName:(NSString *)fileName setSize:(NSString *)fileSize setIsFolder:(BOOL)isFolder;
 
 - (void)setupWithFile:(File *)file;
 

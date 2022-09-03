@@ -341,7 +341,7 @@ DQ
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="45" viewBased="YES" id="3L7-2g-c2R" customClass="DropTableView">
-                                            <rect key="frame" x="0.0" y="0.0" width="478" height="220"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="163"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="0.0" height="20"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -418,6 +418,7 @@ DQ
                                                                 <real value="3.4028234663852886e+38"/>
                                                             </customSpacing>
                                                             <connections>
+                                                                <outlet property="fileIcon" destination="ROT-xP-st6" id="VR5-KM-ZbX"/>
                                                                 <outlet property="fileName" destination="gsh-Kz-DaB" id="613-iZ-QK1"/>
                                                                 <outlet property="fileSize" destination="mm9-vT-UIt" id="OKL-91-fiU"/>
                                                             </connections>
@@ -739,6 +740,7 @@ DQ
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                         <connections>
+                                            <outlet property="fileIcon" destination="0CZ-9I-0rU" id="evF-or-KeU"/>
                                             <outlet property="fileName" destination="dt4-qa-Pkb" id="Zu8-2V-Sh4"/>
                                             <outlet property="fileSize" destination="hD6-IB-rGN" id="RA8-lZ-7lE"/>
                                         </connections>
