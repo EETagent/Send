@@ -126,6 +126,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		462F7ECD28C2532B007F6340 /* Fix (hack) @executable_path for Send Library framework */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
