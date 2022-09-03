@@ -54,7 +54,6 @@ jobs:
 
     - name: Create Disk Image 💿
       run: |
-        cd -
         cp ./dmg/dmg-background.tiff $XCBUILD_PATH
         cp ./dmg/dmg-VolumeIcon.icns $XCBUILD_PATH
         cd $XCBUILD_PATH
