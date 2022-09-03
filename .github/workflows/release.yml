@@ -34,10 +34,13 @@ jobs:
     - name: Create Disk Image 💿
       run: |
         XCBUILD_PATH="build/Build/Products/Release"
+        cd -
+        cp ./dmg/dmg-background.tiff $XCBUILD_PATH
+        cp ./dmg/dmg-VolumeIcon.icns $XCBUILD_PATH
         cd $XCBUILD_PATH
-        curl -sLO https://openintelwireless.github.io/HeliPort/dmg/dmg-background.tiff
         create-dmg \
           --volname "Send" \
+          --volicon "VolumeIcon.icns" \
           --background "dmg-background.tiff" \
           --window-pos 200 120 \
           --window-size 660 420 \
