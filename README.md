@@ -4,7 +4,7 @@
 <p align="center">
     macOS GUI and share extension for 🦊 Send
     <br />
-    <strong>Version: </strong>WIP (Unfinished)
+    <strong>Version: </strong>1.3
     <br />
     <br />
     <img src="https://img.shields.io/badge/macOS-10.13-green.svg">
@@ -12,7 +12,7 @@
     <img src="https://img.shields.io/badge/Objective-C-gold.svg">
     <br />
     <br />
-    <a><strong>No downloads</strong></a>
+    <a href="https://github.com/EETagent/Send/releases"><strong>Download now »</strong></a>
     <br />
     <br />
     <a href="https://github.com/EETagent/Send/issues">Report issues</a>
