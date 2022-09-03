@@ -9,7 +9,12 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>NSExtensionActivationRule</key>
-			<string>TRUEPREDICATE</string>
+			<dict>
+                <key>NSExtensionActivationSupportsFileWithMaxCount</key>
+                <integer>-1</integer>
+				<key>NSExtensionActivationSupportsText</key>
+				<false/>
+            </dict>
 		</dict>
 		<key>NSExtensionMainNibFile</key>
 		<string>ShareViewController</string>
