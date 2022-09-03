@@ -10,11 +10,11 @@
 		<dict>
 			<key>NSExtensionActivationRule</key>
 			<dict>
-                <key>NSExtensionActivationSupportsFileWithMaxCount</key>
-                <integer>-1</integer>
+				<key>NSExtensionActivationSupportsFileWithMaxCount</key>
+				<integer>-1</integer>
 				<key>NSExtensionActivationSupportsText</key>
 				<false/>
-            </dict>
+			</dict>
 		</dict>
 		<key>NSExtensionMainNibFile</key>
 		<string>ShareViewController</string>
