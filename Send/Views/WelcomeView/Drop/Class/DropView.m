@@ -57,7 +57,7 @@
         [[self layer] setCornerRadius:6];
         //Background color
         //#333333 or white
-        [[self layer] setBackgroundColor:[[NSColor colorNamed:@"dragAndDrop" bundle:nil] CGColor]];
+        [[self layer] setBackgroundColor:[[NSColor colorNamed:@"colorDropView" bundle:nil] CGColor]];
         // Drag & Drop register
         [self registerForDraggedTypes:[NSArray arrayWithObjects: (NSString*)kUTTypeFileURL, nil]];
     }
