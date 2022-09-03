@@ -14,7 +14,7 @@ env:
 
 jobs:
   ReleaseCI:
-    runs-on: macos-latest
+    runs-on: macos-12
 
     steps:
     - name: Checkout 🚚

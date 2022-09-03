@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   TestCI:
-    runs-on: macos-latest
+    runs-on: macos-12
     steps:
       - name: Checkout 🚚
         uses: actions/checkout@v3
