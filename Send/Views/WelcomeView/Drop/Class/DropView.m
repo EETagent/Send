@@ -10,7 +10,6 @@
 @implementation DropView {
     NSTimer *timer;
     CGFloat dashedBorderPhase;
-
 }
 
 - (void)dealloc {
@@ -55,15 +54,19 @@
             [[self layer] setCornerCurve:kCACornerCurveContinuous];
         }
         [[self layer] setCornerRadius:6];
-        //Background color
-        //#333333 or white
-        [[self layer] setBackgroundColor:[[NSColor colorNamed:@"colorDropView" bundle:nil] CGColor]];
+        
         // Drag & Drop register
         [self registerForDraggedTypes:[NSArray arrayWithObjects: (NSString*)kUTTypeFileURL, nil]];
     }
     return self;
 }
 
+- (void)layout {
+    //Background color
+    //#333333 or white
+    [[self layer] setBackgroundColor:[[NSColor colorNamed:@"colorDropView" bundle:nil]
+                                      CGColor]];
+}
 
 - (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender {
     // Set style to copy (better cursor icon)
@@ -87,7 +90,7 @@
     [openDialog setCanChooseFiles:YES];
     [openDialog setAllowsMultipleSelection:YES];
     [openDialog setCanChooseDirectories:NO];
-
+    
     if ( [openDialog runModal] == NSModalResponseOK ) {
         NSArray* urls = [openDialog URLs];
         [[self dropDelegate] dropFilesAdded:[urls copy]];

@@ -16,11 +16,14 @@
             [[self layer] setCornerCurve:kCACornerCurveContinuous];
         }
         [[self layer] setCornerRadius:6];
-        //Background color
-        //#333333 or white
-        [[self layer] setBackgroundColor:[[NSColor colorNamed:@"colorFileItemView" bundle:nil] CGColor]];
     }
     return self;
+}
+
+- (void)updateLayer {
+    //Background color
+    //#333333 or white
+    [[self layer] setBackgroundColor:[[NSColor colorNamed:@"colorFileItemView" bundle:nil] CGColor]];
 }
 
 - (void)deleteItem:(id)sender {
