@@ -46,6 +46,8 @@
         // Show progress indicator
         [[self progressIndicator] setHidden:NO];
         [[self progressIndicator] setMaxValue:size];
+        // Disable upload button
+        [[self mainButton] setEnabled:NO];
     });
 }
 
@@ -64,6 +66,7 @@
             [[self resultView] setValues];
             [[self resultView] setHidden:NO];
             
+            [[self mainButton] setEnabled:YES];
             [[self mainButton] setTitle:NSLocalizedString(@"Exit", @"Exit button")];
             self->fileUploaded = YES;
         });

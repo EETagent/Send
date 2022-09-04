@@ -8,8 +8,6 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ShareViewController">
             <connections>
-                <outlet property="expiryPopUpButton" destination="fwq-pW-mhj" id="b7o-9Z-CLD"/>
-                <outlet property="limitPopUpButton" destination="Qot-RD-Dyt" id="v1B-FD-9bN"/>
                 <outlet property="mainButton" destination="1uM-r7-H1c" id="0p9-X2-0bi"/>
                 <outlet property="progressIndicator" destination="2FK-34-Yvl" id="bpU-zK-7xj"/>
                 <outlet property="resultView" destination="9vg-XX-anm" id="KPb-9C-lnw"/>
