@@ -95,7 +95,7 @@ void uploadCompleted (void *ctx) {}
     const NSString *uploadFolder = @"Send-Upload";
     NSString *tempFolder = [NSTemporaryDirectory() stringByAppendingPathComponent:(NSString *)uploadFolder];
     
-    if ([fileManager fileExistsAtPath:tempFolder isDirectory:nil])
+    if ([fileManager fileExistsAtPath:tempFolder])
         [fileManager removeItemAtPath:tempFolder error:nil];
     
     [fileManager createDirectoryAtPath:tempFolder withIntermediateDirectories:YES attributes:nil error:nil];
@@ -103,6 +103,14 @@ void uploadCompleted (void *ctx) {}
     // Copy files and folders
     for (NSString *file in files) {
         NSString *fileName = [file lastPathComponent];
+        
+        NSString *original = [fileName copy];
+        unsigned long fileIndex = 1;
+        while ([fileManager fileExistsAtPath:[tempFolder stringByAppendingPathComponent:fileName]]) {
+            fileName = [NSString stringWithFormat:@"%lu-%@", fileIndex, original];
+            fileIndex++;
+        }
+        
         [fileManager copyItemAtPath:file toPath:[tempFolder stringByAppendingPathComponent:fileName] error:nil];
     }
         
