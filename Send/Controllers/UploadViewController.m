@@ -35,18 +35,22 @@
     if (password)
         [self->send setPassword:password];
     
-    // Single file
+    // Single file/folder
     if ([files count] == 1) {
         self->file = [files objectAtIndex:0];
         NSString *path = [self->file path];
         // Start download
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            [self->send uploadFileWithPath:path];
+            [self->send uploadFileWithPath:path tempFileCreatedAtBlock:^(NSString *path) {
+                // Update file with possible (if folder) ZIP location
+                File *file = [[File alloc] initWithPath:path];
+                self->file = file;
+            }];
         });
         return;
     }
     
-    // Multiple files
+    // Multiple files/folders
     NSMutableArray<NSString *> *filePaths = [NSMutableArray new];
     // Map would be fancy
     for (File *file in files)
