@@ -38,10 +38,7 @@ void uploadProgress (unsigned long long bytes, void *ctx) {
     [[send delegate] sendUploadProgressWithTotalBytesUploaded:bytes];
 }
 
-void uploadCompleted (void *ctx) {
-    //Send* send = (__bridge Send *)(ctx);
-    //[[send delegate] sendUploadCompleted];
-}
+void uploadCompleted (void *ctx) {}
 
 - (void)uploadFileWithPath:(NSString*)path {
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -57,17 +54,23 @@ void uploadCompleted (void *ctx) {
     
     const char *password = [self password] ? [[self password] UTF8String] : nil;
     
+    // If path is directory, create ZIP archive
     if (isDir) {
         const NSString *archiveName = @"Send-Archive.zip";
-        NSString *tempZIP = [NSTemporaryDirectory() stringByAppendingPathComponent:(NSString *)archiveName];
-        BOOL createZIP = [SSZipArchive createZipFileAtPath:tempZIP withContentsOfDirectory:path keepParentDirectory:YES];
-        if (createZIP) {
-            [self uploadFileWithPath:tempZIP];
-            [fileManager removeItemAtPath:tempZIP error:nil];
+        NSString *tempArchive = [NSTemporaryDirectory() stringByAppendingPathComponent:(NSString *)archiveName];
+        
+        if ([fileManager fileExistsAtPath:tempArchive isDirectory:nil])
+            [fileManager removeItemAtPath:tempArchive error:nil];
+        
+        BOOL archiveCreated = [SSZipArchive createZipFileAtPath:tempArchive withContentsOfDirectory:path keepParentDirectory:YES];
+        if (archiveCreated) {
+            // Recursion (Now path is not dir)
+            [self uploadFileWithPath:tempArchive];
+            [fileManager removeItemAtPath:tempArchive error:nil];
         }
         return;
     }
-    
+        
     NSInteger status = upload_file(pathString, password, [self limit], [self expiry], self->progressReporter, self->uploadedFile);
     [[self delegate] sendUploadCompletedWithStatus:status];
 }
@@ -80,42 +83,30 @@ void uploadCompleted (void *ctx) {
 - (void)uploadFilesWithPaths:(NSArray<NSString *> *)files tempFileCreatedAtBlock:(void (^)(NSString *path))tempFileBlock {
     NSFileManager *fileManager = [NSFileManager defaultManager];
 
-    NSMutableArray<NSString *> *mutableFiles = [files mutableCopy];
+    // NSString *uuid = [[NSUUID UUID] UUIDString];
     
-    // Create main ZIP archive
-    const NSString *archiveName = @"Send-Archive.zip";
-    NSString *tempZIP = [NSTemporaryDirectory() stringByAppendingPathComponent:(NSString *)archiveName];
-    // ZIP each directory in provided paths
-    // Nested directories are not supported yet!
-    NSMutableArray<NSString *> *zipDirectories = [NSMutableArray new];
-    for (int index = 0; index < [mutableFiles count]; index++) {
-        NSString *path = [mutableFiles objectAtIndex:index];
-        
-        BOOL isDir = NO;
-        [fileManager fileExistsAtPath:path isDirectory:&isDir];
-        if (!isDir)
-            continue;
-        
-        NSString *fileName = [[path lastPathComponent] stringByDeletingPathExtension];
-        NSString *subZIP = [NSTemporaryDirectory() stringByAppendingFormat:@"%@-%i.zip",fileName, index];
-        BOOL createSubZIP = [SSZipArchive createZipFileAtPath:subZIP withContentsOfDirectory:path keepParentDirectory:NO];
-        
-        if (createSubZIP) {
-            [zipDirectories addObject:subZIP];
-            [mutableFiles replaceObjectAtIndex:index withObject:subZIP];
-        }
+    const NSString *uploadFolder = @"Send-Upload";
+    NSString *tempFolder = [NSTemporaryDirectory() stringByAppendingPathComponent:(NSString *)uploadFolder];
+    
+    if ([fileManager fileExistsAtPath:tempFolder isDirectory:nil])
+        [fileManager removeItemAtPath:tempFolder error:nil];
+    
+    [fileManager createDirectoryAtPath:tempFolder withIntermediateDirectories:YES attributes:nil error:nil];
+    
+    // Copy files and folders
+    for (NSString *file in files) {
+        NSString *fileName = [file lastPathComponent];
+        [fileManager copyItemAtPath:file toPath:[tempFolder stringByAppendingPathComponent:fileName] error:nil];
     }
     
-    BOOL createZIP = [SSZipArchive createZipFileAtPath:tempZIP withFilesAtPaths:mutableFiles];
-    if (createZIP) {
-        tempFileBlock(tempZIP);
-        [self uploadFileWithPath:tempZIP];
-        // Clean ZIP file
-        [fileManager removeItemAtPath:tempZIP error:nil];
-    }
-    // Clean ZIP files
-    for (NSString *zipDir in zipDirectories)
-        [fileManager removeItemAtPath:zipDir error:nil];
+    // File object callback
+    tempFileBlock(tempFolder);
+    
+    // Upload as only one path
+    [self uploadFileWithPath:tempFolder];
+    
+    // Delete temp folder
+    [fileManager removeItemAtPath:tempFolder error:nil];
 }
 
 - (NSString *)uploadedFileGetId {
