@@ -21,7 +21,7 @@
 "5QF-Oa-p0T.title" = "Úpravy";
 
 /* Class = "NSTextFieldCell"; title = "1,4MB"; ObjectID = "5at-G2-IHd"; */
-"5at-G2-IHd.title" = "1,4MB";
+"5at-G2-IHd.title" = "???";
 
 /* Class = "NSMenuItem"; title = "About Send"; ObjectID = "5kV-Vb-QxS"; */
 "5kV-Vb-QxS.title" = "O aplikaci Send";
@@ -93,7 +93,7 @@
 "RHh-fV-Qgn.title" = "1,4MB";
 
 /* Class = "NSTextFieldCell"; title = "A4.pdf"; ObjectID = "SjE-Mz-xfb"; */
-"SjE-Mz-xfb.title" = "A4.pdf";
+"SjE-Mz-xfb.title" = "Soubory se připravují";
 
 /* Class = "NSButtonCell"; title = "Select files to upload"; ObjectID = "SyA-Kd-DaZ"; Note = "DropView select button"; */
 "SyA-Kd-DaZ.title" = "Vyberte soboury k nahrání";

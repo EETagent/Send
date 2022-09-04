@@ -701,16 +701,16 @@ DQ
                                                 <rect key="frame" x="37" y="4" width="413" height="38"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dt4-qa-Pkb">
-                                                        <rect key="frame" x="-2" y="22" width="49" height="16"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="A4.pdf" id="SjE-Mz-xfb">
+                                                        <rect key="frame" x="-2" y="22" width="99" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Preparing files" id="SjE-Mz-xfb">
                                                             <font key="font" textStyle="headline" name=".SFNS-Bold"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hD6-IB-rGN">
-                                                        <rect key="frame" x="-2" y="0.0" width="37" height="14"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="1,4MB" id="5at-G2-IHd">
+                                                        <rect key="frame" x="-2" y="0.0" width="22" height="14"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="???" id="5at-G2-IHd">
                                                             <font key="font" textStyle="subheadline" name=".SFNS-Regular"/>
                                                             <color key="textColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
