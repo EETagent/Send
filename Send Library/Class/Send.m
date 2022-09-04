@@ -41,6 +41,10 @@ void uploadProgress (unsigned long long bytes, void *ctx) {
 void uploadCompleted (void *ctx) {}
 
 - (void)uploadFileWithPath:(NSString*)path {
+    [self uploadFileWithPath:path tempFileCreatedAtBlock:nil];
+}
+
+- (void)uploadFileWithPath:(NSString*)path tempFileCreatedAtBlock:(void (^)(NSString *path))tempFileBlock {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
     BOOL isDir = NO;
@@ -64,6 +68,9 @@ void uploadCompleted (void *ctx) {}
         
         BOOL archiveCreated = [SSZipArchive createZipFileAtPath:tempArchive withContentsOfDirectory:path keepParentDirectory:YES];
         if (archiveCreated) {
+            // File object callback
+            if (tempFileBlock)
+                tempFileBlock(tempArchive);
             // Recursion (Now path is not dir)
             [self uploadFileWithPath:tempArchive];
             [fileManager removeItemAtPath:tempArchive error:nil];
@@ -98,12 +105,12 @@ void uploadCompleted (void *ctx) {}
         NSString *fileName = [file lastPathComponent];
         [fileManager copyItemAtPath:file toPath:[tempFolder stringByAppendingPathComponent:fileName] error:nil];
     }
-    
-    // File object callback
-    tempFileBlock(tempFolder);
-    
+        
     // Upload as only one path
-    [self uploadFileWithPath:tempFolder];
+    [self uploadFileWithPath:tempFolder tempFileCreatedAtBlock:^(NSString *path) {
+        // File object callback
+        tempFileBlock(path);
+    }];
     
     // Delete temp folder
     [fileManager removeItemAtPath:tempFolder error:nil];

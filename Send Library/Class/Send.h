@@ -17,6 +17,7 @@
 
 - (void)uploadFileWithURLPath:(NSURL*)path;
 - (void)uploadFileWithPath:(NSString*)path;
+- (void)uploadFileWithPath:(NSString*)path tempFileCreatedAtBlock:(void (^)(NSString *path))tempFileBlock;
 
 - (void)uploadFilesWithPaths:(NSArray<NSString *> *)files tempFileCreatedAtBlock:(void (^)(NSString *path))tempFileBlock;
 
