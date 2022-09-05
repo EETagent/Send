@@ -21,7 +21,12 @@
         [files addObject:file];
     }
     FilesViewController *controller = [[self storyboard] instantiateControllerWithIdentifier:@"FilesView"];
+    
     [controller setFileList:files];
+    
+    CGRect frame = [[self view] frame];
+    [[controller view] setFrame:frame];
+    
     [[[self view] window] setContentViewController:controller];
 }
 

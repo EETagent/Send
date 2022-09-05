@@ -19,6 +19,10 @@
 
 - (void)returnToWelcome:(id)sender {
     NSViewController *controller = [[self storyboard] instantiateControllerWithIdentifier:@"WelcomeView"];
+    
+    CGRect frame = [[self view] frame];
+    [[controller view] setFrame:frame];
+    
     [[[self view] window] setContentViewController:controller];
 }
 

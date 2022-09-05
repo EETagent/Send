@@ -159,7 +159,7 @@
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="Send" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="SendWindow" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="350"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -180,11 +180,11 @@
             <objects>
                 <viewController storyboardIdentifier="WelcomeView" id="XfG-lQ-9wD" customClass="WelcomeController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="520" height="350"/>
+                        <rect key="frame" x="0.0" y="0.0" width="520" height="348"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hro-Ob-mee">
-                                <rect key="frame" x="20" y="240" width="480" height="90"/>
+                                <rect key="frame" x="20" y="238" width="480" height="90"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="AUi-be-JG7" userLabel="Headline">
                                         <rect key="frame" x="-2" y="62" width="298" height="28"/>
@@ -219,90 +219,99 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="XHV-QG-UmI" customClass="DropView">
-                                <rect key="frame" x="20" y="20" width="480" height="200"/>
+                            <customView horizontalCompressionResistancePriority="499" verticalCompressionResistancePriority="499" translatesAutoresizingMaskIntoConstraints="NO" id="XHV-QG-UmI" customClass="DropView">
+                                <rect key="frame" x="20" y="20" width="480" height="198"/>
                                 <subviews>
-                                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uSa-7z-Dwj">
-                                        <rect key="frame" x="20" y="20" width="440" height="140"/>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GVV-EE-fpq">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="198"/>
                                         <subviews>
-                                            <button translatesAutoresizingMaskIntoConstraints="NO" id="bRa-Es-lhu">
-                                                <rect key="frame" x="205" y="110" width="30" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="abY-0C-BgV"/>
-                                                    <constraint firstAttribute="width" constant="30" id="vEh-op-Mta"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="ypy-h2-Wpj"/>
-                                                </constraints>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="0Qc-as-GhD">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                    <imageReference key="image" image="plus.circle" symbolScale="large"/>
-                                                </buttonCell>
-                                                <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <connections>
-                                                    <action selector="openFile:" target="XHV-QG-UmI" id="SFx-oz-kGH"/>
-                                                </connections>
-                                            </button>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ewR-vj-yzg">
-                                                <rect key="frame" x="157" y="74" width="127" height="16"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Drag and drop files" id="as0-pb-qAw">
-                                                    <font key="font" textStyle="headline" name=".SFNS-Bold"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                                <attributedString key="userComments">
-                                                    <fragment content="DropView D&amp;D"/>
-                                                </attributedString>
-                                            </textField>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q7B-i2-JbY">
-                                                <rect key="frame" x="147" y="40" width="146" height="14"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="or click to send up to 10GB" id="EWT-ky-x4L">
-                                                    <font key="font" textStyle="subheadline" name=".SFNS-Regular"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                                <attributedString key="userComments">
-                                                    <fragment content="DropView 10GB"/>
-                                                </attributedString>
-                                            </textField>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6Us-qz-nDQ">
-                                                <rect key="frame" x="139" y="-7" width="162" height="32"/>
-                                                <buttonCell key="cell" type="push" title="Select files to upload" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SyA-Kd-DaZ">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                    <string key="keyEquivalent" base64-UTF8="YES">
+                                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" horizontalCompressionResistancePriority="200" verticalCompressionResistancePriority="200" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uSa-7z-Dwj">
+                                                <rect key="frame" x="0.0" y="29" width="480" height="140"/>
+                                                <subviews>
+                                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="bRa-Es-lhu">
+                                                        <rect key="frame" x="225" y="110" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="abY-0C-BgV"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="ypy-h2-Wpj"/>
+                                                        </constraints>
+                                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="0Qc-as-GhD">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                            <imageReference key="image" image="plus.circle" symbolScale="large"/>
+                                                        </buttonCell>
+                                                        <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <connections>
+                                                            <action selector="openFile:" target="XHV-QG-UmI" id="SFx-oz-kGH"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ewR-vj-yzg">
+                                                        <rect key="frame" x="177" y="74" width="127" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Drag and drop files" id="as0-pb-qAw">
+                                                            <font key="font" textStyle="headline" name=".SFNS-Bold"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <attributedString key="userComments">
+                                                            <fragment content="DropView D&amp;D"/>
+                                                        </attributedString>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q7B-i2-JbY">
+                                                        <rect key="frame" x="167" y="40" width="146" height="14"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="or click to send up to 10GB" id="EWT-ky-x4L">
+                                                            <font key="font" textStyle="subheadline" name=".SFNS-Regular"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <attributedString key="userComments">
+                                                            <fragment content="DropView 10GB"/>
+                                                        </attributedString>
+                                                    </textField>
+                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6Us-qz-nDQ">
+                                                        <rect key="frame" x="159" y="-7" width="162" height="32"/>
+                                                        <buttonCell key="cell" type="push" title="Select files to upload" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SyA-Kd-DaZ">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                            <string key="keyEquivalent" base64-UTF8="YES">
 DQ
 </string>
-                                                </buttonCell>
-                                                <color key="bezelColor" red="0.3686274886" green="0.62352943419999995" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <attributedString key="userComments">
-                                                    <fragment content="DropView select button"/>
-                                                </attributedString>
-                                                <connections>
-                                                    <action selector="openFile:" target="XHV-QG-UmI" id="L0l-uf-3BT"/>
-                                                </connections>
-                                            </button>
+                                                        </buttonCell>
+                                                        <color key="bezelColor" red="0.3686274886" green="0.62352943419999995" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <attributedString key="userComments">
+                                                            <fragment content="DropView select button"/>
+                                                        </attributedString>
+                                                        <connections>
+                                                            <action selector="openFile:" target="XHV-QG-UmI" id="L0l-uf-3BT"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
                                         </subviews>
                                         <visibilityPriorities>
                                             <integer value="1000"/>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="uSa-7z-Dwj" firstAttribute="leading" secondItem="XHV-QG-UmI" secondAttribute="leading" constant="20" id="1xY-Bh-7Sz"/>
-                                    <constraint firstAttribute="bottom" secondItem="uSa-7z-Dwj" secondAttribute="bottom" constant="20" id="WME-GW-64C"/>
-                                    <constraint firstAttribute="bottom" secondItem="uSa-7z-Dwj" secondAttribute="bottom" constant="20" id="Zbl-1L-S86"/>
-                                    <constraint firstAttribute="trailing" secondItem="uSa-7z-Dwj" secondAttribute="trailing" constant="20" id="dHY-Ro-YIM"/>
-                                    <constraint firstItem="uSa-7z-Dwj" firstAttribute="top" secondItem="XHV-QG-UmI" secondAttribute="top" constant="40" id="zEd-hr-8O1"/>
+                                    <constraint firstItem="GVV-EE-fpq" firstAttribute="top" secondItem="XHV-QG-UmI" secondAttribute="top" id="84a-mV-1dF"/>
+                                    <constraint firstAttribute="trailing" secondItem="GVV-EE-fpq" secondAttribute="trailing" id="9nf-Vs-7pw"/>
+                                    <constraint firstItem="GVV-EE-fpq" firstAttribute="leading" secondItem="XHV-QG-UmI" secondAttribute="leading" id="LYe-AC-aLy"/>
+                                    <constraint firstAttribute="bottom" secondItem="GVV-EE-fpq" secondAttribute="bottom" id="ecG-7r-ep9"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dropDelegate" destination="XfG-lQ-9wD" id="3lM-G9-Tf6"/>
@@ -310,13 +319,13 @@ DQ
                             </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="XHV-QG-UmI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="8FM-C7-Qhq"/>
-                            <constraint firstItem="XHV-QG-UmI" firstAttribute="top" secondItem="hro-Ob-mee" secondAttribute="bottom" constant="20" id="9gH-Le-rCQ"/>
-                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="XHV-QG-UmI" secondAttribute="bottom" constant="20" id="Me7-cF-uUU"/>
+                            <constraint firstAttribute="trailing" secondItem="XHV-QG-UmI" secondAttribute="trailing" constant="20" id="7tU-jI-287"/>
+                            <constraint firstAttribute="bottom" secondItem="XHV-QG-UmI" secondAttribute="bottom" constant="20" id="8AY-tu-0TU"/>
+                            <constraint firstItem="XHV-QG-UmI" firstAttribute="top" secondItem="hro-Ob-mee" secondAttribute="bottom" constant="20" id="auW-OC-YDM"/>
                             <constraint firstItem="hro-Ob-mee" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="dg0-bc-TmO"/>
+                            <constraint firstItem="XHV-QG-UmI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="jNn-2m-ssC"/>
                             <constraint firstAttribute="trailing" secondItem="hro-Ob-mee" secondAttribute="trailing" constant="20" id="k7Y-bw-Zgz"/>
-                            <constraint firstItem="hro-Ob-mee" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="oHJ-Fi-KLB"/>
-                            <constraint firstAttribute="trailing" secondItem="XHV-QG-UmI" secondAttribute="trailing" constant="20" id="upr-JI-9NX"/>
+                            <constraint firstItem="hro-Ob-mee" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="pOs-Af-hGx"/>
                         </constraints>
                     </view>
                     <connections>

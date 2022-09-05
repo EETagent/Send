@@ -28,6 +28,10 @@
 
 - (void)moveToWelcomeView {
     NSViewController *controller = [[self storyboard] instantiateControllerWithIdentifier:@"WelcomeView"];
+    
+    CGRect frame = [[self view] frame];
+    [[controller view] setFrame:frame];
+    
     [[[self view] window] setContentViewController:controller];
 }
 
@@ -94,6 +98,9 @@
     NSString *password = [[self settingsStackView] parsePassword];
     
     [controller uploadFiles:[self fileList] withExpiry:expiry withLimit:limit withPassword:password];
+    
+    CGRect frame = [[self view] frame];
+    [[controller view] setFrame:frame];
     
     [[[self view] window] setContentViewController:controller];
 }
