@@ -21,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="388" height="263"/>
             <subviews>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1uM-r7-H1c">
-                    <rect key="frame" x="307" y="3" width="78" height="32"/>
+                    <rect key="frame" x="297" y="13" width="78" height="32"/>
                     <buttonCell key="cell" type="push" title="Upload" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2l4-PO-we5">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -35,7 +35,7 @@ DQ
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NVE-vN-dkz">
-                    <rect key="frame" x="235" y="3" width="78" height="32"/>
+                    <rect key="frame" x="225" y="13" width="78" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="cP1-hK-9ZX"/>
                     </constraints>
@@ -59,10 +59,10 @@ Gw
                     </textFieldCell>
                 </textField>
                 <progressIndicator hidden="YES" maxValue="100" doubleValue="50" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="2FK-34-Yvl">
-                    <rect key="frame" x="30" y="39" width="328" height="20"/>
+                    <rect key="frame" x="30" y="59" width="328" height="20"/>
                 </progressIndicator>
                 <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yuc-DZ-eLs" customClass="SettingsStackView">
-                    <rect key="frame" x="30" y="125" width="328" height="77"/>
+                    <rect key="frame" x="20" y="135" width="348" height="77"/>
                     <subviews>
                         <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="33E-AP-dc4">
                             <rect key="frame" x="0.0" y="57" width="223" height="20"/>
@@ -180,13 +180,13 @@ Gw
                     </connections>
                 </stackView>
                 <stackView hidden="YES" distribution="fill" orientation="vertical" alignment="leading" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9vg-XX-anm" customClass="ResultView">
-                    <rect key="frame" x="30" y="88" width="328" height="114"/>
+                    <rect key="frame" x="20" y="98" width="348" height="114"/>
                     <subviews>
                         <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7I3-oY-gIy">
-                            <rect key="frame" x="0.0" y="94" width="328" height="20"/>
+                            <rect key="frame" x="0.0" y="94" width="348" height="20"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="499" verticalCompressionResistancePriority="499" translatesAutoresizingMaskIntoConstraints="NO" id="O8s-IF-AbC">
-                                    <rect key="frame" x="0.0" y="0.0" width="268" height="20"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="288" height="20"/>
                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" selectable="YES" editable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="ppl-J4-qo3">
                                         <font key="font" usesAppearanceFont="YES"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -194,7 +194,7 @@ Gw
                                     </textFieldCell>
                                 </textField>
                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zzV-7U-TSf" userLabel="Copy">
-                                    <rect key="frame" x="269" y="-7" width="66" height="32"/>
+                                    <rect key="frame" x="289" y="-7" width="66" height="32"/>
                                     <buttonCell key="cell" type="push" title="Copy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UmE-za-qH0">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
@@ -241,24 +241,24 @@ Gw
             </subviews>
             <constraints>
                 <constraint firstItem="1uM-r7-H1c" firstAttribute="leading" secondItem="NVE-vN-dkz" secondAttribute="trailing" constant="8" id="1UO-J1-LbJ"/>
-                <constraint firstItem="yuc-DZ-eLs" firstAttribute="top" secondItem="aNc-0i-CWK" secondAttribute="bottom" constant="30" id="3Ik-W3-Hnq"/>
+                <constraint firstItem="yuc-DZ-eLs" firstAttribute="top" secondItem="aNc-0i-CWK" secondAttribute="bottom" constant="20" id="3Ik-W3-Hnq"/>
                 <constraint firstItem="NVE-vN-dkz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1" secondAttribute="leading" constant="20" symbolic="YES" id="3N9-qo-UfS"/>
-                <constraint firstAttribute="bottom" secondItem="1uM-r7-H1c" secondAttribute="bottom" constant="10" id="4wH-De-nMF"/>
-                <constraint firstAttribute="bottom" secondItem="NVE-vN-dkz" secondAttribute="bottom" constant="10" id="USG-Gg-of3"/>
-                <constraint firstItem="yuc-DZ-eLs" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="30" id="WVL-i3-cz2"/>
+                <constraint firstAttribute="bottom" secondItem="1uM-r7-H1c" secondAttribute="bottom" constant="20" id="4wH-De-nMF"/>
+                <constraint firstAttribute="bottom" secondItem="NVE-vN-dkz" secondAttribute="bottom" constant="20" id="USG-Gg-of3"/>
+                <constraint firstItem="yuc-DZ-eLs" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="WVL-i3-cz2"/>
                 <constraint firstItem="1uM-r7-H1c" firstAttribute="leading" secondItem="NVE-vN-dkz" secondAttribute="trailing" constant="8" id="a8N-vS-Ew9"/>
-                <constraint firstItem="9vg-XX-anm" firstAttribute="top" secondItem="aNc-0i-CWK" secondAttribute="bottom" constant="30" id="ekB-RG-Kez"/>
-                <constraint firstItem="1uM-r7-H1c" firstAttribute="top" secondItem="2FK-34-Yvl" secondAttribute="bottom" constant="10" id="g35-qp-BaD"/>
+                <constraint firstItem="9vg-XX-anm" firstAttribute="top" secondItem="aNc-0i-CWK" secondAttribute="bottom" constant="20" id="ekB-RG-Kez"/>
+                <constraint firstItem="1uM-r7-H1c" firstAttribute="top" secondItem="2FK-34-Yvl" secondAttribute="bottom" constant="20" id="g35-qp-BaD"/>
                 <constraint firstItem="2FK-34-Yvl" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="30" id="gpE-Jf-olU"/>
-                <constraint firstItem="2FK-34-Yvl" firstAttribute="top" secondItem="9vg-XX-anm" secondAttribute="bottom" constant="30" id="hJo-He-VeY"/>
-                <constraint firstAttribute="trailing" secondItem="yuc-DZ-eLs" secondAttribute="trailing" constant="30" id="j2s-67-Qi7"/>
-                <constraint firstItem="9vg-XX-anm" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="30" id="lY0-T0-KFf"/>
+                <constraint firstItem="2FK-34-Yvl" firstAttribute="top" secondItem="9vg-XX-anm" secondAttribute="bottom" constant="20" id="hJo-He-VeY"/>
+                <constraint firstAttribute="trailing" secondItem="yuc-DZ-eLs" secondAttribute="trailing" constant="20" id="j2s-67-Qi7"/>
+                <constraint firstItem="9vg-XX-anm" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="lY0-T0-KFf"/>
                 <constraint firstAttribute="trailing" secondItem="2FK-34-Yvl" secondAttribute="trailing" constant="30" id="mr4-b9-r26"/>
                 <constraint firstItem="NVE-vN-dkz" firstAttribute="width" secondItem="1uM-r7-H1c" secondAttribute="width" id="qPo-ky-Fcw"/>
-                <constraint firstAttribute="trailing" secondItem="1uM-r7-H1c" secondAttribute="trailing" constant="10" id="qfT-cw-QQ2"/>
+                <constraint firstAttribute="trailing" secondItem="1uM-r7-H1c" secondAttribute="trailing" constant="20" id="qfT-cw-QQ2"/>
                 <constraint firstAttribute="centerX" secondItem="aNc-0i-CWK" secondAttribute="centerX" id="uV3-Wn-RA3"/>
                 <constraint firstItem="aNc-0i-CWK" firstAttribute="top" secondItem="1" secondAttribute="top" constant="15" id="vpR-tf-ebx"/>
-                <constraint firstAttribute="trailing" secondItem="9vg-XX-anm" secondAttribute="trailing" constant="30" id="zyb-7v-A5P"/>
+                <constraint firstAttribute="trailing" secondItem="9vg-XX-anm" secondAttribute="trailing" constant="20" id="zyb-7v-A5P"/>
             </constraints>
             <point key="canvasLocation" x="58" y="-36"/>
         </customView>
