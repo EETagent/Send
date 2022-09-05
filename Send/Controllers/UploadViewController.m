@@ -86,21 +86,26 @@
     });
 }
 
-- (void)sendUploadCompletedWithStatus:(NSInteger)status {
-    // Upload completed
-    // TODO: NSError support
-    if (status == 0) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSURL *link = [self->send uploadedFileGetLink];
-            if (link) {
-                [[self resultView] setUrl:link];
-                [[self resultView] setValues];
-                // TODO: Translation
-                [[self statusTextField] setStringValue:NSLocalizedString(@"Your file is encrypted and ready to send", @"Successful file upload status")];
-                [[self statusTextField] stopAnimating];
-            }
-        });
-    }
+- (void)sendUploadCompleted {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSURL *link = [self->send uploadedFileGetLink];
+        if (link) {
+            [[self resultView] setUrl:link];
+            [[self resultView] setSuccess];
+            [[self statusTextField] setStringValue:NSLocalizedString(@"Your file is encrypted and ready to send", @"Successful file upload status")];
+            [[self statusTextField] stopAnimating];
+        }
+    });
+}
+
+- (void)sendUploadFailedWithError:(NSError *)error {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[self fileItemView] setHidden:YES];
+        [[self statusTextField] setStringValue:[error localizedDescription]];
+        [[self statusTextField] stopAnimating];
+        
+        [[self resultView] setError];
+    });
 }
 
 @end

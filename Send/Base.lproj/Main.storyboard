@@ -183,11 +183,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="520" height="350"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="18" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hro-Ob-mee">
-                                <rect key="frame" x="30" y="232" width="460" height="88"/>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hro-Ob-mee">
+                                <rect key="frame" x="20" y="240" width="480" height="90"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="AUi-be-JG7" userLabel="Headline">
-                                        <rect key="frame" x="-2" y="60" width="298" height="28"/>
+                                        <rect key="frame" x="-2" y="62" width="298" height="28"/>
                                         <textFieldCell key="cell" title="Simple, private file sharing" id="87Z-8c-LE6">
                                             <font key="font" metaFont="systemBold" size="24"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -198,7 +198,7 @@
                                         </attributedString>
                                     </textField>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="MvX-5F-zZs" userLabel="Subtitle">
-                                        <rect key="frame" x="-2" y="0.0" width="464" height="42"/>
+                                        <rect key="frame" x="-2" y="0.0" width="484" height="42"/>
                                         <textFieldCell key="cell" id="2wr-Am-WmR">
                                             <font key="font" textStyle="subheadline" name=".SFNS-Regular"/>
                                             <string key="title">Send lets you share files with end-to-end encryption and a link that automatically expires. So you can keep what you share private and make sure your stuff doesn’t stay online forever.</string>
@@ -220,10 +220,10 @@
                                 </customSpacing>
                             </stackView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="XHV-QG-UmI" customClass="DropView">
-                                <rect key="frame" x="20" y="20" width="480" height="182"/>
+                                <rect key="frame" x="20" y="20" width="480" height="200"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uSa-7z-Dwj">
-                                        <rect key="frame" x="20" y="21" width="440" height="140"/>
+                                        <rect key="frame" x="20" y="20" width="440" height="140"/>
                                         <subviews>
                                             <button translatesAutoresizingMaskIntoConstraints="NO" id="bRa-Es-lhu">
                                                 <rect key="frame" x="205" y="110" width="30" height="30"/>
@@ -299,9 +299,10 @@ DQ
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="uSa-7z-Dwj" firstAttribute="leading" secondItem="XHV-QG-UmI" secondAttribute="leading" constant="20" id="1xY-Bh-7Sz"/>
-                                    <constraint firstItem="uSa-7z-Dwj" firstAttribute="top" secondItem="XHV-QG-UmI" secondAttribute="top" constant="21" id="WIa-aC-DVj"/>
-                                    <constraint firstAttribute="bottom" secondItem="uSa-7z-Dwj" secondAttribute="bottom" constant="21" id="WME-GW-64C"/>
+                                    <constraint firstAttribute="bottom" secondItem="uSa-7z-Dwj" secondAttribute="bottom" constant="20" id="WME-GW-64C"/>
+                                    <constraint firstAttribute="bottom" secondItem="uSa-7z-Dwj" secondAttribute="bottom" constant="20" id="Zbl-1L-S86"/>
                                     <constraint firstAttribute="trailing" secondItem="uSa-7z-Dwj" secondAttribute="trailing" constant="20" id="dHY-Ro-YIM"/>
+                                    <constraint firstItem="uSa-7z-Dwj" firstAttribute="top" secondItem="XHV-QG-UmI" secondAttribute="top" constant="40" id="zEd-hr-8O1"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dropDelegate" destination="XfG-lQ-9wD" id="3lM-G9-Tf6"/>
@@ -310,11 +311,11 @@ DQ
                         </subviews>
                         <constraints>
                             <constraint firstItem="XHV-QG-UmI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="8FM-C7-Qhq"/>
-                            <constraint firstAttribute="bottom" secondItem="XHV-QG-UmI" secondAttribute="bottom" constant="20" id="Me7-cF-uUU"/>
-                            <constraint firstItem="XHV-QG-UmI" firstAttribute="top" secondItem="hro-Ob-mee" secondAttribute="bottom" constant="30" id="WrF-Vu-1wt"/>
-                            <constraint firstItem="hro-Ob-mee" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="30" id="dg0-bc-TmO"/>
-                            <constraint firstAttribute="trailing" secondItem="hro-Ob-mee" secondAttribute="trailing" constant="30" id="k7Y-bw-Zgz"/>
-                            <constraint firstItem="hro-Ob-mee" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="30" id="oHJ-Fi-KLB"/>
+                            <constraint firstItem="XHV-QG-UmI" firstAttribute="top" secondItem="hro-Ob-mee" secondAttribute="bottom" constant="20" id="9gH-Le-rCQ"/>
+                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="XHV-QG-UmI" secondAttribute="bottom" constant="20" id="Me7-cF-uUU"/>
+                            <constraint firstItem="hro-Ob-mee" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="dg0-bc-TmO"/>
+                            <constraint firstAttribute="trailing" secondItem="hro-Ob-mee" secondAttribute="trailing" constant="20" id="k7Y-bw-Zgz"/>
+                            <constraint firstItem="hro-Ob-mee" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="oHJ-Fi-KLB"/>
                             <constraint firstAttribute="trailing" secondItem="XHV-QG-UmI" secondAttribute="trailing" constant="20" id="upr-JI-9NX"/>
                         </constraints>
                     </view>
@@ -341,7 +342,7 @@ DQ
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="45" viewBased="YES" id="3L7-2g-c2R" customClass="DropTableView">
-                                            <rect key="frame" x="0.0" y="0.0" width="478" height="163"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="220"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="0.0" height="20"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -646,7 +647,6 @@ DQ
                             <constraint firstItem="DkF-9u-wRF" firstAttribute="leading" secondItem="lN3-vc-xqW" secondAttribute="leading" constant="20" id="EwM-qq-ayJ"/>
                             <constraint firstItem="DkF-9u-wRF" firstAttribute="top" secondItem="I8F-EU-65B" secondAttribute="bottom" constant="10" id="HRf-1f-6Q4"/>
                             <constraint firstItem="I8F-EU-65B" firstAttribute="leading" secondItem="lN3-vc-xqW" secondAttribute="leading" constant="20" id="NaT-oZ-xQf"/>
-                            <constraint firstItem="xm3-dn-c7g" firstAttribute="top" secondItem="lN3-vc-xqW" secondAttribute="top" constant="20" id="WRe-PB-HCu"/>
                             <constraint firstItem="xm3-dn-c7g" firstAttribute="leading" secondItem="lN3-vc-xqW" secondAttribute="leading" constant="20" id="iA5-87-J12"/>
                             <constraint firstItem="xm3-dn-c7g" firstAttribute="top" secondItem="lN3-vc-xqW" secondAttribute="top" constant="20" id="lk3-ll-ciu"/>
                             <constraint firstItem="I8F-EU-65B" firstAttribute="top" secondItem="xm3-dn-c7g" secondAttribute="bottom" constant="10" id="ow6-9k-Cc0"/>
@@ -676,11 +676,11 @@ DQ
                         <rect key="frame" x="0.0" y="0.0" width="520" height="350"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="18" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SYb-0h-vYb">
-                                <rect key="frame" x="30" y="150" width="460" height="170"/>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SYb-0h-vYb">
+                                <rect key="frame" x="20" y="199" width="480" height="131"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="JWv-KL-XiA" customClass="DotAnimatedTextField">
-                                        <rect key="frame" x="-2" y="142" width="327" height="28"/>
+                                        <rect key="frame" x="-2" y="103" width="327" height="28"/>
                                         <textFieldCell key="cell" title="Your files are being uploaded" id="0eA-X3-HyY">
                                             <font key="font" metaFont="systemBold" size="24"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -688,7 +688,7 @@ DQ
                                         </textFieldCell>
                                     </textField>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PHc-yl-OO5" customClass="FileItemView">
-                                        <rect key="frame" x="0.0" y="79" width="460" height="45"/>
+                                        <rect key="frame" x="0.0" y="38" width="480" height="45"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0CZ-9I-0rU">
                                                 <rect key="frame" x="10" y="12" width="17" height="21"/>
@@ -698,7 +698,7 @@ DQ
                                                 <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </imageView>
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZVv-oL-gUk">
-                                                <rect key="frame" x="37" y="4" width="413" height="38"/>
+                                                <rect key="frame" x="37" y="4" width="433" height="38"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dt4-qa-Pkb">
                                                         <rect key="frame" x="-2" y="22" width="99" height="16"/>
@@ -746,7 +746,7 @@ DQ
                                         </connections>
                                     </stackView>
                                     <progressIndicator maxValue="100" doubleValue="1" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="VPA-8k-75H">
-                                        <rect key="frame" x="0.0" y="-1" width="460" height="63"/>
+                                        <rect key="frame" x="0.0" y="-1" width="480" height="20"/>
                                     </progressIndicator>
                                 </subviews>
                                 <constraints>
@@ -766,29 +766,27 @@ DQ
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4C-Zv-FW4">
-                                <rect key="frame" x="44" y="189" width="50" height="50"/>
+                            <stackView hidden="YES" distribution="fill" orientation="vertical" alignment="leading" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pPW-FH-Ai6" customClass="ResultView">
+                                <rect key="frame" x="20" y="20" width="480" height="159"/>
                                 <subviews>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vn4-kX-fAv">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="HKH-a3-7Nb"/>
-                                    </imageView>
-                                </subviews>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
-                            <stackView hidden="YES" distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pPW-FH-Ai6" customClass="ResultView">
-                                <rect key="frame" x="30" y="30" width="460" height="102"/>
-                                <subviews>
-                                    <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="trg-26-6tT">
-                                        <rect key="frame" x="0.0" y="81" width="460" height="21"/>
+                                    <button horizontalCompressionResistancePriority="499" verticalCompressionResistancePriority="499" translatesAutoresizingMaskIntoConstraints="NO" id="Y76-l7-odK" userLabel="Qrcode">
+                                        <rect key="frame" x="0.0" y="87" width="50" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="ukX-zg-XO8"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="leading" alignment="left" imageScaling="proportionallyUpOrDown" inset="2" id="LoX-xZ-STT">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="copyQrCode:" target="pPW-FH-Ai6" id="g08-yF-8TA"/>
+                                        </connections>
+                                    </button>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="bottom" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="trg-26-6tT">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="67"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="499" verticalCompressionResistancePriority="499" translatesAutoresizingMaskIntoConstraints="NO" id="cWS-cr-nsk">
-                                                <rect key="frame" x="0.0" y="0.0" width="331" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="351" height="21"/>
                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" selectable="YES" editable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="9MW-ns-Q0X">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -796,7 +794,7 @@ DQ
                                                 </textFieldCell>
                                             </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vkd-KD-Jsp" userLabel="Copy">
-                                                <rect key="frame" x="332" y="-6" width="66" height="32"/>
+                                                <rect key="frame" x="352" y="-7" width="66" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Copy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VgV-Zr-LlE">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
@@ -809,7 +807,7 @@ DQ
                                                 </connections>
                                             </button>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DnA-xR-taP">
-                                                <rect key="frame" x="392" y="-6" width="75" height="32"/>
+                                                <rect key="frame" x="412" y="-7" width="75" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Return" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FNl-Ze-Rax">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
@@ -835,20 +833,9 @@ DQ
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
-                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="Y76-l7-odK" userLabel="Qrcode">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="74"/>
-                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="leading" alignment="left" imageScaling="proportionallyUpOrDown" inset="2" id="LoX-xZ-STT">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="copyQrCode:" target="pPW-FH-Ai6" id="g08-yF-8TA"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="trg-26-6tT" secondAttribute="trailing" id="H00-Lm-pJO"/>
-                                    <constraint firstItem="Y76-l7-odK" firstAttribute="top" secondItem="trg-26-6tT" secondAttribute="bottom" constant="10" id="Z3e-MQ-yro"/>
                                     <constraint firstItem="trg-26-6tT" firstAttribute="leading" secondItem="pPW-FH-Ai6" secondAttribute="leading" id="wni-mw-i9h"/>
                                 </constraints>
                                 <visibilityPriorities>
@@ -860,20 +847,21 @@ DQ
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                                 <connections>
+                                    <outlet property="linkCopyButton" destination="Vkd-KD-Jsp" id="84F-Tc-1pW"/>
                                     <outlet property="qrcodeImage" destination="Y76-l7-odK" id="VP9-ID-ddh"/>
+                                    <outlet property="returnButton" destination="DnA-xR-taP" id="QaB-W5-fmm"/>
                                     <outlet property="urlTextField" destination="cWS-cr-nsk" id="nSN-K2-rq1"/>
                                 </connections>
                             </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="pPW-FH-Ai6" secondAttribute="trailing" constant="30" id="7SR-eo-xw1"/>
-                            <constraint firstItem="SYb-0h-vYb" firstAttribute="leading" secondItem="SXe-gv-rCo" secondAttribute="leading" constant="30" id="Gs1-Lg-nod"/>
-                            <constraint firstAttribute="trailing" secondItem="SYb-0h-vYb" secondAttribute="trailing" constant="30" id="HXb-l5-caP"/>
-                            <constraint firstAttribute="bottom" secondItem="pPW-FH-Ai6" secondAttribute="bottom" constant="30" id="Iud-3M-w3b"/>
-                            <constraint firstAttribute="bottom" secondItem="SYb-0h-vYb" secondAttribute="bottom" constant="150" id="MSY-BP-8IQ"/>
-                            <constraint firstItem="pPW-FH-Ai6" firstAttribute="top" secondItem="SYb-0h-vYb" secondAttribute="bottom" constant="18" id="no4-bu-deF"/>
-                            <constraint firstItem="SYb-0h-vYb" firstAttribute="top" secondItem="SXe-gv-rCo" secondAttribute="top" constant="30" id="p56-bU-9qn"/>
-                            <constraint firstItem="pPW-FH-Ai6" firstAttribute="leading" secondItem="SXe-gv-rCo" secondAttribute="leading" constant="30" id="xJP-XU-4ro"/>
+                            <constraint firstAttribute="trailing" secondItem="pPW-FH-Ai6" secondAttribute="trailing" constant="20" id="7SR-eo-xw1"/>
+                            <constraint firstItem="SYb-0h-vYb" firstAttribute="leading" secondItem="SXe-gv-rCo" secondAttribute="leading" constant="20" id="Gs1-Lg-nod"/>
+                            <constraint firstAttribute="trailing" secondItem="SYb-0h-vYb" secondAttribute="trailing" constant="20" id="HXb-l5-caP"/>
+                            <constraint firstAttribute="bottom" secondItem="pPW-FH-Ai6" secondAttribute="bottom" constant="20" id="Iud-3M-w3b"/>
+                            <constraint firstItem="pPW-FH-Ai6" firstAttribute="top" secondItem="SYb-0h-vYb" secondAttribute="bottom" constant="20" id="no4-bu-deF"/>
+                            <constraint firstItem="SYb-0h-vYb" firstAttribute="top" secondItem="SXe-gv-rCo" secondAttribute="top" constant="20" id="p56-bU-9qn"/>
+                            <constraint firstItem="pPW-FH-Ai6" firstAttribute="leading" secondItem="SXe-gv-rCo" secondAttribute="leading" constant="20" id="xJP-XU-4ro"/>
                         </constraints>
                     </view>
                     <connections>

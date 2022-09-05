@@ -30,15 +30,28 @@
     return qrCode;
 }
 
-- (void)setValues{
-    [self setHidden:NO];
-    
+- (void)setSuccess {
     NSString *urlString = [[self url] absoluteString];
     
     [[self urlTextField] setStringValue:urlString];
     
     NSImage *qrCodeImage = [self getQRCodeForURLString:urlString];
     [[self qrcodeImage] setImage:qrCodeImage];
+        
+    [self setHidden:NO];
+}
+
+- (void)setError {
+    [[self urlTextField] setHidden:YES];
+    [[self linkCopyButton] setHidden:YES];
+    
+    NSImage *finderSad = [NSImage imageNamed:@"finderSad"];
+    if (finderSad)
+        [[self qrcodeImage] setImage:finderSad];
+    else
+        [[self qrcodeImage] setHidden:YES];
+
+    [self setHidden:NO];
 }
 
 - (void)copyQrCode:(id)sender {

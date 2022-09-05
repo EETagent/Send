@@ -48,9 +48,14 @@ void uploadCompleted (void *ctx) {}
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
     BOOL isDir = NO;
-    if (![fileManager fileExistsAtPath:path isDirectory:&isDir])
-        //TODO: Normal errors
+    if (![fileManager fileExistsAtPath:path isDirectory:&isDir]) {
+        [[self delegate] sendUploadFailedWithError:[NSError errorWithDomain:[[NSBundle mainBundle] bundleIdentifier]
+                                                                       code:1000
+                                                                   userInfo:@{
+            NSLocalizedDescriptionKey:@"File not found"
+        }]];
         return;
+    }
     
     const char *pathString = [path UTF8String];
     
@@ -74,12 +79,37 @@ void uploadCompleted (void *ctx) {}
             // Recursion (Now path is not dir)
             [self uploadFileWithPath:tempArchive];
             [fileManager removeItemAtPath:tempArchive error:nil];
+        } else {
+            [[self delegate] sendUploadFailedWithError:[NSError errorWithDomain:[[NSBundle mainBundle] bundleIdentifier]
+                                                                           code:1001
+                                                                       userInfo:@{
+                NSLocalizedDescriptionKey:@"Failed to create ZIP archive"
+            }]];
         }
         return;
     }
-        
+    
     NSInteger status = upload_file(pathString, password, [self limit], [self expiry], self->progressReporter, self->uploadedFile);
-    [[self delegate] sendUploadCompletedWithStatus:status];
+    
+    switch (status) {
+        case 0:
+            [[self delegate] sendUploadCompleted];
+            break;
+        case -1:
+            [[self delegate] sendUploadFailedWithError:[NSError errorWithDomain:[NSString stringWithFormat:@"%@.libffsend", [[NSBundle mainBundle] bundleIdentifier]]
+                                                                           code:1002
+                                                                       userInfo:@{
+                NSLocalizedDescriptionKey:@"Internal file path error"
+            }]];
+            return;
+        case -2:
+            [[self delegate] sendUploadFailedWithError:[NSError errorWithDomain:[NSString stringWithFormat:@"%@.libffsend", [[NSBundle mainBundle] bundleIdentifier]]
+                                                                           code:1003
+                                                                       userInfo:@{
+                NSLocalizedDescriptionKey:@"Internal upload error"
+            }]];
+            return;
+    }
 }
 
 - (void)uploadFileWithURLPath:(NSURL *)urlPath {
@@ -113,7 +143,6 @@ void uploadCompleted (void *ctx) {}
         
         [fileManager copyItemAtPath:file toPath:[tempFolder stringByAppendingPathComponent:fileName] error:nil];
     }
-        
     // Upload as only one path
     [self uploadFileWithPath:tempFolder tempFileCreatedAtBlock:^(NSString *path) {
         // File object callback

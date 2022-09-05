@@ -57,21 +57,20 @@
     });
 }
 
-- (void)sendUploadCompletedWithStatus:(NSInteger)status {
-    if (status == 0) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSURL *url = [self->send uploadedFileGetLink];
-            
-            [[self resultView] setUrl:url];
-            [[self resultView] setValues];
-            [[self resultView] setHidden:NO];
-            
-            [[self mainButton] setEnabled:YES];
-            [[self mainButton] setTitle:NSLocalizedString(@"Exit", @"Exit button")];
-            self->fileUploaded = YES;
-        });
-    }
+- (void)sendUploadCompleted{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSURL *url = [self->send uploadedFileGetLink];
+        
+        [[self resultView] setUrl:url];
+        [[self resultView] setSuccess];
+        
+        [[self mainButton] setEnabled:YES];
+        [[self mainButton] setTitle:NSLocalizedString(@"Exit", @"Exit button")];
+        self->fileUploaded = YES;
+    });
 }
+
+- (void)sendUploadFailedWithError:(NSError *)error {}
 
 - (void)exitShareView {
     NSExtensionItem *outputItem = [[NSExtensionItem alloc] init];

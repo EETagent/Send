@@ -11,9 +11,16 @@
 
 @property(nonatomic, weak) IBOutlet NSButton *qrcodeImage;
 
+@property(nonatomic, weak) IBOutlet NSButton *returnButton;
+
+@property(nonatomic, weak) IBOutlet NSButton *linkCopyButton;
+
+
 @property NSURL *url;
 
-- (void)setValues;
+- (void)setSuccess;
+
+- (void)setError;
 
 - (IBAction)copyQrCode:(id)sender;
 

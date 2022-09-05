@@ -7,13 +7,13 @@
 
 @protocol SendUploadDelegate <NSObject>
 
-@optional
-
 - (void)sendUploadStartedWithSize:(NSUInteger)size;
 
 - (void)sendUploadProgressWithTotalBytesUploaded:(NSUInteger)bytes;
 
-- (void)sendUploadCompletedWithStatus:(NSInteger)status;
+- (void)sendUploadCompleted;
+
+- (void)sendUploadFailedWithError:(NSError *)error;
 
 @end
 
