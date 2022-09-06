@@ -23,7 +23,7 @@
 
 ## 🔔 Information
 
-Send is still in development
+Send is a native macOS client for Firefox Send services directly based on a fast and secure Rust library
 
 ## 👏 Dependencies
 
@@ -39,25 +39,26 @@ Send is still in development
 
 ## 🖼️ Gallery
 
-<img src="https://user-images.githubusercontent.com/20557318/187721262-faa87980-af5c-4f97-a3c7-2eb8d5156804.jpg" width=500px alt="Send Screenshot 1">
+<img src="https://user-images.githubusercontent.com/20557318/188597068-43bbb920-10a2-4937-9c5e-235271284698.png" width=500px alt="Send Screenshot 1">
 
-<img src="https://user-images.githubusercontent.com/20557318/187721326-8a96cdd4-5c34-409a-bc3f-9724f1bb5a95.jpg" width=500px alt="Send Screenshot 2">
+<img src="https://user-images.githubusercontent.com/20557318/188597429-1bf6f4dd-50c2-43cf-888e-d395e4d2a009.png" width=500px alt="Send Screenshot 2">
 
-<img src="https://user-images.githubusercontent.com/20557318/187721519-188ac076-5b1b-4b2d-9ba1-a1026c8d6013.jpg" width=500px alt="Send Screenshot 3">
+<img src="https://user-images.githubusercontent.com/20557318/188596728-f56aefc9-d758-43d8-852a-9244c7f1dc49.png" width=500px alt="Send Screenshot 3">
 
-<img src="https://user-images.githubusercontent.com/20557318/187721775-589e7560-ae0b-443e-915d-ee229c57f71d.jpg" width=500px alt="Send Screenshot 4">
+<img src="https://user-images.githubusercontent.com/20557318/188597641-910eb4c0-651d-450e-a7da-4d2f1ae04a94.png" width=500px alt="Send Screenshot 4">
 
-<img src="https://user-images.githubusercontent.com/20557318/188220364-92110b91-da24-4bcc-991b-fc23ff4f8e2e.png" width=500px alt="Send Screenshot 5">
+<img src="https://user-images.githubusercontent.com/20557318/188596499-3cf15c5e-5746-4682-84a0-b21a558f6082.png" width=500px alt="Send Screenshot 5">
 
-<img src="https://user-images.githubusercontent.com/20557318/187721839-20928b57-0566-415d-8deb-91220cdce6a4.jpg" width=500px alt="Send Share Screenshot 1">
+<img src="https://user-images.githubusercontent.com/20557318/188598989-b4a9f50c-ffef-4ecc-88c8-045b80e6d08c.png" width=500px alt="Send Screenshot 6">
+
+<img src="https://user-images.githubusercontent.com/20557318/188598399-dfaf1f06-876f-49a7-9867-5263f7425f1d.png" width=500px alt="Send Share Screenshot 1">
 
 <img src="https://user-images.githubusercontent.com/20557318/187721922-8acb170c-a782-42ef-85f0-ae731fdfad30.jpg" width=500px alt="Send Share Screenshot 2">
 
-<img src="https://user-images.githubusercontent.com/20557318/187722057-1325eed2-a592-47be-9275-356db3119faa.jpg" width=500px alt="Send Share Screenshot 3">
+<img src="https://user-images.githubusercontent.com/20557318/188597947-5a8fc974-8faf-4b4f-8708-36daee72f362.png" width=500px alt="Send Share Screenshot 3">
 
+<img src="https://user-images.githubusercontent.com/20557318/188598026-70315780-0e4b-4c7a-a745-b5529b4d204a.png" width=500px alt="Send Share Screenshot 4">
 
 ## 🎥 Video
 
-https://user-images.githubusercontent.com/20557318/187444449-51a2b0f0-55da-47da-bbc2-4e891a2a61fa.mp4
-
-
+https://user-images.githubusercontent.com/20557318/188600242-e33f74f3-62b9-4f1d-8f7f-ae53968cda18.mp4
