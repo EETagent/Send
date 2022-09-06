@@ -52,7 +52,7 @@ void uploadCompleted (void *ctx) {}
         [[self delegate] sendUploadFailedWithError:[NSError errorWithDomain:[[NSBundle mainBundle] bundleIdentifier]
                                                                        code:1000
                                                                    userInfo:@{
-            NSLocalizedDescriptionKey:@"File not found"
+            NSLocalizedDescriptionKey:NSLocalizedString(@"File not found", @"")
         }]];
         return;
     }
@@ -83,7 +83,7 @@ void uploadCompleted (void *ctx) {}
             [[self delegate] sendUploadFailedWithError:[NSError errorWithDomain:[[NSBundle mainBundle] bundleIdentifier]
                                                                            code:1001
                                                                        userInfo:@{
-                NSLocalizedDescriptionKey:@"Failed to create ZIP archive"
+                NSLocalizedDescriptionKey:NSLocalizedString(@"Failed to create ZIP archive", @"")
             }]];
         }
         return;
@@ -99,14 +99,14 @@ void uploadCompleted (void *ctx) {}
             [[self delegate] sendUploadFailedWithError:[NSError errorWithDomain:[NSString stringWithFormat:@"%@.libffsend", [[NSBundle mainBundle] bundleIdentifier]]
                                                                            code:1002
                                                                        userInfo:@{
-                NSLocalizedDescriptionKey:@"Internal file path error"
+                NSLocalizedDescriptionKey:NSLocalizedString(@"Internal file path error", @"")
             }]];
             return;
         case -2:
             [[self delegate] sendUploadFailedWithError:[NSError errorWithDomain:[NSString stringWithFormat:@"%@.libffsend", [[NSBundle mainBundle] bundleIdentifier]]
                                                                            code:1003
                                                                        userInfo:@{
-                NSLocalizedDescriptionKey:@"Internal upload error"
+                NSLocalizedDescriptionKey:NSLocalizedString(@"Internal upload error", @"")
             }]];
             return;
     }

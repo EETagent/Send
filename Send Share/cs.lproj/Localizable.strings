@@ -1,2 +1,8 @@
 /* Exit button */
 "Exit" = "Ukončit";
+
+"Internal upload error" = "Nezdařilo se nahrávání souboru";
+
+"File not found" = "Soubor nenalezen";
+
+"Failed to create ZIP archive" = "Nezdařilo se vytvoření archívu ZIP";
