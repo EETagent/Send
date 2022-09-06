@@ -4,7 +4,7 @@
 <p align="center">
     macOS GUI and share extension for 🦊 Send
     <br />
-    <strong>Version: </strong>1.5
+    <strong>Version: </strong>1.6
     <br />
     <br />
     <img src="https://img.shields.io/badge/macOS-10.13-green.svg">
