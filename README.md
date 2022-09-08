@@ -23,7 +23,7 @@
 
 ## 🔔 Information
 
-Send is a native macOS client for Firefox Send services directly based on a fast and secure Rust library
+Send is a native macOS client for Firefox Send services directly based on a fast and secure Rust library with first class support for uploading folders and large files.
 
 ## 👏 Dependencies
 
