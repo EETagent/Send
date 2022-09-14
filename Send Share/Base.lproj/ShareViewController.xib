@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21223" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21223"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -75,7 +75,7 @@ Gw
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
-                                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fwq-pW-mhj">
+                                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fwq-pW-mhj" userLabel="Limit Pop Up Button">
                                     <rect key="frame" x="82" y="-4" width="124" height="25"/>
                                     <popUpButtonCell key="cell" type="push" title="1 download" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="AiN-uI-b64" id="OMf-T1-fEt">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -112,7 +112,7 @@ Gw
                                 <real value="3.4028234663852886e+38"/>
                             </customSpacing>
                         </stackView>
-                        <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qot-RD-Dyt">
+                        <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qot-RD-Dyt" userLabel="Expiry Pop Up Button">
                             <rect key="frame" x="-3" y="25" width="99" height="25"/>
                             <popUpButtonCell key="cell" type="push" title="1 day" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="wHB-nr-a8O" id="b9y-4X-P2m">
                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -173,8 +173,8 @@ Gw
                         <real value="3.4028234663852886e+38"/>
                     </customSpacing>
                     <connections>
-                        <outlet property="expiryPopUpButton" destination="fwq-pW-mhj" id="nmN-gp-Sxg"/>
-                        <outlet property="limitPopUpButton" destination="Qot-RD-Dyt" id="YBG-kK-ccR"/>
+                        <outlet property="expiryPopUpButton" destination="Qot-RD-Dyt" id="tfn-ky-8bG"/>
+                        <outlet property="limitPopUpButton" destination="fwq-pW-mhj" id="mfT-4a-85p"/>
                         <outlet property="passwordCheckBox" destination="V1G-In-jog" id="fNn-sA-rks"/>
                         <outlet property="passwordTextField" destination="7YT-qB-hGh" id="cAD-Gv-hNd"/>
                     </connections>

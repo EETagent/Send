@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21223" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21223"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -370,14 +370,14 @@ DQ
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ROT-xP-st6">
-                                                                    <rect key="frame" x="15" y="90" width="17" height="21"/>
+                                                                    <rect key="frame" x="15" y="90" width="16" height="21"/>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="8ks-HG-XI8">
                                                                         <imageReference key="image" image="doc" symbolScale="large"/>
                                                                     </imageCell>
                                                                     <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </imageView>
                                                                 <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QFv-R9-z3Q">
-                                                                    <rect key="frame" x="42" y="81" width="362" height="38"/>
+                                                                    <rect key="frame" x="41" y="81" width="364" height="38"/>
                                                                     <subviews>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gsh-Kz-DaB">
                                                                             <rect key="frame" x="-2" y="22" width="49" height="16"/>
@@ -406,7 +406,7 @@ DQ
                                                                     </customSpacing>
                                                                 </stackView>
                                                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="JFJ-ab-hi7">
-                                                                    <rect key="frame" x="414" y="92" width="16" height="16"/>
+                                                                    <rect key="frame" x="415" y="93" width="15" height="15"/>
                                                                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="xmark" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="ePC-1V-EJ2">
                                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                         <font key="font" metaFont="system"/>
@@ -516,7 +516,7 @@ DQ
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XA1-Vl-rxp">
+                                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XA1-Vl-rxp" userLabel="Limit Pop Up Button">
                                                 <rect key="frame" x="82" y="-4" width="124" height="25"/>
                                                 <popUpButtonCell key="cell" type="push" title="1 download" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="vRD-AE-Cz8" id="8nX-Wr-2qO">
                                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -553,7 +553,7 @@ DQ
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
-                                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b95-Sy-qKL">
+                                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b95-Sy-qKL" userLabel="Expiry Pop Up Button">
                                         <rect key="frame" x="-3" y="53" width="99" height="25"/>
                                         <popUpButtonCell key="cell" type="push" title="1 day" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="AyN-pM-hOP" id="Nh1-QB-5sR">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -643,8 +643,8 @@ DQ
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                                 <connections>
-                                    <outlet property="expiryPopUpButton" destination="XA1-Vl-rxp" id="MFd-Sd-RmU"/>
-                                    <outlet property="limitPopUpButton" destination="b95-Sy-qKL" id="zBn-0t-2IZ"/>
+                                    <outlet property="expiryPopUpButton" destination="b95-Sy-qKL" id="n6A-NJ-wRm"/>
+                                    <outlet property="limitPopUpButton" destination="XA1-Vl-rxp" id="Ll0-KQ-zLL"/>
                                     <outlet property="passwordCheckBox" destination="Wav-Mh-kxD" id="47q-ya-2cw"/>
                                     <outlet property="passwordTextField" destination="SqA-mS-heU" id="1gy-zo-OLn"/>
                                 </connections>
@@ -664,11 +664,8 @@ DQ
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="expiryPopUpButton" destination="b95-Sy-qKL" id="7YR-IC-wle"/>
                         <outlet property="fileListView" destination="3L7-2g-c2R" id="Jme-oT-RjP"/>
-                        <outlet property="limitPopUpButton" destination="XA1-Vl-rxp" id="Ei2-Ka-SU8"/>
-                        <outlet property="passwordCheckBox" destination="Wav-Mh-kxD" id="cx0-dl-WbX"/>
-                        <outlet property="passwordTextField" destination="SqA-mS-heU" id="aus-Fy-5gL"/>
+                        <outlet property="settingsStackView" destination="DkF-9u-wRF" id="7of-fa-eAq"/>
                         <outlet property="totalSize" destination="5NX-t2-iF7" id="52p-Ee-FNi"/>
                     </connections>
                 </viewController>
@@ -700,14 +697,14 @@ DQ
                                         <rect key="frame" x="0.0" y="38" width="480" height="45"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0CZ-9I-0rU">
-                                                <rect key="frame" x="10" y="12" width="17" height="21"/>
+                                                <rect key="frame" x="10" y="12" width="16" height="21"/>
                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="8u4-6F-ScY">
                                                     <imageReference key="image" image="doc" symbolScale="large"/>
                                                 </imageCell>
                                                 <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </imageView>
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZVv-oL-gUk">
-                                                <rect key="frame" x="37" y="4" width="433" height="38"/>
+                                                <rect key="frame" x="36" y="4" width="434" height="38"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dt4-qa-Pkb">
                                                         <rect key="frame" x="-2" y="22" width="99" height="16"/>
