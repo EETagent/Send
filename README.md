@@ -62,3 +62,15 @@ Send is a native macOS client for Firefox Send services directly based on a fast
 ## 🎥 Video
 
 https://user-images.githubusercontent.com/20557318/188600242-e33f74f3-62b9-4f1d-8f7f-ae53968cda18.mp4
+
+## 📋 Requirments 
+
+- Xcode 12
+- Rust 1.56.0 with both x64 and arm64 targets
+
+## 🛠️ How to build
+
+- ```git clone https://github.com/EETagent/Send.git```
+- ```cd Send```
+- ```xcodebuild -scheme Send -configuration Release -derivedDataPath build -disableAutomaticPackageResolution CODE_SIGN_IDENTITY=-```
+
