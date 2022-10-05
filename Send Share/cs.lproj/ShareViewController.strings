@@ -8,6 +8,9 @@
 /* Class = "NSButtonCell"; title = "Upload"; ObjectID = "2l4-PO-we5"; */
 "2l4-PO-we5.title" = "Nahrát";
 
+/* Class = "NSMenuItem"; title = "20 downloads"; ObjectID = "7nr-ZQ-iLh"; */
+"7nr-ZQ-iLh.title" = "10 staženích";
+
 /* Class = "NSMenuItem"; title = "20 downloads"; ObjectID = "5QB-WR-tzH"; */
 "5QB-WR-tzH.title" = "20 staženích";
 
@@ -40,6 +43,9 @@
 
 /* Class = "NSMenuItem"; title = "7 days"; ObjectID = "br7-vj-j8g"; */
 "br7-vj-j8g.title" = "7 dní";
+
+/* Class = "NSMenuItem"; title = "3 days"; ObjectID = "6JK-4J-B3i"; */
+"6JK-4J-B3i.title" = "3 dny";
 
 /* Class = "NSButtonCell"; title = "Protect with password"; ObjectID = "hFI-IM-XSd"; */
 "hFI-IM-XSd.title" = "Ochránit heslem";

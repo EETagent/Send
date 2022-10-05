@@ -38,6 +38,9 @@
             // 1 days
             return 24*60*minute;
         case 3:
+            // 3 days
+            return 3*24*60*minute;
+        case 4:
             // 7 days
             return 7*24*60*minute;
         default:
@@ -53,7 +56,11 @@
         case 2:
         case 3:
         case 4:
+            // ++index downloads
             return [button indexOfSelectedItem] + 1;
+        case 5:
+            // 10 downloads
+            return 10;
         case 6:
             // 20 downloads
             return 20;

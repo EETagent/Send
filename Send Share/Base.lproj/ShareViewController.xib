@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21506"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -87,6 +87,7 @@ Gw
                                                 <menuItem title="3 downloads" id="XpO-co-yzE"/>
                                                 <menuItem title="4 downloads" id="Tbi-57-haw"/>
                                                 <menuItem title="5 downloads" id="2U7-8v-G6B"/>
+                                                <menuItem title="10 downloads" id="7nr-ZQ-iLh"/>
                                                 <menuItem title="20 downloads" id="5QB-WR-tzH"/>
                                             </items>
                                         </menu>
@@ -122,6 +123,7 @@ Gw
                                         <menuItem title="5 minutes" id="Zm0-Hw-fbi"/>
                                         <menuItem title="1 hour" id="BfR-OJ-7AW"/>
                                         <menuItem title="1 day" state="on" id="wHB-nr-a8O"/>
+                                        <menuItem title="3 days" id="6JK-4J-B3i"/>
                                         <menuItem title="7 days" id="br7-vj-j8g"/>
                                     </items>
                                 </menu>

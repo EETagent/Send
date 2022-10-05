@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21506"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -528,6 +528,7 @@ DQ
                                                             <menuItem title="3 downloads" id="JkK-Xt-tdE"/>
                                                             <menuItem title="4 downloads" id="nda-tz-HHE"/>
                                                             <menuItem title="5 downloads" id="cBa-7R-f2j"/>
+                                                            <menuItem title="10 downloads" id="Loi-Hv-vd4"/>
                                                             <menuItem title="20 downloads" id="7Ku-K8-OS4"/>
                                                         </items>
                                                     </menu>
@@ -563,6 +564,7 @@ DQ
                                                     <menuItem title="5 minutes" id="Xvl-v2-zS9"/>
                                                     <menuItem title="1 hour" id="4PV-Ud-cMG"/>
                                                     <menuItem title="1 day" state="on" id="AyN-pM-hOP"/>
+                                                    <menuItem title="3 days" id="c2A-XH-ytl"/>
                                                     <menuItem title="7 days" id="ijj-hM-ypL"/>
                                                 </items>
                                             </menu>

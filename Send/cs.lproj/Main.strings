@@ -143,6 +143,9 @@
 /* Class = "NSMenuItem"; title = "7 days"; ObjectID = "ijj-hM-ypL"; */
 "ijj-hM-ypL.title" = "7 dní";
 
+/* Class = "NSMenuItem"; title = "3 days"; ObjectID = "c2A-XH-ytl"; */
+"c2A-XH-ytl.title" = "3 dny";
+
 /* Class = "NSTextFieldCell"; title = "Expires after"; ObjectID = "nM0-mq-q1p"; */
 "nM0-mq-q1p.title" = "Platnost vyprší po";
 
@@ -169,6 +172,9 @@
 
 /* Class = "NSMenuItem"; title = "1 download"; ObjectID = "vRD-AE-Cz8"; */
 "vRD-AE-Cz8.title" = "1 stažení";
+
+/* Class = "NSMenuItem"; title = "10 downloads"; ObjectID = "Loi-Hv-vd4"; */
+"Loi-Hv-vd4.title" = "10 staženích";
 
 /* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
 "wpr-3q-Mcd.title" = "Nápověda";
