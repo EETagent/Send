@@ -4,7 +4,7 @@
 <p align="center">
     macOS GUI and share extension for 🦊 Send
     <br />
-    <strong>Version: </strong>1.6.1
+    <strong>Version: </strong>1.7
     <br />
     <br />
     <img src="https://img.shields.io/badge/macOS-10.13-green.svg">
@@ -66,7 +66,7 @@ https://user-images.githubusercontent.com/20557318/188600242-e33f74f3-62b9-4f1d-
 ## 📋 Requirments 
 
 - Xcode 12
-- Rust 1.56.0 with both x64 and arm64 targets
+- Rust 1.56.1 with both x64 and arm64 targets
 
 ## 🛠️ How to build
 
