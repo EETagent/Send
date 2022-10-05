@@ -45,7 +45,7 @@ pub extern "C" fn uploaded_file_free(ptr: *mut UploadedFile) {
         return;
     }
     unsafe {
-        Box::from_raw(ptr);
+        drop(Box::from_raw(ptr));
     }
 }
 
@@ -97,7 +97,7 @@ pub extern "C" fn uploaded_file_string_free(s: *mut c_char) {
         if s.is_null() {
             return;
         }
-        CString::from_raw(s)
+        drop(CString::from_raw(s));
     };
 }
 
@@ -164,7 +164,7 @@ pub extern "C" fn progress_reporter_free(ptr: *mut Arc<Mutex<Reporter>>) {
         return;
     }
     unsafe {
-        Box::from_raw(ptr);
+        drop(Box::from_raw(ptr));
     }
 }
 
