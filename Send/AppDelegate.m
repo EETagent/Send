@@ -20,6 +20,10 @@
     return YES;
 }
 
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
+    return YES;
+}
+
 - (BOOL)application:(NSApplication *)sender openFile:(NSString *)filename {
     // Support Drag & Drop for application icon
     [[NSApplication sharedApplication] enumerateWindowsWithOptions:NSWindowListOrderedFrontToBack usingBlock:^(NSWindow * _Nonnull window, BOOL * _Nonnull stop) {
