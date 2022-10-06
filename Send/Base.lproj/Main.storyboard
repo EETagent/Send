@@ -351,7 +351,7 @@ DQ
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="45" viewBased="YES" id="3L7-2g-c2R" customClass="DropTableView">
-                                            <rect key="frame" x="0.0" y="0.0" width="478" height="220"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="163"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="0.0" height="20"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
