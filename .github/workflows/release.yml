@@ -11,6 +11,7 @@ env:
   MACOS_DMG_ARTIFACT: "Send.dmg"
   MACOS_ZIP_ARTIFACT: "Send.zip"
   XCBUILD_PATH: "build/Build/Products/Release"
+  CODE_SIGN_IDENTITY: "Apple Development: frantisek.zakopal@gmail.com (JLHQ66WC7C)"
 
 jobs:
   ReleaseCI:
@@ -65,7 +66,10 @@ jobs:
 
     - name: Release Build 🔨
       run: |
-        xcodebuild -scheme ${MACOS_APP_NAME} -configuration Release -derivedDataPath build -disableAutomaticPackageResolution CODE_SIGN_IDENTITY="Apple Development: frantisek.zakopal@gmail.com (JLHQ66WC7C)" | xcpretty && exit ${PIPESTATUS[0]}
+        xcodebuild -scheme ${MACOS_APP_NAME} -configuration Release -derivedDataPath build -disableAutomaticPackageResolution CODE_SIGN_IDENTITY="${CODE_SIGN_IDENTITY}" | xcpretty && exit ${PIPESTATUS[0]}
+
+    - name: Resign app
+      run: codesign -f -s "${CODE_SIGN_IDENTITY}" "${XCBUILD_PATH}/${MACOS_APP_ARTIFACT}"
 
     - name: Check Send signature
       run: codesign --verify -vvvv --deep --strict "${XCBUILD_PATH}/${MACOS_APP_ARTIFACT}"
