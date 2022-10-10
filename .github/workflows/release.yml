@@ -20,6 +20,19 @@ jobs:
     - name: Checkout 🚚
       uses: actions/checkout@v3
 
+    - name: Manage Version 💼
+      run: |
+        git fetch --prune --unshallow --tags
+        GIT_SHA="$(git rev-parse --short HEAD)"
+        CUR_TAG="$(git tag -l  | tail -1)"
+        echo "VER=$CUR_TAG" >> $GITHUB_ENV
+        echo "SHORT_SHA=$GIT_SHA" >> $GITHUB_ENV
+        if [[ -z $CUR_TAG ]]; then
+          echo "OLD_PRE_TAG=NULL" >> $GITHUB_ENV
+        else
+          echo "OLD_PRE_TAG=$CUR_TAG">> $GITHUB_ENV
+        fi
+
     - name: Install Dependencies 🚀
       run: brew install create-dmg
       env:
@@ -77,6 +90,38 @@ jobs:
         zip -r ${MACOS_ZIP_ARTIFACT} ${MACOS_APP_ARTIFACT}
         cd -
         cp ${XCBUILD_PATH}/*.zip Artifacts
+
+    - name: Generate Sparkle Appcast ✨
+      run: |
+        REPO_COMMIT_URL='https://github.com/EETagent/Send/commit/'
+        SPARKLE_BIN='./build/SourcePackages/artifacts/Sparkle/bin'
+        PUBDATE="$(date +"%a, %d %b %Y %T %z")"
+        APPCAST=(
+            '<?xml version="1.0" standalone="yes"?>'
+            '<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">'
+            '    <channel>'
+            '        <title>Send</title>'
+            '        <item>'
+            "            <title>${VER}</title>"
+            "            <pubDate>${PUBDATE}</pubDate>"
+            '            <description><![CDATA['
+            '                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/20.4.6/primer.min.css"><meta charset="UTF-8"><div class="markdown-body"><h3>The latest updates are:</h3><ul>'
+            "${REPO_COMMIT_URL}"
+            '                </ul></div>'
+            '            ]]>'
+            '            </description>'
+            '            <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>'
+            "            <enclosure url=\"https://github.com/EETagent/Send/releases/latest/download/Send.dmg\" sparkle:version=\"${VER}-stable-${SHORT_SHA}\" sparkle:shortVersionString=\"${VER}\" type=\"application/octet-stream\" $($SPARKLE_BIN/sign_update -s ${SPARKLE_KEY} ./Artifacts/Send.dmg)/>"
+            '        </item>'
+            '    </channel>'
+            '</rss>'
+        )
+        for appcast in "${APPCAST[@]}"; do
+            echo "${appcast}" >> ./Artifacts/appcast.xml
+        done
+      shell: zsh {0}
+      env:
+        SPARKLE_KEY: ${{ secrets.SPARKLE_KEY }}
 
     - name: Publish GitHub Release 📂
       uses: ncipollo/release-action@v1
