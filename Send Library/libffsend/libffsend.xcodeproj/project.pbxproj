@@ -97,7 +97,7 @@
 		CA602EE07C51E04653AD465F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					CA607EE972B117691337FC0B = {
 						CreatedOnToolsVersion = 9.2;
@@ -287,7 +287,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				DEAD_CODE_STRIPPING = YES;
 				INSTALL_PATH = "";
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = ffsend;
 				SUPPORTED_PLATFORMS = macosx;
 			};
@@ -301,7 +301,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				DEAD_CODE_STRIPPING = YES;
 				INSTALL_PATH = "";
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = ffsend;
 				SUPPORTED_PLATFORMS = macosx;
 			};
