@@ -13,5 +13,9 @@
 	</array>
 	<key>CFBundleTypeRole</key>
 	<string>Viewer</string>
+	<key>SUFeedURL</key>
+	<string>https://github.com/EETagent/Send/releases/latest/download/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+    <string>KwnjjCT6gLXsjzJTOJvNwW1XxOxQmShLXzps7ScYUmw=</string>
 </dict>
 </plist>

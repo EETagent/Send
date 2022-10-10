@@ -12,7 +12,18 @@
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {}
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        [self setUpdaterController:[[SPUStandardUpdaterController alloc] initWithStartingUpdater:YES updaterDelegate:nil userDriverDelegate:nil]];
+    }
+    return self;
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    [[self checkForUpdatesMenuItem] setTarget:[self updaterController]];
+    [[self checkForUpdatesMenuItem] setAction:@selector(checkForUpdates:)];
+}
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {}
 
