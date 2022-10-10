@@ -112,7 +112,7 @@ jobs:
             '            ]]>'
             '            </description>'
             '            <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>'
-            "            <enclosure url=\"https://github.com/EETagent/Send/releases/latest/download/Send.dmg\" sparkle:version=\"${VER}-stable-${SHORT_SHA}\" sparkle:shortVersionString=\"${VER}\" type=\"application/octet-stream\" $($SPARKLE_BIN/sign_update -s ${SPARKLE_KEY} ./Artifacts/Send.dmg)/>"
+            "            <enclosure url=\"https://github.com/EETagent/Send/releases/latest/download/Send.dmg\" sparkle:version=\"${VER}\" sparkle:shortVersionString=\"${VER}\" type=\"application/octet-stream\" $($SPARKLE_BIN/sign_update -s ${SPARKLE_KEY} ./Artifacts/Send.dmg)/>"
             '        </item>'
             '    </channel>'
             '</rss>'
