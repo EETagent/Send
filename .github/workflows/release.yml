@@ -93,7 +93,8 @@ jobs:
 
     - name: Generate Sparkle Appcast ✨
       run: |
-        REPO_COMMIT_URL='https://github.com/EETagent/Send/commit/'
+        RELEASE_URL='https://github.com/EETagent/Send/releases/tag/'
+        TAG_RELEASE_URL="${RELEASE_URL}${CUR_TAG}"
         SPARKLE_BIN='./build/SourcePackages/artifacts/Sparkle/bin'
         PUBDATE="$(date +"%a, %d %b %Y %T %z")"
         APPCAST=(
@@ -105,8 +106,8 @@ jobs:
             "            <title>${VER}</title>"
             "            <pubDate>${PUBDATE}</pubDate>"
             '            <description><![CDATA['
-            '                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/20.4.6/primer.min.css"><meta charset="UTF-8"><div class="markdown-body"><h3>The latest updates are:</h3><ul>'
-            "${REPO_COMMIT_URL}"
+            '                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/20.4.6/primer.min.css"><meta charset="UTF-8"><div class="markdown-body"><h3>The latest updates are available here:</h3><ul>'
+            '<a href="${TAG_RELEASE_URL}">${TAG_RELEASE_URL}</a>'
             '                </ul></div>'
             '            ]]>'
             '            </description>'
