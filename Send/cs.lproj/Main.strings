@@ -44,6 +44,9 @@
 /* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
 "BOF-NM-1cW.title" = "Nastavení…";
 
+/* Class = "NSMenuItem"; title = "Check for updates..."; ObjectID = "fO4-w7-XPI"; */
+"fO4-w7-XPI.title" = "Zkontrolovat aktualizace…";
+
 /* Class = "NSMenuItem"; title = "Close"; ObjectID = "DVo-aG-piG"; */
 "DVo-aG-piG.title" = "Zavřít";
 
