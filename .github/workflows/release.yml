@@ -65,7 +65,7 @@ jobs:
 
     - name: Release Build 🔨
       run: |
-        xcodebuild -scheme ${MACOS_APP_NAME} -configuration Release -derivedDataPath build -disableAutomaticPackageResolution CODE_SIGN_IDENTITY=- | xcpretty && exit ${PIPESTATUS[0]}
+        xcodebuild -scheme ${MACOS_APP_NAME} -configuration Release -derivedDataPath build -disableAutomaticPackageResolution CODE_SIGN_IDENTITY="Apple Development: frantisek.zakopal@gmail.com (JLHQ66WC7C)" | xcpretty && exit ${PIPESTATUS[0]}
 
     - name: Check Send signature
       run: codesign --verify -vvvv --deep --strict "${XCBUILD_PATH}/${MACOS_APP_ARTIFACT}"
