@@ -25,8 +25,13 @@ jobs:
         git fetch --prune --unshallow --tags
         GIT_SHA="$(git rev-parse --short HEAD)"
         CUR_TAG="$(git tag -l  | tail -1)"
-        echo "VER=$CUR_TAG" >> $GITHUB_ENV
+        
+        VER_BUILD="$(xcodebuild -showBuildSettings | grep CURRENT_PROJECT_VERSION | tr -d 'CURRENT_PROJECT_VERSION =')"
+        VER="$(xcodebuild -showBuildSettings | grep MARKETING_VERSION | tr -d 'MARKETING_VERSION =')"
+        echo "VER=$VER" >> $GITHUB_ENV
+        echo "VER_BUILD=$VER_BUILD" >> $GITHUB_ENV
         echo "SHORT_SHA=$GIT_SHA" >> $GITHUB_ENV
+        echo "CUR_TAG=$CUR_TAG" >> $GITHUB_ENV
         if [[ -z $CUR_TAG ]]; then
           echo "OLD_PRE_TAG=NULL" >> $GITHUB_ENV
         else
@@ -107,12 +112,12 @@ jobs:
             "            <pubDate>${PUBDATE}</pubDate>"
             '            <description><![CDATA['
             '                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/20.4.6/primer.min.css"><meta charset="UTF-8"><div class="markdown-body"><h3>The latest updates are available here:</h3><ul>'
-            '<a href="${TAG_RELEASE_URL}">${TAG_RELEASE_URL}</a>'
+            "<a href=\"${TAG_RELEASE_URL}\">${TAG_RELEASE_URL}</a>"
             '                </ul></div>'
             '            ]]>'
             '            </description>'
             '            <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>'
-            "            <enclosure url=\"https://github.com/EETagent/Send/releases/latest/download/Send.dmg\" sparkle:version=\"${VER}\" sparkle:shortVersionString=\"${VER}\" type=\"application/octet-stream\" $($SPARKLE_BIN/sign_update -s ${SPARKLE_KEY} ./Artifacts/Send.dmg)/>"
+            "            <enclosure url=\"https://github.com/EETagent/Send/releases/latest/download/Send.dmg\" sparkle:version=\"${VER_BUILD}\" sparkle:shortVersionString=\"${VER}\" type=\"application/octet-stream\" $($SPARKLE_BIN/sign_update -s ${SPARKLE_KEY} ./Artifacts/Send.dmg)/>"
             '        </item>'
             '    </channel>'
             '</rss>'
