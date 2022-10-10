@@ -68,10 +68,10 @@ jobs:
       run: |
         xcodebuild -scheme ${MACOS_APP_NAME} -configuration Release -derivedDataPath build -disableAutomaticPackageResolution CODE_SIGN_IDENTITY="${CODE_SIGN_IDENTITY}" | xcpretty && exit ${PIPESTATUS[0]}
 
-    - name: Resign app
+    - name: Resign app 🔑 (Temp fix for Sparkle updating)
       run: codesign -f -s "${CODE_SIGN_IDENTITY}" "${XCBUILD_PATH}/${MACOS_APP_ARTIFACT}"
 
-    - name: Check Send signature
+    - name: Check Send signature 🔑
       run: codesign --verify -vvvv --deep --strict "${XCBUILD_PATH}/${MACOS_APP_ARTIFACT}"
 
     - name: Create Disk Image 💿
