@@ -9,13 +9,17 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>NSExtensionActivationRule</key>
-			<string>{extensionItems = ({
-				attachments = ({
-					registeredTypeIdentifiers = (
-						"public.file-url"
-					);
-				});
-			})}</string>
+			<string>
+				SUBQUERY (
+					extensionItems,
+					$extensionItem,
+					SUBQUERY (
+						$extensionItem.attachments,
+						$attachment,
+						ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO "public.url"
+					).@count > 0
+				).@count > 0
+			</string>
 		</dict>
 		<key>NSExtensionMainNibFile</key>
 		<string>ShareViewController</string>
