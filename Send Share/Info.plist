@@ -9,12 +9,13 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>NSExtensionActivationRule</key>
-			<dict>
-				<key>NSExtensionActivationSupportsFileWithMaxCount</key>
-				<integer>-1</integer>
-				<key>NSExtensionActivationSupportsText</key>
-				<false/>
-			</dict>
+			<string>{extensionItems = ({
+				attachments = ({
+					registeredTypeIdentifiers = (
+						"public.file-url"
+					);
+				});
+			})}</string>
 		</dict>
 		<key>NSExtensionMainNibFile</key>
 		<string>ShareViewController</string>
