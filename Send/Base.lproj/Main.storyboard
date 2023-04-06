@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -264,8 +264,8 @@
                                                         </attributedString>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q7B-i2-JbY">
-                                                        <rect key="frame" x="167" y="40" width="146" height="14"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="or click to send up to 10GB" id="EWT-ky-x4L">
+                                                        <rect key="frame" x="164" y="40" width="153" height="14"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="or click to send up to 2.5 GB" id="EWT-ky-x4L">
                                                             <font key="font" textStyle="subheadline" name=".SFNS-Regular"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -378,14 +378,14 @@ DQ
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ROT-xP-st6">
-                                                                    <rect key="frame" x="15" y="90" width="17" height="21"/>
+                                                                    <rect key="frame" x="15" y="90" width="16" height="21"/>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="8ks-HG-XI8">
                                                                         <imageReference key="image" image="doc" symbolScale="large"/>
                                                                     </imageCell>
                                                                     <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </imageView>
                                                                 <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QFv-R9-z3Q">
-                                                                    <rect key="frame" x="42" y="81" width="362" height="38"/>
+                                                                    <rect key="frame" x="41" y="81" width="364" height="38"/>
                                                                     <subviews>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gsh-Kz-DaB">
                                                                             <rect key="frame" x="-2" y="22" width="49" height="16"/>
@@ -414,7 +414,7 @@ DQ
                                                                     </customSpacing>
                                                                 </stackView>
                                                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="JFJ-ab-hi7">
-                                                                    <rect key="frame" x="414" y="92" width="16" height="16"/>
+                                                                    <rect key="frame" x="415" y="93" width="15" height="15"/>
                                                                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="xmark" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="ePC-1V-EJ2">
                                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                         <font key="font" metaFont="system"/>
@@ -526,10 +526,10 @@ DQ
                                             </textField>
                                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XA1-Vl-rxp" userLabel="Limit Pop Up Button">
                                                 <rect key="frame" x="82" y="-4" width="124" height="25"/>
-                                                <popUpButtonCell key="cell" type="push" title="1 download" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="vRD-AE-Cz8" id="8nX-Wr-2qO">
+                                                <popUpButtonCell key="cell" type="push" title="1 download" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" selectedItem="vRD-AE-Cz8" id="8nX-Wr-2qO">
                                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="menu"/>
-                                                    <menu key="menu" id="IjD-kl-qB4">
+                                                    <menu key="menu" autoenablesItems="NO" id="IjD-kl-qB4">
                                                         <items>
                                                             <menuItem title="1 download" state="on" id="vRD-AE-Cz8"/>
                                                             <menuItem title="2 downloads" id="pqN-Wt-TTe"/>
@@ -537,7 +537,7 @@ DQ
                                                             <menuItem title="4 downloads" id="nda-tz-HHE"/>
                                                             <menuItem title="5 downloads" id="cBa-7R-f2j"/>
                                                             <menuItem title="10 downloads" id="Loi-Hv-vd4"/>
-                                                            <menuItem title="20 downloads" id="7Ku-K8-OS4"/>
+                                                            <menuItem title="20 downloads" enabled="NO" id="7Ku-K8-OS4"/>
                                                         </items>
                                                     </menu>
                                                 </popUpButtonCell>
@@ -564,16 +564,16 @@ DQ
                                     </stackView>
                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b95-Sy-qKL" userLabel="Expiry Pop Up Button">
                                         <rect key="frame" x="-3" y="53" width="99" height="25"/>
-                                        <popUpButtonCell key="cell" type="push" title="1 day" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="AyN-pM-hOP" id="Nh1-QB-5sR">
+                                        <popUpButtonCell key="cell" type="push" title="1 day" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" selectedItem="AyN-pM-hOP" id="Nh1-QB-5sR">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
-                                            <menu key="menu" id="Dh7-UK-tDI">
+                                            <menu key="menu" autoenablesItems="NO" id="Dh7-UK-tDI">
                                                 <items>
                                                     <menuItem title="5 minutes" id="Xvl-v2-zS9"/>
                                                     <menuItem title="1 hour" id="4PV-Ud-cMG"/>
                                                     <menuItem title="1 day" state="on" id="AyN-pM-hOP"/>
                                                     <menuItem title="3 days" id="c2A-XH-ytl"/>
-                                                    <menuItem title="7 days" id="ijj-hM-ypL"/>
+                                                    <menuItem title="7 days" enabled="NO" id="ijj-hM-ypL"/>
                                                 </items>
                                             </menu>
                                         </popUpButtonCell>
@@ -707,14 +707,14 @@ DQ
                                         <rect key="frame" x="0.0" y="38" width="480" height="45"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0CZ-9I-0rU">
-                                                <rect key="frame" x="10" y="12" width="17" height="21"/>
+                                                <rect key="frame" x="10" y="12" width="16" height="21"/>
                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="8u4-6F-ScY">
                                                     <imageReference key="image" image="doc" symbolScale="large"/>
                                                 </imageCell>
                                                 <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </imageView>
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZVv-oL-gUk">
-                                                <rect key="frame" x="37" y="4" width="433" height="38"/>
+                                                <rect key="frame" x="36" y="4" width="434" height="38"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dt4-qa-Pkb">
                                                         <rect key="frame" x="-2" y="22" width="99" height="16"/>

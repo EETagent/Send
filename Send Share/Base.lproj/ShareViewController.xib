@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -77,10 +77,10 @@ Gw
                                 </textField>
                                 <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fwq-pW-mhj" userLabel="Limit Pop Up Button">
                                     <rect key="frame" x="82" y="-4" width="124" height="25"/>
-                                    <popUpButtonCell key="cell" type="push" title="1 download" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="AiN-uI-b64" id="OMf-T1-fEt">
+                                    <popUpButtonCell key="cell" type="push" title="1 download" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" selectedItem="AiN-uI-b64" id="OMf-T1-fEt">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="menu"/>
-                                        <menu key="menu" id="to4-3t-uTM">
+                                        <menu key="menu" autoenablesItems="NO" id="to4-3t-uTM">
                                             <items>
                                                 <menuItem title="1 download" state="on" id="AiN-uI-b64"/>
                                                 <menuItem title="2 downloads" id="raA-c7-cvn"/>
@@ -88,7 +88,7 @@ Gw
                                                 <menuItem title="4 downloads" id="Tbi-57-haw"/>
                                                 <menuItem title="5 downloads" id="2U7-8v-G6B"/>
                                                 <menuItem title="10 downloads" id="7nr-ZQ-iLh"/>
-                                                <menuItem title="20 downloads" id="5QB-WR-tzH"/>
+                                                <menuItem title="20 downloads" enabled="NO" id="5QB-WR-tzH"/>
                                             </items>
                                         </menu>
                                     </popUpButtonCell>
@@ -115,16 +115,16 @@ Gw
                         </stackView>
                         <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qot-RD-Dyt" userLabel="Expiry Pop Up Button">
                             <rect key="frame" x="-3" y="25" width="99" height="25"/>
-                            <popUpButtonCell key="cell" type="push" title="1 day" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="wHB-nr-a8O" id="b9y-4X-P2m">
+                            <popUpButtonCell key="cell" type="push" title="1 day" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" selectedItem="wHB-nr-a8O" id="b9y-4X-P2m">
                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="menu"/>
-                                <menu key="menu" id="WlV-ie-cme">
+                                <menu key="menu" autoenablesItems="NO" id="WlV-ie-cme">
                                     <items>
                                         <menuItem title="5 minutes" id="Zm0-Hw-fbi"/>
                                         <menuItem title="1 hour" id="BfR-OJ-7AW"/>
                                         <menuItem title="1 day" state="on" id="wHB-nr-a8O"/>
                                         <menuItem title="3 days" id="6JK-4J-B3i"/>
-                                        <menuItem title="7 days" id="br7-vj-j8g"/>
+                                        <menuItem title="7 days" enabled="NO" id="br7-vj-j8g"/>
                                     </items>
                                 </menu>
                             </popUpButtonCell>

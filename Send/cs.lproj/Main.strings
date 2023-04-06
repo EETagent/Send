@@ -51,7 +51,7 @@
 "DVo-aG-piG.title" = "Zavřít";
 
 /* Class = "NSTextFieldCell"; title = "or click to send up to 10GB"; ObjectID = "EWT-ky-x4L"; Note = "DropView 10GB"; */
-"EWT-ky-x4L.title" = "můžete poslat až 10GB";
+"EWT-ky-x4L.title" = "můžete poslat až 2.5 GB";
 
 /* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
 "F2S-fz-NVQ.title" = "Nápověda";
