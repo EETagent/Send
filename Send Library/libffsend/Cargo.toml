@@ -16,3 +16,6 @@ codegen-units = 1
 lto = true
 opt-level = 3
 panic = "abort"
+
+[patch.crates-io]
+traitobject = { git = "https://github.com/fralalonde/traitobject_patch", tag = "0.1.1" }
