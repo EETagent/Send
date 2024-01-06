@@ -5,7 +5,7 @@ edition = "2021"
 
 [dependencies]
 ffsend-api = { version = "0.7.3", features = ["send3", "crypto-ring"], default-features = false }
-url = "2.2.2"
+url = "2.5.0"
 
 [dev-dependencies]
 tempfile = "3.9"
@@ -21,4 +21,4 @@ opt-level = 3
 panic = "abort"
 
 [patch.crates-io]
-traitobject = { git = "https://github.com/fralalonde/traitobject_patch", tag = "0.1.1" }
+traitobject = { git = "https://github.com/reem/rust-traitobject", rev = "b3471a15917b2caf5a8b27debb0b4b390fc6634f" }
