@@ -253,3 +253,84 @@ pub extern "C" fn upload_file(
     }
     return 0;
 }
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn test_upload_file() {
+        use super::*;
+        use std::ffi::CString;
+        use std::io::Write;
+        use std::os::raw::c_void;
+        use std::ptr::null_mut;
+
+        use tempfile::NamedTempFile;
+
+        const PASSWORD: &str = "password";
+        const FILE_CONTENT: &str = "Ahoj!";
+        const LIMIT: u8 = 2;
+        const EXPIRY: i64 = 5*60;
+
+        let mut file = NamedTempFile::new().unwrap();
+
+        file.write_all(FILE_CONTENT.as_bytes()).unwrap();
+
+        let path = file.into_temp_path();
+
+        let uploaded_file: *mut UploadedFile = uploaded_file_new();
+        let reporter: *mut Arc<Mutex<Reporter>> = progress_reporter_new();
+
+        extern "C" fn start(size: u64, ctx: *mut c_void) {
+            println!("Start: {} {}", size, ctx as u64);
+        }
+        extern "C" fn progress(progress: u64, ctx: *mut c_void) {
+            println!("Progress: {} {}", progress, ctx as u64);
+        }
+        extern "C" fn finish(ctx: *mut c_void) {
+            println!("Finish: {}", ctx as u64);
+        }
+
+        progress_reporter_setup(reporter, start, progress, finish, null_mut());
+
+        let path_string = CString::new(path.to_str().unwrap()).unwrap();
+        let password = CString::new(PASSWORD).unwrap();
+
+        let result = upload_file(
+            path_string.as_ptr(),
+            password.as_ptr(),
+            LIMIT,
+            EXPIRY,
+            reporter,
+            uploaded_file,
+        );
+
+        path.close().unwrap();
+
+        assert_eq!(result, 0);
+
+        let id = uploaded_file_get_id(uploaded_file);
+        let url = uploaded_file_get_url(uploaded_file);
+        let secret = uploaded_file_get_secret(uploaded_file);
+        let expire_at = dbg!(uploaded_file_get_expire_at(uploaded_file));
+
+        let id = dbg!(unsafe { CString::from_raw(id as *mut c_char) });
+        let url = dbg!(unsafe { CString::from_raw(url as *mut c_char) });
+        let secret = dbg!(unsafe { CString::from_raw(secret as *mut c_char) });
+
+        assert!(id.to_str().unwrap().len() > 0);
+        assert!(expire_at > 0);
+
+        let url_parsed = url.to_str().unwrap();
+        let url_parsed = Url::parse(url_parsed);
+        assert!(url_parsed.is_ok());
+
+        assert!(secret.to_str().unwrap().len() > 0);
+
+        uploaded_file_string_free(id.into_raw());
+        uploaded_file_string_free(url.into_raw());
+        uploaded_file_string_free(secret.into_raw());
+
+        uploaded_file_free(uploaded_file);
+        progress_reporter_free(reporter);
+    }
+}

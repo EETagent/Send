@@ -7,6 +7,9 @@ edition = "2021"
 ffsend-api = { version = "0.7.3", features = ["send3", "crypto-ring"], default-features = false }
 url = "2.2.2"
 
+[dev-dependencies]
+tempfile = "3.9"
+
 [lib]
 name = "ffsend"
 crate-type = ["cdylib"]
