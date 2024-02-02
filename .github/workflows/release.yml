@@ -104,6 +104,8 @@ jobs:
         TAG_RELEASE_URL="${RELEASE_URL}${CUR_TAG}"
         SPARKLE_BIN='./build/SourcePackages/artifacts/Sparkle/bin'
         PUBDATE="$(date +"%a, %d %b %Y %T %z")"
+        
+        SIGN=$(echo SPARKLE_KEY | $SPARKLE_BIN/sign_update ./Artifacts/Send.dmg  --ed-key-file -)
         APPCAST=(
             '<?xml version="1.0" standalone="yes"?>'
             '<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">'
@@ -119,7 +121,7 @@ jobs:
             '            ]]>'
             '            </description>'
             '            <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>'
-            "            <enclosure url=\"https://github.com/EETagent/Send/releases/latest/download/Send.dmg\" sparkle:version=\"${VER_BUILD}\" sparkle:shortVersionString=\"${VER}\" type=\"application/octet-stream\" $($SPARKLE_BIN/sign_update -s ${SPARKLE_KEY} ./Artifacts/Send.dmg)/>"
+            "            <enclosure url=\"https://github.com/EETagent/Send/releases/latest/download/Send.dmg\" sparkle:version=\"${VER_BUILD}\" sparkle:shortVersionString=\"${VER}\" type=\"application/octet-stream\" ${SIGN} />"
             '        </item>'
             '    </channel>'
             '</rss>'
