@@ -10,12 +10,10 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Install latest stable Rust toolchain 🦀
-        uses: actions-rs/toolchain@v1
+        uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: stable
-          target: aarch64-apple-darwin
-          default: true
-          override: true
+          targets: 'aarch64-apple-darwin,x86_64-apple-darwin'
 
       - name: Setup latest Xcode ⚒️
         uses: maxim-lobanov/setup-xcode@v1
