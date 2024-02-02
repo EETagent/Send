@@ -102,7 +102,7 @@ jobs:
       run: |
         RELEASE_URL='https://github.com/EETagent/Send/releases/tag/'
         TAG_RELEASE_URL="${RELEASE_URL}${CUR_TAG}"
-        SPARKLE_BIN='./build/SourcePackages/artifacts/Sparkle/bin'
+        SPARKLE_BIN='./build/SourcePackages/artifacts/sparkle/Sparkle/bin'
         PUBDATE="$(date +"%a, %d %b %Y %T %z")"
         
         SIGN=$(echo SPARKLE_KEY | $SPARKLE_BIN/sign_update ./Artifacts/Send.dmg  --ed-key-file -)
