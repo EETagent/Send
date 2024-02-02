@@ -15,11 +15,11 @@ env:
 
 jobs:
   ReleaseCI:
-    runs-on: macos-12
+    runs-on: macos-14
 
     steps:
     - name: Checkout 🚚
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Manage Version 💼
       run: |
