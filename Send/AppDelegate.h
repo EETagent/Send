@@ -9,6 +9,7 @@
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property(nonatomic, weak) IBOutlet NSMenuItem *checkForUpdatesMenuItem;
+@property(nonatomic, weak) IBOutlet NSMenuItem *finderShareExtensionMenuItem;
 
 @property SPUStandardUpdaterController *updaterController;
 

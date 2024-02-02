@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,6 +26,8 @@
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                                         <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                                        <menuItem title="Finder Share Extension" keyEquivalent="," id="1xF-zX-ilQ"/>
+                                        <menuItem isSeparatorItem="YES" id="6t2-ZU-Nff"/>
                                         <menuItem title="Check for updates..." id="fO4-w7-XPI">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
@@ -155,6 +157,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
                     <connections>
                         <outlet property="checkForUpdatesMenuItem" destination="fO4-w7-XPI" id="53e-yA-n9c"/>
+                        <outlet property="finderShareExtensionMenuItem" destination="1xF-zX-ilQ" id="riW-8v-vwf"/>
                     </connections>
                 </customObject>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -194,7 +197,7 @@
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hro-Ob-mee">
                                 <rect key="frame" x="20" y="238" width="480" height="90"/>
                                 <subviews>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="AUi-be-JG7" userLabel="Headline">
+                                    <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="AUi-be-JG7" userLabel="Headline">
                                         <rect key="frame" x="-2" y="62" width="298" height="28"/>
                                         <textFieldCell key="cell" title="Simple, private file sharing" id="87Z-8c-LE6">
                                             <font key="font" metaFont="systemBold" size="24"/>
@@ -205,7 +208,7 @@
                                             <fragment content="WelcomeView Headline"/>
                                         </attributedString>
                                     </textField>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="MvX-5F-zZs" userLabel="Subtitle">
+                                    <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="MvX-5F-zZs" userLabel="Subtitle">
                                         <rect key="frame" x="-2" y="0.0" width="484" height="42"/>
                                         <textFieldCell key="cell" id="2wr-Am-WmR">
                                             <font key="font" textStyle="subheadline" name=".SFNS-Regular"/>
@@ -238,21 +241,21 @@
                                                 <subviews>
                                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="bRa-Es-lhu">
                                                         <rect key="frame" x="225" y="110" width="30" height="30"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="30" id="abY-0C-BgV"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="ypy-h2-Wpj"/>
-                                                        </constraints>
                                                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="0Qc-as-GhD">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                             <imageReference key="image" image="plus.circle" symbolScale="large"/>
                                                         </buttonCell>
                                                         <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="abY-0C-BgV"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="ypy-h2-Wpj"/>
+                                                        </constraints>
                                                         <connections>
                                                             <action selector="openFile:" target="XHV-QG-UmI" id="SFx-oz-kGH"/>
                                                         </connections>
                                                     </button>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ewR-vj-yzg">
+                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ewR-vj-yzg">
                                                         <rect key="frame" x="177" y="74" width="127" height="16"/>
                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Drag and drop files" id="as0-pb-qAw">
                                                             <font key="font" textStyle="headline" name=".SFNS-Bold"/>
@@ -263,7 +266,7 @@
                                                             <fragment content="DropView D&amp;D"/>
                                                         </attributedString>
                                                     </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q7B-i2-JbY">
+                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q7B-i2-JbY">
                                                         <rect key="frame" x="164" y="40" width="153" height="14"/>
                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="or click to send up to 2.5 GB" id="EWT-ky-x4L">
                                                             <font key="font" textStyle="subheadline" name=".SFNS-Regular"/>
@@ -359,7 +362,7 @@ DQ
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="45" viewBased="YES" id="3L7-2g-c2R" customClass="DropTableView">
-                                            <rect key="frame" x="0.0" y="0.0" width="478" height="220"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="163"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="0.0" height="20"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -378,16 +381,16 @@ DQ
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ROT-xP-st6">
-                                                                    <rect key="frame" x="15" y="90" width="16" height="21"/>
+                                                                    <rect key="frame" x="15" y="90" width="17" height="21"/>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="8ks-HG-XI8">
                                                                         <imageReference key="image" image="doc" symbolScale="large"/>
                                                                     </imageCell>
                                                                     <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </imageView>
                                                                 <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QFv-R9-z3Q">
-                                                                    <rect key="frame" x="41" y="81" width="364" height="38"/>
+                                                                    <rect key="frame" x="42" y="81" width="362" height="38"/>
                                                                     <subviews>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gsh-Kz-DaB">
+                                                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gsh-Kz-DaB">
                                                                             <rect key="frame" x="-2" y="22" width="49" height="16"/>
                                                                             <textFieldCell key="cell" lineBreakMode="clipping" title="A4.pdf" id="Yql-n0-DXD">
                                                                                 <font key="font" textStyle="headline" name=".SFNS-Bold"/>
@@ -395,7 +398,7 @@ DQ
                                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mm9-vT-UIt">
+                                                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mm9-vT-UIt">
                                                                             <rect key="frame" x="-2" y="0.0" width="37" height="14"/>
                                                                             <textFieldCell key="cell" lineBreakMode="clipping" title="1,4MB" id="RHh-fV-Qgn">
                                                                                 <font key="font" textStyle="subheadline" name=".SFNS-Regular"/>
@@ -414,7 +417,7 @@ DQ
                                                                     </customSpacing>
                                                                 </stackView>
                                                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="JFJ-ab-hi7">
-                                                                    <rect key="frame" x="415" y="93" width="15" height="15"/>
+                                                                    <rect key="frame" x="414" y="92" width="16" height="16"/>
                                                                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="xmark" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="ePC-1V-EJ2">
                                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                         <font key="font" metaFont="system"/>
@@ -466,20 +469,20 @@ DQ
                                 <subviews>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="AQu-Df-dit">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="uRF-Tt-Y3J"/>
-                                        </constraints>
                                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="ODM-zz-2pe">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                             <imageReference key="image" image="plus.circle" symbolScale="large"/>
                                         </buttonCell>
                                         <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="uRF-Tt-Y3J"/>
+                                        </constraints>
                                         <connections>
                                             <action selector="openFile:" target="e1U-O2-xRu" id="DrN-43-yzf"/>
                                         </connections>
                                     </button>
-                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lhi-54-l1C">
+                                    <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lhi-54-l1C">
                                         <rect key="frame" x="28" y="2" width="354" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Select files to upload" id="gHz-wO-AxW">
                                             <font key="font" metaFont="systemBold"/>
@@ -490,7 +493,7 @@ DQ
                                             <fragment content="FilesView select files"/>
                                         </attributedString>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5NX-t2-iF7">
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5NX-t2-iF7">
                                         <rect key="frame" x="378" y="2" width="104" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Total size: 1,4MB" id="3nt-6W-H1a">
                                             <font key="font" metaFont="systemLight" size="13"/>
@@ -516,7 +519,7 @@ DQ
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jtk-GE-CkC">
                                         <rect key="frame" x="0.0" y="85" width="223" height="20"/>
                                         <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8th-ie-phr">
+                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8th-ie-phr">
                                                 <rect key="frame" x="-2" y="4" width="81" height="16"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Expires after" id="nM0-mq-q1p">
                                                     <font key="font" usesAppearanceFont="YES"/>
@@ -542,7 +545,7 @@ DQ
                                                     </menu>
                                                 </popUpButtonCell>
                                             </popUpButton>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BAI-hT-at4">
+                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BAI-hT-at4">
                                                 <rect key="frame" x="208" y="4" width="17" height="16"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="or" id="yNA-35-9y1">
                                                     <font key="font" usesAppearanceFont="YES"/>
@@ -596,7 +599,7 @@ DQ
                                                     </binding>
                                                 </connections>
                                             </button>
-                                            <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SqA-mS-heU">
+                                            <secureTextField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SqA-mS-heU">
                                                 <rect key="frame" x="167" y="0.0" width="96" height="21"/>
                                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="5sM-QC-ceO">
                                                     <font key="font" metaFont="system"/>
@@ -695,7 +698,7 @@ DQ
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SYb-0h-vYb">
                                 <rect key="frame" x="20" y="199" width="480" height="131"/>
                                 <subviews>
-                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="JWv-KL-XiA" customClass="DotAnimatedTextField">
+                                    <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="JWv-KL-XiA" customClass="DotAnimatedTextField">
                                         <rect key="frame" x="-2" y="103" width="327" height="28"/>
                                         <textFieldCell key="cell" title="Your files are being uploaded" id="0eA-X3-HyY">
                                             <font key="font" metaFont="systemBold" size="24"/>
@@ -707,16 +710,16 @@ DQ
                                         <rect key="frame" x="0.0" y="38" width="480" height="45"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0CZ-9I-0rU">
-                                                <rect key="frame" x="10" y="12" width="16" height="21"/>
+                                                <rect key="frame" x="10" y="12" width="17" height="21"/>
                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="8u4-6F-ScY">
                                                     <imageReference key="image" image="doc" symbolScale="large"/>
                                                 </imageCell>
                                                 <color key="contentTintColor" red="0.3686274886" green="0.62352943419999995" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </imageView>
                                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZVv-oL-gUk">
-                                                <rect key="frame" x="36" y="4" width="434" height="38"/>
+                                                <rect key="frame" x="37" y="4" width="433" height="38"/>
                                                 <subviews>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dt4-qa-Pkb">
+                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dt4-qa-Pkb">
                                                         <rect key="frame" x="-2" y="22" width="99" height="16"/>
                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Preparing files" id="SjE-Mz-xfb">
                                                             <font key="font" textStyle="headline" name=".SFNS-Bold"/>
@@ -724,7 +727,7 @@ DQ
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hD6-IB-rGN">
+                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hD6-IB-rGN">
                                                         <rect key="frame" x="-2" y="0.0" width="22" height="14"/>
                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="???" id="5at-G2-IHd">
                                                             <font key="font" textStyle="subheadline" name=".SFNS-Regular"/>
@@ -787,13 +790,13 @@ DQ
                                 <subviews>
                                     <button horizontalCompressionResistancePriority="499" verticalCompressionResistancePriority="499" translatesAutoresizingMaskIntoConstraints="NO" id="Y76-l7-odK" userLabel="Qrcode">
                                         <rect key="frame" x="0.0" y="87" width="50" height="72"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="ukX-zg-XO8"/>
-                                        </constraints>
                                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="leading" alignment="left" imageScaling="proportionallyUpOrDown" inset="2" id="LoX-xZ-STT">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="ukX-zg-XO8"/>
+                                        </constraints>
                                         <connections>
                                             <action selector="copyQrCode:" target="pPW-FH-Ai6" id="g08-yF-8TA"/>
                                         </connections>
@@ -801,7 +804,7 @@ DQ
                                     <stackView distribution="fill" orientation="horizontal" alignment="bottom" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="trg-26-6tT">
                                         <rect key="frame" x="0.0" y="0.0" width="480" height="67"/>
                                         <subviews>
-                                            <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="499" verticalCompressionResistancePriority="499" translatesAutoresizingMaskIntoConstraints="NO" id="cWS-cr-nsk">
+                                            <textField focusRingType="none" horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="499" verticalCompressionResistancePriority="499" translatesAutoresizingMaskIntoConstraints="NO" id="cWS-cr-nsk">
                                                 <rect key="frame" x="0.0" y="0.0" width="351" height="21"/>
                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" selectable="YES" editable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="9MW-ns-Q0X">
                                                     <font key="font" usesAppearanceFont="YES"/>
