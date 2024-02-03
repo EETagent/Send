@@ -13,4 +13,7 @@
 + (void)resetProgress;
 + (void)hideProgress;
 
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
+
 @end
