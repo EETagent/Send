@@ -18,6 +18,7 @@
 		4634032228BE740600C759DB /* SettingsStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4634031F28BE70AE00C759DB /* SettingsStackView.m */; };
 		4634033228BE805200C759DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4634033428BE805200C759DB /* Localizable.strings */; };
 		46371F2C28BA4F5F008F6DFF /* FileItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46371F2B28BA4F5F008F6DFF /* FileItemView.m */; };
+		46B9E8D22B6E8D1700BFD528 /* DockProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B9E8D12B6E8D1700BFD528 /* DockProgress.m */; };
 		46BC690328F1D31200E3D268 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 46BC690228F1D31200E3D268 /* Sparkle */; };
 		46BFCF3228BBEF66006919D0 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 46BFCF3128BBEF66006919D0 /* Credits.rtf */; };
 		46CAAA0828B802430015008F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA0728B802430015008F /* AppDelegate.m */; };
@@ -149,6 +150,8 @@
 		46371F2B28BA4F5F008F6DFF /* FileItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FileItemView.m; sourceTree = "<group>"; };
 		4651F4B328BB9E2A00FF3E4D /* DropDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DropDelegate.h; sourceTree = "<group>"; };
 		46769B3F28BC038700F06426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		46B9E8D02B6E8D1700BFD528 /* DockProgress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DockProgress.h; sourceTree = "<group>"; };
+		46B9E8D12B6E8D1700BFD528 /* DockProgress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DockProgress.m; sourceTree = "<group>"; };
 		46BFCF3128BBEF66006919D0 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		46CAAA0328B802430015008F /* Send.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Send.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46CAAA0628B802430015008F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -358,6 +361,15 @@
 			path = Class;
 			sourceTree = "<group>";
 		};
+		46B9E8CF2B6E8D0100BFD528 /* DockProgress */ = {
+			isa = PBXGroup;
+			children = (
+				46B9E8D02B6E8D1700BFD528 /* DockProgress.h */,
+				46B9E8D12B6E8D1700BFD528 /* DockProgress.m */,
+			);
+			path = DockProgress;
+			sourceTree = "<group>";
+		};
 		46CAA9FA28B802430015008F = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +394,7 @@
 		46CAAA0528B802430015008F /* Send */ = {
 			isa = PBXGroup;
 			children = (
+				46B9E8CF2B6E8D0100BFD528 /* DockProgress */,
 				4634032328BE741300C759DB /* Shared */,
 				46769B3F28BC038700F06426 /* Info.plist */,
 				4618301328BA7D3600BFB7E8 /* Model */,
@@ -672,6 +685,7 @@
 				462E688A28BA28C8001F569F /* FilesViewController.m in Sources */,
 				46CF0F4328BD11FF00298A84 /* ResultView.m in Sources */,
 				46CAAA3928B807050015008F /* UploadViewController.m in Sources */,
+				46B9E8D22B6E8D1700BFD528 /* DockProgress.m in Sources */,
 				4634032228BE740600C759DB /* SettingsStackView.m in Sources */,
 				46CAAA1228B802440015008F /* main.m in Sources */,
 				46CAAA0828B802430015008F /* AppDelegate.m in Sources */,
