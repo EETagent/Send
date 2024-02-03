@@ -106,6 +106,8 @@
             [[self statusTextField] setStringValue:NSLocalizedString(@"Your file is encrypted and ready to send", @"Successful file upload status")];
             [[self statusTextField] stopAnimating];
         }
+        
+        [DockProgress hideProgress];
     });
 }
 
