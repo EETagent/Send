@@ -7,6 +7,8 @@
 
 #import <Send_Library/Send.h>
 
+#import "../DockProgress/DockProgress.h"
+
 @implementation UploadViewController {
     Send *send;
     File *file;
@@ -86,8 +88,13 @@
 - (void)sendUploadProgressWithTotalBytesUploaded:(NSUInteger)bytes {
     // Update progress
     dispatch_async(dispatch_get_main_queue(), ^{
+        double percent = bytes / [[self progressIndicator] maxValue];
+        
+        [DockProgress setProgress:percent];
+        
         [[self progressIndicator] setDoubleValue:bytes];
     });
+    
 }
 
 - (void)sendUploadCompleted {
