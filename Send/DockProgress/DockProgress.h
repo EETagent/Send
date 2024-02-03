@@ -4,7 +4,7 @@
 //  Ported from https://github.com/sindresorhus/DockProgress
 //
 
-#include <Cocoa/Cocoa.h>
+#import <Cocoa/Cocoa.h>
 
 @interface DockProgress : NSObject
 
