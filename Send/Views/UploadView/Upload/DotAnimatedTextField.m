@@ -23,6 +23,7 @@
 
 - (void)dealloc {
     [self->statusAnimationTimer invalidate];
+    self->statusAnimationTimer = nil;
 }
 
 - (void)dotAnimation {
