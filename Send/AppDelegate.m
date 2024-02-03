@@ -26,11 +26,12 @@
     
     [[self finderShareExtensionMenuItem] setTarget:self];
     [[self finderShareExtensionMenuItem] setAction:@selector(openFinderShareExtensionSettings)];
-    }
+}
 
 - (void)openFinderShareExtensionSettings {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"x-apple.systempreferences:com.apple.ExtensionsPreferences?Sharing"]];
 }
+
 - (void)applicationWillTerminate:(NSNotification *)aNotification {}
 
 - (BOOL)applicationSupportsSecureRestorableState:(NSApplication *)app {
