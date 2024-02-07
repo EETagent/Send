@@ -62,7 +62,7 @@
     for (File *file in files)
         [filePaths addObject:[file path]];
     // Start download
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         [self->send uploadFilesWithPaths:filePaths tempFileCreatedAtBlock:^(NSString *path) {
             // Update file with created ZIP location
             File *file = [[File alloc] initWithPath:path];
