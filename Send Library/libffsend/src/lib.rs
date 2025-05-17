@@ -13,7 +13,6 @@ use std::ffi::{CStr, CString, OsStr};
 use std::os::raw::{c_char, c_int, c_longlong, c_uchar, c_ulonglong, c_void};
 use std::ptr::null_mut;
 
-//TODO: Configurable
 //const SEND_URL: &str = "https://send.vis.ee";
 const SEND_VERSION: Version = Version::V3;
 

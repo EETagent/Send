@@ -27,7 +27,8 @@ Send is a native macOS client for Firefox Send services directly based on a fast
 
 ## 👏 Dependencies
 
-- `Maintained Send instance` https://send.vis.ee by [@timvisee](https://github.com/timvisee)
+- `Maintained Send instance` upload.nolog.cz by [nolog](https://witter.cz/@nolog), you can change to your own instance in the settings.
+- `(Terminated on May 24th) Send instance` https://send.vis.ee by [@timvisee](https://github.com/timvisee)
 - `FFsend API library` [ffsend-api](https://github.com/timvisee/ffsend-api) by [@timvisee](https://github.com/timvisee)
 - `ZIP library` [ZipArchive](https://github.com/ZipArchive/ZipArchive) by [@ZipArchive team](https://github.com/ZipArchive)
 

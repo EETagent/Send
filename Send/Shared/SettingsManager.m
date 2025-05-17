@@ -10,10 +10,10 @@ NSString * const kSendMaxDownloadLimit = @"SendMaxDownloadLimit";
 NSString * const kSendMaxDurationMinutes = @"SendMaxDurationMinutes";
 NSString * const kSendMaxFileSizeMB = @"SendMaxFileSizeMB";
 
-static NSString * const kDefaultSendURL = @"https://send.vis.ee/";
-static NSInteger const kDefaultMaxDownloadLimit = 10;
-static NSInteger const kDefaultMaxDurationMinutes = 24*60*3;
-static NSInteger const kDefaultMaxFileSizeMB = 2500;
+static NSString * const kDefaultSendURL = @"https://upload.nolog.cz/";
+static NSInteger const kDefaultMaxDownloadLimit = 500;
+static NSInteger const kDefaultMaxDurationMinutes = 24*60*7;
+static NSInteger const kDefaultMaxFileSizeMB = 5000;
 
 @implementation SettingsManager {
     NSUserDefaults *_userDefaults;
