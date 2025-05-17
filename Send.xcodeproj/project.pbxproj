@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4618301628BA7D4600BFB7E8 /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = 4618301528BA7D4600BFB7E8 /* File.m */; };
 		461D13B928BBAEE4001E34CC /* DropTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 461D13B828BBAEE4001E34CC /* DropTableView.m */; };
+		46253B452DD9452F00CEF28D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 46253B442DD9452F00CEF28D /* Localizable.xcstrings */; };
+		46253B492DD9452F00CEF28D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 46253B482DD9452F00CEF28D /* Localizable.xcstrings */; };
 		462E688628B94B6F001F569F /* DropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 462E688528B94B6F001F569F /* DropView.m */; };
 		462E688A28BA28C8001F569F /* FilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 462E688928BA28C8001F569F /* FilesViewController.m */; };
 		4634031728BE5E5B00C759DB /* Send_Library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EAB07B28BE554800BA82D5 /* Send_Library.framework */; };
@@ -16,9 +18,7 @@
 		4634032028BE70AE00C759DB /* SettingsStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4634031F28BE70AE00C759DB /* SettingsStackView.m */; };
 		4634032128BE73EB00C759DB /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CF0F4228BD11FF00298A84 /* ResultView.m */; };
 		4634032228BE740600C759DB /* SettingsStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4634031F28BE70AE00C759DB /* SettingsStackView.m */; };
-		4634033228BE805200C759DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4634033428BE805200C759DB /* Localizable.strings */; };
 		46371F2C28BA4F5F008F6DFF /* FileItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46371F2B28BA4F5F008F6DFF /* FileItemView.m */; };
-		464CCA112DD90B3B00950826 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464CCA0F2DD90B3B00950826 /* Main.storyboard */; };
 		46A9C5F12DC1530800C5C319 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A9C5F02DC1530800C5C319 /* SettingsViewController.m */; };
 		46A9C5F42DC1531B00C5C319 /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A9C5F32DC1531B00C5C319 /* SettingsManager.m */; };
 		46A9C5F52DC1531B00C5C319 /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A9C5F32DC1531B00C5C319 /* SettingsManager.m */; };
@@ -33,7 +33,6 @@
 		46CAAA3928B807050015008F /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CAAA3828B807050015008F /* UploadViewController.m */; };
 		46CF0F4328BD11FF00298A84 /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CF0F4228BD11FF00298A84 /* ResultView.m */; };
 		46CF0F4628BD496900298A84 /* DotAnimatedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 46CF0F4528BD496900298A84 /* DotAnimatedTextField.m */; };
-		46D4CE0E28BE0C2000CD26B5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46D4CE1028BE0C2000CD26B5 /* Localizable.strings */; };
 		46EAB06128BE446D00BA82D5 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 46EAB06028BE446D00BA82D5 /* icon.icns */; };
 		46EAB06428BE446D00BA82D5 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EAB06328BE446D00BA82D5 /* ShareViewController.m */; };
 		46EAB06728BE446D00BA82D5 /* ShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46EAB06528BE446D00BA82D5 /* ShareViewController.xib */; };
@@ -141,18 +140,19 @@
 		4618301A28BA80CF00BFB7E8 /* FileItemViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FileItemViewDelegate.h; sourceTree = "<group>"; };
 		461D13B728BBAEE4001E34CC /* DropTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DropTableView.h; sourceTree = "<group>"; };
 		461D13B828BBAEE4001E34CC /* DropTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DropTableView.m; sourceTree = "<group>"; };
+		46253B442DD9452F00CEF28D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		46253B462DD9452F00CEF28D /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/Main.xcstrings; sourceTree = "<group>"; };
+		46253B472DD9452F00CEF28D /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = mul.lproj/ShareViewController.xcstrings; sourceTree = "<group>"; };
+		46253B482DD9452F00CEF28D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		462E688428B94B6F001F569F /* DropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DropView.h; sourceTree = "<group>"; };
 		462E688528B94B6F001F569F /* DropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DropView.m; sourceTree = "<group>"; };
 		462E688828BA28C8001F569F /* FilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FilesViewController.h; sourceTree = "<group>"; };
 		462E688928BA28C8001F569F /* FilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FilesViewController.m; sourceTree = "<group>"; };
 		4634031E28BE70AE00C759DB /* SettingsStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SettingsStackView.h; sourceTree = "<group>"; };
 		4634031F28BE70AE00C759DB /* SettingsStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SettingsStackView.m; sourceTree = "<group>"; };
-		4634032D28BE7EA100C759DB /* cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = cs; path = cs.lproj/ShareViewController.strings; sourceTree = "<group>"; };
-		4634033328BE805200C759DB /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		46371F2228BA46EF008F6DFF /* libzip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libzip.xcodeproj; path = libzip/libzip.xcodeproj; sourceTree = "<group>"; };
 		46371F2A28BA4F5F008F6DFF /* FileItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FileItemView.h; sourceTree = "<group>"; };
 		46371F2B28BA4F5F008F6DFF /* FileItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FileItemView.m; sourceTree = "<group>"; };
-		464CCA102DD90B3B00950826 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Send/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4651F4B328BB9E2A00FF3E4D /* DropDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DropDelegate.h; sourceTree = "<group>"; };
 		46769B3F28BC038700F06426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		46A9C5F02DC1530800C5C319 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
@@ -180,8 +180,6 @@
 		46CF0F4228BD11FF00298A84 /* ResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ResultView.m; sourceTree = "<group>"; };
 		46CF0F4428BD496900298A84 /* DotAnimatedTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DotAnimatedTextField.h; sourceTree = "<group>"; };
 		46CF0F4528BD496900298A84 /* DotAnimatedTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DotAnimatedTextField.m; sourceTree = "<group>"; };
-		46CF0F4A28BE048F00298A84 /* cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; lineEnding = 0; name = cs; path = cs.lproj/Main.strings; sourceTree = "<group>"; };
-		46D4CE0F28BE0C2000CD26B5 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		46EAB05E28BE446D00BA82D5 /* Send Share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Send Share.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46EAB06028BE446D00BA82D5 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		46EAB06228BE446D00BA82D5 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ShareViewController.h; sourceTree = "<group>"; };
@@ -384,7 +382,6 @@
 		46CAA9FA28B802430015008F = {
 			isa = PBXGroup;
 			children = (
-				464CCA0F2DD90B3B00950826 /* Main.storyboard */,
 				46CAAA0528B802430015008F /* Send */,
 				46EAB05F28BE446D00BA82D5 /* Send Share */,
 				46EAB07C28BE554800BA82D5 /* Send Library */,
@@ -419,7 +416,7 @@
 				46CAAA1128B802440015008F /* main.m */,
 				46CAAA1328B802440015008F /* Send.entitlements */,
 				46BFCF3128BBEF66006919D0 /* Credits.rtf */,
-				46D4CE1028BE0C2000CD26B5 /* Localizable.strings */,
+				46253B482DD9452F00CEF28D /* Localizable.xcstrings */,
 			);
 			path = Send;
 			sourceTree = "<group>";
@@ -466,7 +463,7 @@
 				46EAB06528BE446D00BA82D5 /* ShareViewController.xib */,
 				46EAB06828BE446D00BA82D5 /* Info.plist */,
 				46EAB06928BE446D00BA82D5 /* Send_Share.entitlements */,
-				4634033428BE805200C759DB /* Localizable.strings */,
+				46253B442DD9452F00CEF28D /* Localizable.xcstrings */,
 			);
 			path = "Send Share";
 			sourceTree = "<group>";
@@ -661,8 +658,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46CAAA0D28B802440015008F /* Assets.xcassets in Resources */,
-				464CCA112DD90B3B00950826 /* Main.storyboard in Resources */,
-				46D4CE0E28BE0C2000CD26B5 /* Localizable.strings in Resources */,
+				46253B492DD9452F00CEF28D /* Localizable.xcstrings in Resources */,
 				46BFCF3228BBEF66006919D0 /* Credits.rtf in Resources */,
 				46CAAA1028B802440015008F /* Main.storyboard in Resources */,
 			);
@@ -672,8 +668,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4634033228BE805200C759DB /* Localizable.strings in Resources */,
 				46EAB06728BE446D00BA82D5 /* ShareViewController.xib in Resources */,
+				46253B452DD9452F00CEF28D /* Localizable.xcstrings in Resources */,
 				46EAB06128BE446D00BA82D5 /* icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -750,44 +746,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4634033428BE805200C759DB /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4634033328BE805200C759DB /* cs */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		464CCA0F2DD90B3B00950826 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				464CCA102DD90B3B00950826 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		46CAAA0E28B802440015008F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				46CAAA0F28B802440015008F /* Base */,
-				46CF0F4A28BE048F00298A84 /* cs */,
+				46253B462DD9452F00CEF28D /* mul */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		46D4CE1028BE0C2000CD26B5 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				46D4CE0F28BE0C2000CD26B5 /* cs */,
-			);
-			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		46EAB06528BE446D00BA82D5 /* ShareViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				46EAB06628BE446D00BA82D5 /* Base */,
-				4634032D28BE7EA100C759DB /* cs */,
+				46253B472DD9452F00CEF28D /* mul */,
 			);
 			name = ShareViewController.xib;
 			sourceTree = "<group>";
@@ -847,11 +819,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Debug;
 		};
@@ -901,10 +875,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};

@@ -1,0 +1,72 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Failed to create ZIP archive" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nezdařilo se vytvoření archívu ZIP"
+          }
+        }
+      }
+    },
+    "File not found" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soubor nenalezen"
+          }
+        }
+      }
+    },
+    "Internal upload error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nezdařilo se nahrávání souboru"
+          }
+        }
+      }
+    },
+    "Total size:" : {
+      "comment" : "Total size in FilesView",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Celková velikost:"
+          }
+        }
+      }
+    },
+    "Your file is encrypted and ready to send" : {
+      "comment" : "Successful file upload status",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Váš soubor je zašifrovaný a připraven k použití"
+          }
+        }
+      }
+    },
+    "Your files are currently being uploaded" : {
+      "comment" : "Files uploading status",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaše soubory se právě nahrávají"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

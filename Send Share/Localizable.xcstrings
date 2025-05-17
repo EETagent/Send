@@ -1,0 +1,50 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Exit" : {
+      "comment" : "Exit button",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ukončit"
+          }
+        }
+      }
+    },
+    "Failed to create ZIP archive" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nezdařilo se vytvoření archívu ZIP"
+          }
+        }
+      }
+    },
+    "File not found" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soubor nenalezen"
+          }
+        }
+      }
+    },
+    "Internal upload error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nezdařilo se nahrávání souboru"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

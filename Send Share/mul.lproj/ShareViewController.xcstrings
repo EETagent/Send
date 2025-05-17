@@ -1,0 +1,348 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "0xp-rC-2gr.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Send\"; ObjectID = \"0xp-rC-2gr\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Send"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Send"
+          }
+        }
+      }
+    },
+    "2l4-PO-we5.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Upload\"; ObjectID = \"2l4-PO-we5\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nahrát"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Upload"
+          }
+        }
+      }
+    },
+    "2U7-8v-G6B.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"5 downloads\"; ObjectID = \"2U7-8v-G6B\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5 staženích"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "5 downloads"
+          }
+        }
+      }
+    },
+    "5QB-WR-tzH.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"20 downloads\"; ObjectID = \"5QB-WR-tzH\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "20 staženích"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "20 downloads"
+          }
+        }
+      }
+    },
+    "6JK-4J-B3i.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"3 days\"; ObjectID = \"6JK-4J-B3i\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3 dny"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "3 days"
+          }
+        }
+      }
+    },
+    "6Up-t3-mwm.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Cancel\"; ObjectID = \"6Up-t3-mwm\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zrušit"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "7nr-ZQ-iLh.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"10 downloads\"; ObjectID = \"7nr-ZQ-iLh\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10 staženích"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "10 downloads"
+          }
+        }
+      }
+    },
+    "AiN-uI-b64.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"1 download\"; ObjectID = \"AiN-uI-b64\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 stažení"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "1 download"
+          }
+        }
+      }
+    },
+    "arY-cB-zPe.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Expires after\"; ObjectID = \"arY-cB-zPe\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Platnost vyprší po"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Expires after"
+          }
+        }
+      }
+    },
+    "BfR-OJ-7AW.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"1 hour\"; ObjectID = \"BfR-OJ-7AW\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 hodina"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "1 hour"
+          }
+        }
+      }
+    },
+    "br7-vj-j8g.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"7 days\"; ObjectID = \"br7-vj-j8g\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7 dní"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "7 days"
+          }
+        }
+      }
+    },
+    "hFI-IM-XSd.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Protect with password\"; ObjectID = \"hFI-IM-XSd\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ochránit heslem"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Protect with password"
+          }
+        }
+      }
+    },
+    "MIR-OB-riG.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"or\"; ObjectID = \"MIR-OB-riG\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "nebo"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "or"
+          }
+        }
+      }
+    },
+    "raA-c7-cvn.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"2 downloads\"; ObjectID = \"raA-c7-cvn\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2 staženích"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "2 downloads"
+          }
+        }
+      }
+    },
+    "Tbi-57-haw.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"4 downloads\"; ObjectID = \"Tbi-57-haw\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4 stažení"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "4 downloads"
+          }
+        }
+      }
+    },
+    "UmE-za-qH0.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Copy\"; ObjectID = \"UmE-za-qH0\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopírovat"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Copy"
+          }
+        }
+      }
+    },
+    "wHB-nr-a8O.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"1 day\"; ObjectID = \"wHB-nr-a8O\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "jeden den"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "1 day"
+          }
+        }
+      }
+    },
+    "XpO-co-yzE.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"3 downloads\"; ObjectID = \"XpO-co-yzE\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3 stažení"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "3 downloads"
+          }
+        }
+      }
+    },
+    "Zm0-Hw-fbi.title" : {
+      "comment" : "Class = \"NSMenuItem\"; title = \"5 minutes\"; ObjectID = \"Zm0-Hw-fbi\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5 minut"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "5 minutes"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
