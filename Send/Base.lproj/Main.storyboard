@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23727"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,9 +24,15 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <action selector="showSettings:" target="Ady-hI-5gd" id="nvx-8N-whn"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
-                                        <menuItem title="Finder Share Extension" keyEquivalent="," id="1xF-zX-ilQ"/>
+                                        <menuItem title="Finder Share Extension" keyEquivalent="," id="1xF-zX-ilQ">
+                                            <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="6t2-ZU-Nff"/>
                                         <menuItem title="Check for updates..." id="fO4-w7-XPI">
                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -191,11 +197,11 @@
             <objects>
                 <viewController storyboardIdentifier="WelcomeView" id="XfG-lQ-9wD" customClass="WelcomeController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="520" height="348"/>
+                        <rect key="frame" x="0.0" y="0.0" width="520" height="420"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hro-Ob-mee">
-                                <rect key="frame" x="20" y="238" width="480" height="90"/>
+                                <rect key="frame" x="20" y="310" width="480" height="90"/>
                                 <subviews>
                                     <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="AUi-be-JG7" userLabel="Headline">
                                         <rect key="frame" x="-2" y="62" width="298" height="28"/>
@@ -231,13 +237,13 @@
                                 </customSpacing>
                             </stackView>
                             <customView horizontalCompressionResistancePriority="499" verticalCompressionResistancePriority="499" translatesAutoresizingMaskIntoConstraints="NO" id="XHV-QG-UmI" customClass="DropView">
-                                <rect key="frame" x="20" y="20" width="480" height="198"/>
+                                <rect key="frame" x="20" y="20" width="480" height="270"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GVV-EE-fpq">
-                                        <rect key="frame" x="0.0" y="0.0" width="480" height="198"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                                         <subviews>
                                             <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" horizontalCompressionResistancePriority="200" verticalCompressionResistancePriority="200" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uSa-7z-Dwj">
-                                                <rect key="frame" x="0.0" y="29" width="480" height="140"/>
+                                                <rect key="frame" x="0.0" y="65" width="480" height="140"/>
                                                 <subviews>
                                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="bRa-Es-lhu">
                                                         <rect key="frame" x="225" y="110" width="30" height="30"/>
@@ -266,17 +272,41 @@
                                                             <fragment content="DropView D&amp;D"/>
                                                         </attributedString>
                                                     </textField>
-                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q7B-i2-JbY">
-                                                        <rect key="frame" x="164" y="40" width="153" height="14"/>
-                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="or click to send up to 2.5 GB" id="EWT-ky-x4L">
-                                                            <font key="font" textStyle="subheadline" name=".SFNS-Regular"/>
-                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                        <attributedString key="userComments">
-                                                            <fragment content="DropView 10GB"/>
-                                                        </attributedString>
-                                                    </textField>
+                                                    <stackView focusRingType="none" distribution="fill" orientation="horizontal" alignment="top" spacing="2.5" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TNm-3d-5Yg">
+                                                        <rect key="frame" x="172" y="40" width="136" height="14"/>
+                                                        <subviews>
+                                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q7B-i2-JbY">
+                                                                <rect key="frame" x="-2" y="0.0" width="115" height="14"/>
+                                                                <textFieldCell key="cell" lineBreakMode="clipping" title="or click to send up to" id="EWT-ky-x4L">
+                                                                    <font key="font" textStyle="subheadline" name=".SFNS-Regular"/>
+                                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                                <attributedString key="userComments">
+                                                                    <fragment content="DropView 10GB"/>
+                                                                </attributedString>
+                                                            </textField>
+                                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C7e-Nj-ymR">
+                                                                <rect key="frame" x="111" y="0.0" width="27" height="14"/>
+                                                                <textFieldCell key="cell" lineBreakMode="clipping" title="5GB" id="Rbf-g9-TAR">
+                                                                    <font key="font" textStyle="subheadline" name=".SFNS-Regular"/>
+                                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                                <attributedString key="userComments">
+                                                                    <fragment content="DropView 10GB"/>
+                                                                </attributedString>
+                                                            </textField>
+                                                        </subviews>
+                                                        <visibilityPriorities>
+                                                            <integer value="1000"/>
+                                                            <integer value="1000"/>
+                                                        </visibilityPriorities>
+                                                        <customSpacing>
+                                                            <real value="3.4028234663852886e+38"/>
+                                                            <real value="3.4028234663852886e+38"/>
+                                                        </customSpacing>
+                                                    </stackView>
                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6Us-qz-nDQ">
                                                         <rect key="frame" x="159" y="-7" width="162" height="32"/>
                                                         <buttonCell key="cell" type="push" title="Select files to upload" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SyA-Kd-DaZ">
@@ -341,6 +371,7 @@ DQ
                     </view>
                     <connections>
                         <outlet property="dropView" destination="XHV-QG-UmI" id="fiQ-sy-RK9"/>
+                        <outlet property="maxSizeLabel" destination="Rbf-g9-TAR" id="4Oa-VS-mOm"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -362,7 +393,7 @@ DQ
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="45" viewBased="YES" id="3L7-2g-c2R" customClass="DropTableView">
-                                            <rect key="frame" x="0.0" y="0.0" width="478" height="163"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="220"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="0.0" height="20"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -531,7 +562,7 @@ DQ
                                                 <rect key="frame" x="82" y="-4" width="124" height="25"/>
                                                 <popUpButtonCell key="cell" type="push" title="1 download" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" selectedItem="vRD-AE-Cz8" id="8nX-Wr-2qO">
                                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="menu"/>
+                                                    <font key="font" metaFont="message"/>
                                                     <menu key="menu" autoenablesItems="NO" id="IjD-kl-qB4">
                                                         <items>
                                                             <menuItem title="1 download" state="on" id="vRD-AE-Cz8"/>
@@ -540,7 +571,7 @@ DQ
                                                             <menuItem title="4 downloads" id="nda-tz-HHE"/>
                                                             <menuItem title="5 downloads" id="cBa-7R-f2j"/>
                                                             <menuItem title="10 downloads" id="Loi-Hv-vd4"/>
-                                                            <menuItem title="20 downloads" enabled="NO" id="7Ku-K8-OS4"/>
+                                                            <menuItem title="20 downloads" id="7Ku-K8-OS4"/>
                                                         </items>
                                                     </menu>
                                                 </popUpButtonCell>
@@ -569,14 +600,14 @@ DQ
                                         <rect key="frame" x="-3" y="53" width="99" height="25"/>
                                         <popUpButtonCell key="cell" type="push" title="1 day" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" selectedItem="AyN-pM-hOP" id="Nh1-QB-5sR">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="menu"/>
+                                            <font key="font" metaFont="message"/>
                                             <menu key="menu" autoenablesItems="NO" id="Dh7-UK-tDI">
                                                 <items>
                                                     <menuItem title="5 minutes" id="Xvl-v2-zS9"/>
                                                     <menuItem title="1 hour" id="4PV-Ud-cMG"/>
                                                     <menuItem title="1 day" state="on" id="AyN-pM-hOP"/>
                                                     <menuItem title="3 days" id="c2A-XH-ytl"/>
-                                                    <menuItem title="7 days" enabled="NO" id="ijj-hM-ypL"/>
+                                                    <menuItem title="7 days" id="ijj-hM-ypL"/>
                                                 </items>
                                             </menu>
                                         </popUpButtonCell>
@@ -894,9 +925,142 @@ DQ
             </objects>
             <point key="canvasLocation" x="75" y="1220"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="Ew4-A2-qvy">
+            <objects>
+                <tabViewController title="Settings" storyboardIdentifier="SettingsTabView" selectedTabViewItemIndex="0" tabStyle="toolbar" canPropagateSelectedChildViewControllerTitle="NO" id="3KL-bh-kq1" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem identifier="" image="gearshape" catalog="system" id="Me9-WC-ZW7"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="MNp-w4-GzG">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="system"/>
+                        <connections>
+                            <outlet property="delegate" destination="3KL-bh-kq1" id="vTt-S4-x3k"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="MNp-w4-GzG" id="bV0-OV-hvD"/>
+                        <segue destination="rDS-TG-6RZ" kind="relationship" relationship="tabItems" id="3b5-iI-myg"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="duY-7l-E2G" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="638" y="1277.5"/>
+        </scene>
+        <!--General-->
+        <scene sceneID="x4C-Zm-2lD">
+            <objects>
+                <viewController title="General" storyboardIdentifier="SettingsView" id="rDS-TG-6RZ" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="m3s-Kv-7qx">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="250"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gif-G0-hR3">
+                                <rect key="frame" x="30" y="206" width="68" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Send URL:" id="9We-Kr-52h">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" contentType="url" translatesAutoresizingMaskIntoConstraints="NO" id="LSJ-Vx-ayB">
+                                <rect key="frame" x="139" y="203" width="222" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="nwZ-fU-4uc">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <action selector="textFieldValueChanged:" target="rDS-TG-6RZ" id="CXJ-Pj-L98"/>
+                                </connections>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zfv-wF-j4X">
+                                <rect key="frame" x="30" y="166" width="104" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Max Downloads:" id="CKl-3i-fV6">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78N-jZ-FUU">
+                                <rect key="frame" x="140" y="163" width="96" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Png-0o-EIc">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="dWm-sK-TLY"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <action selector="textFieldValueChanged:" target="rDS-TG-6RZ" id="m2A-e3-NHL"/>
+                                </connections>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gJk-5y-uOc">
+                                <rect key="frame" x="30" y="128" width="89" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Max Duration:" id="PAN-o2-VT0">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cBF-SH-LbE">
+                                <rect key="frame" x="140" y="125" width="96" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="08w-Xl-SAq">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="Wvu-rs-kMw"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <action selector="textFieldValueChanged:" target="rDS-TG-6RZ" id="iYD-F3-Utw"/>
+                                </connections>
+                            </textField>
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FDN-ms-6JL">
+                                <rect key="frame" x="30" y="84" width="87" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Max File Size:" id="KOC-uT-LFx">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tWl-u3-NVU">
+                                <rect key="frame" x="140" y="81" width="96" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="BD2-Zx-by5">
+                                    <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="evf-vh-FdM"/>
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <action selector="textFieldValueChanged:" target="rDS-TG-6RZ" id="UkM-nO-asl"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="maxDownloadsTextField" destination="78N-jZ-FUU" id="uv7-aI-rR8"/>
+                        <outlet property="maxDurationTextField" destination="cBF-SH-LbE" id="gYs-RL-w4d"/>
+                        <outlet property="maxFileSizeTextField" destination="tWl-u3-NVU" id="t8h-j2-mt0"/>
+                        <outlet property="sendInstanceURLTextField" destination="LSJ-Vx-ayB" id="pHZ-lc-uE5"/>
+                    </connections>
+                </viewController>
+                <customObject id="vJD-lw-mtw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1186" y="1330"/>
+        </scene>
     </scenes>
     <resources>
         <image name="doc" width="16.5" height="21"/>
+        <image name="gearshape" catalog="system" width="16" height="16"/>
         <image name="plus.circle" width="20" height="20"/>
         <image name="xmark" width="15.5" height="15.5"/>
     </resources>

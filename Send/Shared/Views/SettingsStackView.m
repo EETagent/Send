@@ -4,6 +4,7 @@
 //
 
 #import "SettingsStackView.h"
+#import "SettingsManager.h"
 
 @implementation SettingsStackView
 
@@ -11,9 +12,17 @@
     self = [super initWithCoder:coder];
     if (self) {
         if ([[self passwordCheckBox] state] == NSControlStateValueOn)
-            [[self passwordTextField] setEnabled:YES];
+            [[self passwordTextField] setEnabled:YES];        
+        [self updateLimitOptions];
     }
     return self;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib]; 
+
+    [self updateLimitOptions];
+    [self updateExpiryOptions];
 }
 
 - (void)passwordCheckBoxClicked:(id)sender {
@@ -69,10 +78,48 @@
     }
 }
 
+
 - (NSString *)parsePassword {
     if ([[self passwordCheckBox] state] == NSControlStateValueOn)
         return [[self passwordTextField] stringValue];
     return nil;
+}
+
+- (NSInteger)durationMinutesForIndex:(NSInteger)index {
+    switch (index) {
+        case 0: return 5;           // 5 minut
+        case 1: return 60;          // 1 hodina
+        case 2: return 24 * 60;     // 1 den
+        case 3: return 3 * 24 * 60; // 3 dny
+        case 4: return 7 * 24 * 60; // 7 dní
+        default: return 60; 
+    }
+}
+
+- (void)updateExpiryOptions {
+    NSPopUpButton *button = [self expiryPopUpButton];
+    NSInteger maxDuration = [[SettingsManager sharedManager] maxDurationMinutes];
+
+
+    for (NSInteger i = 0; i < [button numberOfItems]; ++i) {
+        NSMenuItem *item = [button itemAtIndex:i];
+        NSInteger itemDuration = [self durationMinutesForIndex:i];
+
+        [item setEnabled:(itemDuration <= maxDuration)];
+    }
+}
+
+- (void)updateLimitOptions {
+    NSPopUpButton *button = [self limitPopUpButton];
+    NSInteger maxLimit = [[SettingsManager sharedManager] maxDownloadLimit];
+
+    for (NSMenuItem *item in [button itemArray]) {
+        NSInteger itemValue = [[[item title] componentsSeparatedByString:@" "] firstObject].integerValue;
+        
+       if (itemValue > 0) { 
+             [item setEnabled:(itemValue <= maxLimit)];
+    }
+    }
 }
 
 @end

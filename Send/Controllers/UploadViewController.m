@@ -4,6 +4,7 @@
 //
 
 #import "UploadViewController.h"
+#import "../Shared/SettingsManager.h"
 
 #import <Send_Library/Send.h>
 
@@ -32,7 +33,8 @@
     if ([files count] == 0)
         return;
     
-    self->send = [Send new];
+    NSURL *sendURL = [[SettingsManager sharedManager] sendURL];
+    self->send = [[Send alloc] initWithSendURL:[sendURL absoluteString]];
     [self->send setDelegate:self];
     
     [self->send setExpiry:expiry];

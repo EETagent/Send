@@ -4,6 +4,7 @@
 //
 
 #import "ShareViewController.h"
+#import "SettingsManager.h"
 
 #import <Send_Library/Send.h>
 
@@ -22,7 +23,8 @@
     
     self->files = [NSMutableArray new];
     
-    self->send = [Send new];
+    NSURL *sendURL = [[SettingsManager sharedManager] sendURL];
+    self->send = [[Send alloc] initWithSendURL:[sendURL absoluteString]];
     [self->send setDelegate:self];
     
     [[self progressIndicator] setHidden:YES];

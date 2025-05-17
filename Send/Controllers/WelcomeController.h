@@ -12,6 +12,7 @@
 @interface WelcomeController : NSViewController <DropDelegate>
 
 @property (nonatomic, weak) IBOutlet DropView *dropView;
+@property (nonatomic, weak) IBOutlet NSTextFieldCell *maxSizeLabel;
 
 // Respond to openDocument in menu
 - (void)openDocument:(id)sender;

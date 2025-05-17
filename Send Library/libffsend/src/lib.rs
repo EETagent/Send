@@ -14,7 +14,7 @@ use std::os::raw::{c_char, c_int, c_longlong, c_uchar, c_ulonglong, c_void};
 use std::ptr::null_mut;
 
 //TODO: Configurable
-const SEND_URL: &str = "https://send.vis.ee";
+//const SEND_URL: &str = "https://send.vis.ee";
 const SEND_VERSION: Version = Version::V3;
 
 #[derive(Debug, Default)]
@@ -190,6 +190,7 @@ pub extern "C" fn progress_reporter_free(ptr: *mut Arc<Mutex<Reporter>>) {
 // Upload a file
 #[no_mangle]
 pub extern "C" fn upload_file(
+    url: *const c_char,
     path: *const c_char,
     password: *const c_char,
     limit: c_uchar,
@@ -225,12 +226,36 @@ pub extern "C" fn upload_file(
         None => None,
     };
 
+
+    let c_str_url: Option<&CStr> = unsafe {
+        if !url.is_null() {
+            Some(CStr::from_ptr(url))
+        } else {
+            None
+        }
+    };
+    let send_url_str = match c_str_url {
+        Some(s) => {
+            match s.to_str() {
+                Ok(s_str) => s_str,
+                Err(_) => return -3,
+            }
+        },
+        None => return -3,
+    };
+
+    let send_url = match Url::parse(send_url_str) {
+        Ok(url) => url,
+        Err(_) => return -3,
+    };
+
+
     // From u64 long long to usize, unwrap is safe on 64 bit
     let params: ParamsData = ParamsData::from(Some(limit), Some(expiriry.try_into().unwrap()));
 
     let upload: Upload = Upload::new(
         SEND_VERSION,
-        Url::parse(SEND_URL).unwrap(),
+        send_url,
         path_buffer,
         None,
         password,

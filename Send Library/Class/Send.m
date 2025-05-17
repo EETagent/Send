@@ -10,15 +10,17 @@
 #import <libzip/SSZipArchive.h>
 
 @implementation Send {
+    char *sendUrl;
     uploaded_file_t *uploadedFile;
     progress_reporter_t *progressReporter;
 }
 
-- (instancetype)init {
+- (instancetype)initWithSendURL:(NSString *)sendURL {
     self = [super init];
     if (self) {
         self->uploadedFile = uploaded_file_new();
         self->progressReporter = progress_reporter_new();
+        self->sendUrl = strdup([sendURL UTF8String]);
     }
     return self;
 }
@@ -26,6 +28,9 @@
 - (void)dealloc {
     uploaded_file_free(self->uploadedFile);
     progress_reporter_free(self->progressReporter);
+    if (self->sendUrl) {
+        free(self->sendUrl);
+    }
 }
 
 void uploadStarted (unsigned long long size, void *ctx) {
@@ -89,7 +94,7 @@ void uploadCompleted (void *ctx) {}
         return;
     }
     
-    NSInteger status = upload_file(pathString, password, [self limit], [self expiry], self->progressReporter, self->uploadedFile);
+    NSInteger status = upload_file(self->sendUrl, pathString, password, [self limit], [self expiry], self->progressReporter, self->uploadedFile);
     
     switch (status) {
         case 0:

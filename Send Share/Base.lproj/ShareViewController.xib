@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23727" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23727"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -36,9 +36,6 @@ DQ
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NVE-vN-dkz">
                     <rect key="frame" x="225" y="13" width="78" height="32"/>
-                    <constraints>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="cP1-hK-9ZX"/>
-                    </constraints>
                     <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6Up-t3-mwm">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -46,11 +43,14 @@ DQ
 Gw
 </string>
                     </buttonCell>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="cP1-hK-9ZX"/>
+                    </constraints>
                     <connections>
                         <action selector="cancel:" target="-2" id="Qav-AK-DGt"/>
                     </connections>
                 </button>
-                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aNc-0i-CWK">
+                <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aNc-0i-CWK">
                     <rect key="frame" x="176" y="232" width="37" height="16"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Send" id="0xp-rC-2gr">
                         <font key="font" metaFont="systemBold"/>
@@ -67,7 +67,7 @@ Gw
                         <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="33E-AP-dc4">
                             <rect key="frame" x="0.0" y="57" width="223" height="20"/>
                             <subviews>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eMp-gC-mlE">
+                                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eMp-gC-mlE">
                                     <rect key="frame" x="-2" y="4" width="81" height="16"/>
                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Expires after" id="arY-cB-zPe">
                                         <font key="font" usesAppearanceFont="YES"/>
@@ -79,7 +79,7 @@ Gw
                                     <rect key="frame" x="82" y="-4" width="124" height="25"/>
                                     <popUpButtonCell key="cell" type="push" title="1 download" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" selectedItem="AiN-uI-b64" id="OMf-T1-fEt">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="menu"/>
+                                        <font key="font" metaFont="message"/>
                                         <menu key="menu" autoenablesItems="NO" id="to4-3t-uTM">
                                             <items>
                                                 <menuItem title="1 download" state="on" id="AiN-uI-b64"/>
@@ -88,12 +88,12 @@ Gw
                                                 <menuItem title="4 downloads" id="Tbi-57-haw"/>
                                                 <menuItem title="5 downloads" id="2U7-8v-G6B"/>
                                                 <menuItem title="10 downloads" id="7nr-ZQ-iLh"/>
-                                                <menuItem title="20 downloads" enabled="NO" id="5QB-WR-tzH"/>
+                                                <menuItem title="20 downloads" id="5QB-WR-tzH"/>
                                             </items>
                                         </menu>
                                     </popUpButtonCell>
                                 </popUpButton>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pEr-Wy-FnR">
+                                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pEr-Wy-FnR">
                                     <rect key="frame" x="208" y="4" width="17" height="16"/>
                                     <textFieldCell key="cell" lineBreakMode="clipping" title="or" id="MIR-OB-riG">
                                         <font key="font" usesAppearanceFont="YES"/>
@@ -117,14 +117,14 @@ Gw
                             <rect key="frame" x="-3" y="25" width="99" height="25"/>
                             <popUpButtonCell key="cell" type="push" title="1 day" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" selectedItem="wHB-nr-a8O" id="b9y-4X-P2m">
                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="menu"/>
+                                <font key="font" metaFont="message"/>
                                 <menu key="menu" autoenablesItems="NO" id="WlV-ie-cme">
                                     <items>
                                         <menuItem title="5 minutes" id="Zm0-Hw-fbi"/>
                                         <menuItem title="1 hour" id="BfR-OJ-7AW"/>
                                         <menuItem title="1 day" state="on" id="wHB-nr-a8O"/>
                                         <menuItem title="3 days" id="6JK-4J-B3i"/>
-                                        <menuItem title="7 days" enabled="NO" id="br7-vj-j8g"/>
+                                        <menuItem title="7 days" id="br7-vj-j8g"/>
                                     </items>
                                 </menu>
                             </popUpButtonCell>
@@ -142,7 +142,7 @@ Gw
                                         <action selector="passwordCheckBoxClicked:" target="yuc-DZ-eLs" id="9Gy-Hp-U62"/>
                                     </connections>
                                 </button>
-                                <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7YT-qB-hGh">
+                                <secureTextField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7YT-qB-hGh">
                                     <rect key="frame" x="167" y="0.0" width="96" height="21"/>
                                     <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="Lna-dg-JcQ">
                                         <font key="font" metaFont="system"/>
@@ -187,7 +187,7 @@ Gw
                         <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7I3-oY-gIy">
                             <rect key="frame" x="0.0" y="94" width="348" height="20"/>
                             <subviews>
-                                <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="499" verticalCompressionResistancePriority="499" translatesAutoresizingMaskIntoConstraints="NO" id="O8s-IF-AbC">
+                                <textField focusRingType="none" horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="499" verticalCompressionResistancePriority="499" translatesAutoresizingMaskIntoConstraints="NO" id="O8s-IF-AbC">
                                     <rect key="frame" x="0.0" y="0.0" width="288" height="20"/>
                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" selectable="YES" editable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="ppl-J4-qo3">
                                         <font key="font" usesAppearanceFont="YES"/>

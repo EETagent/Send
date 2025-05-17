@@ -9,6 +9,11 @@
 
 @interface Send : NSObject
 
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
+
+- (instancetype)initWithSendURL:(NSString *)sendURL NS_DESIGNATED_INITIALIZER;
+
 @property (nonatomic, weak) id <SendUploadDelegate> delegate;
 
 @property NSString *password;

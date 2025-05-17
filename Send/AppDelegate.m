@@ -60,4 +60,19 @@
     return YES;
 }
 
+- (IBAction)showSettings:(id)sender {
+    // TODO: Better way
+    NSStoryboard *storyboard = [NSStoryboard storyboardWithName:@"Main" bundle:nil];
+    NSViewController *settingsViewController = [storyboard instantiateControllerWithIdentifier:@"SettingsTabView"];
+    
+    NSRect viewFrame = settingsViewController.view.frame;
+    viewFrame.size.height = 250;
+    settingsViewController.view.frame = viewFrame;
+    
+    NSWindow *keyWindow = [NSApplication sharedApplication].keyWindow;
+    if (keyWindow && keyWindow.contentViewController) {
+        [keyWindow.contentViewController presentViewControllerAsModalWindow:settingsViewController];
+    }
+}
+
 @end

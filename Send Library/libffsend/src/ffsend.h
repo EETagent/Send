@@ -67,6 +67,7 @@ extern void progress_reporter_free(progress_reporter_t *ptr);
 
 /**
  * Upload file using Firefox Send
+ * @param[in] url Send URL
  * @param[in] path File path
  * @param[in] password Optional password
  * @param[in] limit Number of downloads limit
@@ -74,4 +75,4 @@ extern void progress_reporter_free(progress_reporter_t *ptr);
  * @param[in] reporter ProgressReporter for callbacks
  * @param[out] ptr UploadedFile
  */
-extern int upload_file(const char* path, const char *password, unsigned char limit, long long expiry, progress_reporter_t *reporter, uploaded_file_t *ptr);
+extern int upload_file(const char* url, const char* path, const char *password, unsigned char limit, long long expiry, progress_reporter_t *reporter, uploaded_file_t *ptr);

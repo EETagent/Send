@@ -5,6 +5,7 @@
 
 #import "WelcomeController.h"
 #import "FilesViewController.h"
+#import "SettingsManager.h" // Import SettingsManager
 
 #import "File.h"
 
@@ -12,6 +13,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    SettingsManager *settings = [SettingsManager sharedManager];
+    double maxSizeGB = [settings maxFileSizeInGB];
+    NSString *maxSizeString = [NSString stringWithFormat:@"%.1f GB", maxSizeGB];
+    [[self maxSizeLabel] setStringValue:maxSizeString];
 }
 
 - (void)moveToFilesViewWithFiles:(NSArray<NSURL *> *)filesURL {

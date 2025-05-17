@@ -18,6 +18,10 @@
 		4634032228BE740600C759DB /* SettingsStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4634031F28BE70AE00C759DB /* SettingsStackView.m */; };
 		4634033228BE805200C759DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4634033428BE805200C759DB /* Localizable.strings */; };
 		46371F2C28BA4F5F008F6DFF /* FileItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46371F2B28BA4F5F008F6DFF /* FileItemView.m */; };
+		464CCA112DD90B3B00950826 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464CCA0F2DD90B3B00950826 /* Main.storyboard */; };
+		46A9C5F12DC1530800C5C319 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A9C5F02DC1530800C5C319 /* SettingsViewController.m */; };
+		46A9C5F42DC1531B00C5C319 /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A9C5F32DC1531B00C5C319 /* SettingsManager.m */; };
+		46A9C5F52DC1531B00C5C319 /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A9C5F32DC1531B00C5C319 /* SettingsManager.m */; };
 		46B9E8D22B6E8D1700BFD528 /* DockProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 46B9E8D12B6E8D1700BFD528 /* DockProgress.m */; };
 		46BC690328F1D31200E3D268 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 46BC690228F1D31200E3D268 /* Sparkle */; };
 		46BFCF3228BBEF66006919D0 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 46BFCF3128BBEF66006919D0 /* Credits.rtf */; };
@@ -148,8 +152,13 @@
 		46371F2228BA46EF008F6DFF /* libzip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libzip.xcodeproj; path = libzip/libzip.xcodeproj; sourceTree = "<group>"; };
 		46371F2A28BA4F5F008F6DFF /* FileItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FileItemView.h; sourceTree = "<group>"; };
 		46371F2B28BA4F5F008F6DFF /* FileItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FileItemView.m; sourceTree = "<group>"; };
+		464CCA102DD90B3B00950826 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Send/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4651F4B328BB9E2A00FF3E4D /* DropDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DropDelegate.h; sourceTree = "<group>"; };
 		46769B3F28BC038700F06426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		46A9C5F02DC1530800C5C319 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		46A9C5F22DC1531B00C5C319 /* SettingsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsManager.h; sourceTree = "<group>"; };
+		46A9C5F32DC1531B00C5C319 /* SettingsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsManager.m; sourceTree = "<group>"; };
+		46A9C5F62DC153D600C5C319 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		46B9E8D02B6E8D1700BFD528 /* DockProgress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DockProgress.h; sourceTree = "<group>"; };
 		46B9E8D12B6E8D1700BFD528 /* DockProgress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DockProgress.m; sourceTree = "<group>"; };
 		46BFCF3128BBEF66006919D0 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
@@ -260,6 +269,8 @@
 		4634032328BE741300C759DB /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				46A9C5F22DC1531B00C5C319 /* SettingsManager.h */,
+				46A9C5F32DC1531B00C5C319 /* SettingsManager.m */,
 				4634032428BE741700C759DB /* Views */,
 			);
 			path = Shared;
@@ -373,6 +384,7 @@
 		46CAA9FA28B802430015008F = {
 			isa = PBXGroup;
 			children = (
+				464CCA0F2DD90B3B00950826 /* Main.storyboard */,
 				46CAAA0528B802430015008F /* Send */,
 				46EAB05F28BE446D00BA82D5 /* Send Share */,
 				46EAB07C28BE554800BA82D5 /* Send Library */,
@@ -415,6 +427,8 @@
 		46CAAA3A28B8070B0015008F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				46A9C5F62DC153D600C5C319 /* SettingsViewController.h */,
+				46A9C5F02DC1530800C5C319 /* SettingsViewController.m */,
 				46CAAA0928B802430015008F /* WelcomeController.h */,
 				46CAAA0A28B802430015008F /* WelcomeController.m */,
 				46CAAA3728B807050015008F /* UploadViewController.h */,
@@ -647,6 +661,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46CAAA0D28B802440015008F /* Assets.xcassets in Resources */,
+				464CCA112DD90B3B00950826 /* Main.storyboard in Resources */,
 				46D4CE0E28BE0C2000CD26B5 /* Localizable.strings in Resources */,
 				46BFCF3228BBEF66006919D0 /* Credits.rtf in Resources */,
 				46CAAA1028B802440015008F /* Main.storyboard in Resources */,
@@ -684,12 +699,14 @@
 				46371F2C28BA4F5F008F6DFF /* FileItemView.m in Sources */,
 				462E688A28BA28C8001F569F /* FilesViewController.m in Sources */,
 				46CF0F4328BD11FF00298A84 /* ResultView.m in Sources */,
+				46A9C5F42DC1531B00C5C319 /* SettingsManager.m in Sources */,
 				46CAAA3928B807050015008F /* UploadViewController.m in Sources */,
 				46B9E8D22B6E8D1700BFD528 /* DockProgress.m in Sources */,
 				4634032228BE740600C759DB /* SettingsStackView.m in Sources */,
 				46CAAA1228B802440015008F /* main.m in Sources */,
 				46CAAA0828B802430015008F /* AppDelegate.m in Sources */,
 				4618301628BA7D4600BFB7E8 /* File.m in Sources */,
+				46A9C5F12DC1530800C5C319 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +714,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46A9C5F52DC1531B00C5C319 /* SettingsManager.m in Sources */,
 				4634032128BE73EB00C759DB /* ResultView.m in Sources */,
 				4634032028BE70AE00C759DB /* SettingsStackView.m in Sources */,
 				46EAB06428BE446D00BA82D5 /* ShareViewController.m in Sources */,
@@ -738,6 +756,14 @@
 				4634033328BE805200C759DB /* cs */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		464CCA0F2DD90B3B00950826 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				464CCA102DD90B3B00950826 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		46CAAA0E28B802440015008F /* Main.storyboard */ = {
@@ -892,7 +918,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 109;
+				CURRENT_PROJECT_VERSION = 110;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = CNYLT3CP76;
@@ -910,7 +936,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 1.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.EETagent.Send;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -929,7 +955,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 109;
+				CURRENT_PROJECT_VERSION = 110;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = CNYLT3CP76;
@@ -947,7 +973,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 1.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.EETagent.Send;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -964,7 +990,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 109;
+				CURRENT_PROJECT_VERSION = 110;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = CNYLT3CP76;
@@ -979,7 +1005,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 1.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.EETagent.Send.Send-Share";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -996,7 +1022,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 109;
+				CURRENT_PROJECT_VERSION = 110;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = CNYLT3CP76;
@@ -1011,7 +1037,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.11;
+				MARKETING_VERSION = 1.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.EETagent.Send.Send-Share";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
