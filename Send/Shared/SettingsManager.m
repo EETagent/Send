@@ -31,7 +31,7 @@ static NSInteger const kDefaultMaxFileSizeMB = 2500;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"CNYLT3CP76.Send.Settings"];
+        _userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"KSR6A94B7P.Send.Settings"];
         [self registerDefaults];
     }
     return self;
