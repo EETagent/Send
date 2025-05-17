@@ -4,11 +4,15 @@ version = "0.1.1"
 edition = "2021"
 
 [dependencies]
-ffsend-api = { version = "0.7.3", features = ["send3", "crypto-ring"], default-features = false }
-url = "2.5.0"
+ffsend-api = { version = "0.7.3", features = [
+    "send3",
+    "crypto-ring",
+], default-features = false }
+url = "2.5.4"
+traitobject = "0.1.1"
 
 [dev-dependencies]
-tempfile = "3.9"
+tempfile = "3.20"
 
 [lib]
 name = "ffsend"
@@ -19,6 +23,3 @@ codegen-units = 1
 lto = true
 opt-level = 3
 panic = "abort"
-
-[patch.crates-io]
-traitobject = { git = "https://github.com/reem/rust-traitobject", rev = "b3471a15917b2caf5a8b27debb0b4b390fc6634f" }
