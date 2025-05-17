@@ -8,12 +8,12 @@ jobs:
     steps:
       - name: Checkout 🚚
         uses: actions/checkout@v4
-        
+
       - name: Install latest stable Rust toolchain 🦀
         uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: stable
-          targets: 'aarch64-apple-darwin,x86_64-apple-darwin'
+          targets: "aarch64-apple-darwin,x86_64-apple-darwin"
 
       - name: Setup latest Xcode ⚒️
         uses: maxim-lobanov/setup-xcode@v1
@@ -27,4 +27,4 @@ jobs:
           p12-password: ${{ secrets.CERTIFICATES_P12_PASSWORD }}
 
       - name: Debug Build 🔨
-        run: xcodebuild -scheme Send -destination "platform=macOS" -configuration Debug CODE_SIGN_IDENTITY=- | xcpretty && exit ${PIPESTATUS[0]}
+        run: xcodebuild -scheme Send -destination "platform=macOS" -configuration Debug CODE_SIGN_IDENTITY=-
