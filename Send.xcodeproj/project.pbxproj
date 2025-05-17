@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4618301628BA7D4600BFB7E8 /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = 4618301528BA7D4600BFB7E8 /* File.m */; };
+		461BBBAE2DD94C2300276DC0 /* ffsend.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 461BBBAC2DD94C1F00276DC0 /* ffsend.dylib */; };
+		461BBBB02DD94D8200276DC0 /* ffsend.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 461BBBAC2DD94C1F00276DC0 /* ffsend.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		461BBBB12DD94EA800276DC0 /* ffsend.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 461BBBAC2DD94C1F00276DC0 /* ffsend.dylib */; };
 		461D13B928BBAEE4001E34CC /* DropTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 461D13B828BBAEE4001E34CC /* DropTableView.m */; };
 		46253B452DD9452F00CEF28D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 46253B442DD9452F00CEF28D /* Localizable.xcstrings */; };
 		46253B492DD9452F00CEF28D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 46253B482DD9452F00CEF28D /* Localizable.xcstrings */; };
@@ -39,8 +42,6 @@
 		46EAB06C28BE446D00BA82D5 /* Send Share.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 46EAB05E28BE446D00BA82D5 /* Send Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		46EAB08828BE55E200BA82D5 /* SendUploadDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EAB08728BE55E200BA82D5 /* SendUploadDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46EAB09828BE57CD00BA82D5 /* Send.h in Headers */ = {isa = PBXBuildFile; fileRef = 46CAAA4328B81B3C0015008F /* Send.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46EAB09928BE586400BA82D5 /* ffsend.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EAB09228BE566700BA82D5 /* ffsend.dylib */; };
-		46EAB09A28BE586400BA82D5 /* ffsend.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 46EAB09228BE566700BA82D5 /* ffsend.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		46EAB09B28BE586800BA82D5 /* libzip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EAB09728BE567000BA82D5 /* libzip.framework */; };
 		46EAB09C28BE586800BA82D5 /* libzip.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 46EAB09728BE567000BA82D5 /* libzip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		46EAB09D28BE589400BA82D5 /* Send_Library.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EAB07B28BE554800BA82D5 /* Send_Library.framework */; };
@@ -49,6 +50,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		461BBBAB2DD94C1F00276DC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46CAAA3C28B808250015008F /* libffsend.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CA00F0E2C82195EB9635735F;
+			remoteInfo = "ffsend.dylib (cdylib)";
+		};
 		4634031928BE5E5B00C759DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46CAA9FB28B802430015008F /* Project object */;
@@ -62,13 +70,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 46EAB05D28BE446D00BA82D5;
 			remoteInfo = "Send Share";
-		};
-		46EAB09128BE566700BA82D5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 46CAAA3C28B808250015008F /* libffsend.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CA607EE972B195EB9635735F;
-			remoteInfo = "ffsend-cdylib";
 		};
 		46EAB09628BE567000BA82D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -115,8 +116,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				461BBBB02DD94D8200276DC0 /* ffsend.dylib in Embed Libraries */,
 				46EAB09C28BE586800BA82D5 /* libzip.framework in Embed Libraries */,
-				46EAB09A28BE586400BA82D5 /* ffsend.dylib in Embed Libraries */,
 			);
 			name = "Embed Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,8 +214,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461BBBAE2DD94C2300276DC0 /* ffsend.dylib in Frameworks */,
+				461BBBB12DD94EA800276DC0 /* ffsend.dylib in Frameworks */,
 				46EAB09B28BE586800BA82D5 /* libzip.framework in Frameworks */,
-				46EAB09928BE586400BA82D5 /* ffsend.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,7 +492,7 @@
 		46EAB08E28BE566700BA82D5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				46EAB09228BE566700BA82D5 /* ffsend.dylib */,
+				461BBBAC2DD94C1F00276DC0 /* ffsend.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -636,11 +638,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		46EAB09228BE566700BA82D5 /* ffsend.dylib */ = {
+		461BBBAC2DD94C1F00276DC0 /* ffsend.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			path = ffsend.dylib;
-			remoteRef = 46EAB09128BE566700BA82D5 /* PBXContainerItemProxy */;
+			remoteRef = 461BBBAB2DD94C1F00276DC0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		46EAB09728BE567000BA82D5 /* libzip.framework */ = {
