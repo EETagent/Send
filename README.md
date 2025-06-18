@@ -27,8 +27,8 @@ Send is a native macOS client for Firefox Send services directly based on a fast
 
 ## 👏 Dependencies
 
-- `Maintained Send instance` upload.nolog.cz by [nolog](https://witter.cz/@nolog), you can change to your own instance in the settings.
-- `(Terminated on May 24th) Send instance` https://send.vis.ee by [@timvisee](https://github.com/timvisee)
+- `Maintained, sponsored by Thunderbird, Send instance` https://send.vis.ee by [@timvisee](https://github.com/timvisee)
+- `Alternative maintained Send instance` upload.nolog.cz by [nolog](https://witter.cz/@nolog), you can change to your own instance in the settings.
 - `FFsend API library` [ffsend-api](https://github.com/timvisee/ffsend-api) by [@timvisee](https://github.com/timvisee)
 - `ZIP library` [ZipArchive](https://github.com/ZipArchive/ZipArchive) by [@ZipArchive team](https://github.com/ZipArchive)
 
@@ -37,6 +37,18 @@ Send is a native macOS client for Firefox Send services directly based on a fast
 - Czech 🇨🇿
 - English 🇬🇧🇺🇸
 
+## ⚙️ Settings
+
+### Available Instance Configurations
+
+| Setting | send.vis.ee (default) | upload.nolog.cz|
+|---------|-------------|----------------------------|
+| **Send URL** | https://send.vis.ee | https://upload.nolog.cz/ |
+| **Max Download Limit** | 10 | 500 |
+| **Max Download Duration** | 4320 minutes (3 days) | 10080 minutes (7 days) |
+| **Max File Size** | 2500 MB (2.5 GB) | 5000 MB (5 GB) |
+
+> **Note:** These configurations may be out of date. Please check the respective instance websites for the most current limits and settings.
 
 ## 🖼️ Gallery
 
